@@ -1,0 +1,1882 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ql_tourdulichModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="blogtour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tieude" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="noidung" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="trangthai" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="loaiblog_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="chitiettour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ngaybatdau" Type="date" Nullable="false" />
+          <Property Name="ngaykethuc" Type="date" Nullable="false" />
+          <Property Name="gia" Type="bigint" Nullable="false" />
+          <Property Name="tour_id" Type="uint" Nullable="false" />
+          <Property Name="diemdulich_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="chucvu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenchucvu" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="hesoluong" Type="double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="chuongtrinhtour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tieude" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="thoigianbatdau" Type="date" Nullable="false" />
+          <Property Name="thoigianketthuc" Type="date" Nullable="false" />
+          <Property Name="mota" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tour_id" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="danhgia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noidung" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="diemdanhgia" Type="uint" Nullable="false" />
+          <Property Name="khachhang_id" Type="uint" Nullable="false" />
+          <Property Name="ngaydanhgia" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="dattour">
+          <Key>
+            <PropertyRef Name="tour_id" />
+            <PropertyRef Name="khachhang_id" />
+          </Key>
+          <Property Name="tour_id" Type="uint" Nullable="false" />
+          <Property Name="khachhang_id" Type="uint" Nullable="false" />
+          <Property Name="soluong" Type="uint" Nullable="false" />
+          <Property Name="ngaydattour" Type="date" Nullable="false" />
+          <Property Name="dongia" Type="ubigint" Nullable="false" />
+          <Property Name="trangthai" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="diachi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="xa" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="huyen" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tinh" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ghichu" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="khachhang_id" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="diemdulich">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tendiem" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="mota" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="failed_jobs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uuid" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="connection" Type="text" Nullable="false" />
+          <Property Name="queue" Type="text" Nullable="false" />
+          <Property Name="payload" Type="longtext" Nullable="false" />
+          <Property Name="exception" Type="longtext" Nullable="false" />
+          <Property Name="failed_at" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hinhanhtour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenhinh" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="duongdan" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tour_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="hoadon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tongsotien" Type="ubigint" Nullable="false" />
+          <Property Name="trangthai" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="phuongthucthanhtoan" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="khachhang_id" Type="uint" Nullable="false" />
+          <Property Name="ngaytao" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="khachhang">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hoten" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="gioitinh" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ngaysinh" Type="date" Nullable="false" />
+          <Property Name="sodienthoai" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="hinhdaidien" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="user_id" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="khachsan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenkhachsan" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="diachi" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="sodienthoai" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="chatluong" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="khachsantheochuongtrinh">
+          <Key>
+            <PropertyRef Name="khachsan_id" />
+            <PropertyRef Name="chuongtrinhtour_id" />
+          </Key>
+          <Property Name="khachsan_id" Type="uint" Nullable="false" />
+          <Property Name="chuongtrinhtour_id" Type="uint" Nullable="false" />
+          <Property Name="vitri" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="succhua" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="khuyenmai">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="thoigianbatdau" Type="date" Nullable="false" />
+          <Property Name="thoigianketthuc" Type="date" Nullable="false" />
+          <Property Name="phantramgiam" Type="int" Nullable="false" />
+          <Property Name="ngaytao" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="loaiblog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenloai" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="loaitour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenloai" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="migrations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="migration" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="batch" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="nhanvien">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hoten" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="gioitinh" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ngaysinh" Type="date" Nullable="false" />
+          <Property Name="sodienthoai" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="bangcap" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="hinhdaidien" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="luong" Type="bigint" Nullable="false" />
+          <Property Name="ngayvaolam" Type="date" Nullable="false" />
+          <Property Name="phongban_id" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="nhomquyen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tennhomquyen" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="password_reset_tokens">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="token" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="personal_access_tokens">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tokenable_type" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tokenable_id" Type="ubigint" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="token" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="abilities" Type="text" />
+          <Property Name="last_used_at" Type="timestamp" Precision="0" />
+          <Property Name="expires_at" Type="timestamp" Precision="0" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="phancongchucvu">
+          <Key>
+            <PropertyRef Name="idnhanvien" />
+            <PropertyRef Name="idchucvu" />
+          </Key>
+          <Property Name="idnhanvien" Type="uint" Nullable="false" />
+          <Property Name="idchucvu" Type="uint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="phancongnhanvien">
+          <Key>
+            <PropertyRef Name="nhanvien_id" />
+            <PropertyRef Name="chuongtrinhtour_id" />
+          </Key>
+          <Property Name="nhanvien_id" Type="uint" Nullable="false" />
+          <Property Name="chuongtrinhtour_id" Type="uint" Nullable="false" />
+          <Property Name="nhiemvu" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="phieuhuytour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sotienhoan" Type="ubigint" Nullable="false" />
+          <Property Name="lydohuy" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="hoadon_id" Type="uint" Nullable="false" />
+          <Property Name="ngayhuy" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="phongban">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenphongban" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="phuongtien">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenphuongtien" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="sodienthoai" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="phuongtientheochuongtrinh">
+          <Key>
+            <PropertyRef Name="chuongtrinhtour_id" />
+            <PropertyRef Name="phuongtien_id" />
+          </Key>
+          <Property Name="chuongtrinhtour_id" Type="uint" Nullable="false" />
+          <Property Name="phuongtien_id" Type="uint" Nullable="false" />
+          <Property Name="soluonghanhkhach" Type="uint" Nullable="false" />
+          <Property Name="ghichu" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tentour" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="motatour" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tinhtrang" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="hinhdaidien" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="thoigiandi" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="noikhoihanh" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="loaitour_id" Type="uint" Nullable="false" />
+          <Property Name="ngaytao" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="email_verified_at" Type="timestamp" Precision="0" />
+          <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="create_at" Type="date" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="remember_token" Type="varchar" MaxLength="100" />
+          <Property Name="nhomquyen_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <Association Name="blogtour_loaiblog_id_foreign">
+          <End Role="loaiblog" Type="Self.loaiblog" Multiplicity="1" />
+          <End Role="blogtour" Type="Self.blogtour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="loaiblog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="blogtour">
+              <PropertyRef Name="loaiblog_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="chitiettour_diemdulich_id_foreign">
+          <End Role="diemdulich" Type="Self.diemdulich" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chitiettour" Type="Self.chitiettour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="diemdulich">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chitiettour">
+              <PropertyRef Name="diemdulich_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="chitiettour_tour_id_foreign">
+          <End Role="tour" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chitiettour" Type="Self.chitiettour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chitiettour">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="chuongtrinhtour_tour_id_foreign">
+          <End Role="tour" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chuongtrinhtour" Type="Self.chuongtrinhtour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chuongtrinhtour">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="danhgia_khachhang_id_foreign">
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="danhgia" Type="Self.danhgia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="danhgia">
+              <PropertyRef Name="khachhang_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dattour_khachhang_id_foreign">
+          <End Role="tour" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="dattour" Type="Self.dattour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dattour">
+              <PropertyRef Name="khachhang_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dattour_tour_id_foreign">
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="dattour" Type="Self.dattour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dattour">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="diachi_khachhang_id_foreign">
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="1" />
+          <End Role="diachi" Type="Self.diachi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="diachi">
+              <PropertyRef Name="khachhang_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="hinhanhtour_tour_id_foreign">
+          <End Role="tour" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="hinhanhtour" Type="Self.hinhanhtour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hinhanhtour">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="hoadon_khachhang_id_foreign">
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="hoadon" Type="Self.hoadon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hoadon">
+              <PropertyRef Name="khachhang_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="khachhang_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="khachhang">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="khachsantheochuongtrinh_chuongtrinhtour_id_foreign">
+          <End Role="chuongtrinhtour" Type="Self.chuongtrinhtour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="khachsantheochuongtrinh" Type="Self.khachsantheochuongtrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chuongtrinhtour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="khachsantheochuongtrinh">
+              <PropertyRef Name="chuongtrinhtour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="khachsantheochuongtrinh_khachsan_id_foreign">
+          <End Role="khachsan" Type="Self.khachsan" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="khachsantheochuongtrinh" Type="Self.khachsantheochuongtrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachsan">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="khachsantheochuongtrinh">
+              <PropertyRef Name="khachsan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="nhanvien_phongban_id_foreign">
+          <End Role="phongban" Type="Self.phongban" Multiplicity="1" />
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongban">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="nhanvien">
+              <PropertyRef Name="phongban_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phancongchucvu_idchucvu_foreign">
+          <End Role="chucvu" Type="Self.chucvu" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phancongchucvu" Type="Self.phancongchucvu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chucvu">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phancongchucvu">
+              <PropertyRef Name="idchucvu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phancongchucvu_idnhanvien_foreign">
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phancongchucvu" Type="Self.phancongchucvu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhanvien">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phancongchucvu">
+              <PropertyRef Name="idnhanvien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phancongnhanvien_chuongtrinhtour_id_foreign">
+          <End Role="chuongtrinhtour" Type="Self.chuongtrinhtour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phancongnhanvien" Type="Self.phancongnhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chuongtrinhtour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phancongnhanvien">
+              <PropertyRef Name="chuongtrinhtour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phancongnhanvien_nhanvien_id_foreign">
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phancongnhanvien" Type="Self.phancongnhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhanvien">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phancongnhanvien">
+              <PropertyRef Name="nhanvien_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phieuhuytour_hoadon_id_foreign">
+          <End Role="hoadon" Type="Self.hoadon" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phieuhuytour" Type="Self.phieuhuytour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hoadon">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phieuhuytour">
+              <PropertyRef Name="hoadon_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phuongtientheochuongtrinh_chuongtrinhtour_id_foreign">
+          <End Role="chuongtrinhtour" Type="Self.chuongtrinhtour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phuongtientheochuongtrinh" Type="Self.phuongtientheochuongtrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chuongtrinhtour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phuongtientheochuongtrinh">
+              <PropertyRef Name="chuongtrinhtour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phuongtientheochuongtrinh_phuongtien_id_foreign">
+          <End Role="phuongtien" Type="Self.phuongtien" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phuongtientheochuongtrinh" Type="Self.phuongtientheochuongtrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phuongtien">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phuongtientheochuongtrinh">
+              <PropertyRef Name="phuongtien_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_loaitour_id_foreign">
+          <End Role="loaitour" Type="Self.loaitour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour" Type="Self.tour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="loaitour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour">
+              <PropertyRef Name="loaitour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="users_nhomquyen_id_foreign">
+          <End Role="nhomquyen" Type="Self.nhomquyen" Multiplicity="1" />
+          <End Role="users" Type="Self.users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhomquyen">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="nhomquyen_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ql_tourdulichModelStoreContainer">
+          <EntitySet Name="blogtour" EntityType="Self.blogtour" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="chitiettour" EntityType="Self.chitiettour" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="chucvu" EntityType="Self.chucvu" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="chuongtrinhtour" EntityType="Self.chuongtrinhtour" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="danhgia" EntityType="Self.danhgia" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="dattour" EntityType="Self.dattour" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="diachi" EntityType="Self.diachi" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="diemdulich" EntityType="Self.diemdulich" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="failed_jobs" EntityType="Self.failed_jobs" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="hinhanhtour" EntityType="Self.hinhanhtour" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="hoadon" EntityType="Self.hoadon" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="khachhang" EntityType="Self.khachhang" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="khachsan" EntityType="Self.khachsan" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="khachsantheochuongtrinh" EntityType="Self.khachsantheochuongtrinh" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="khuyenmai" EntityType="Self.khuyenmai" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="loaiblog" EntityType="Self.loaiblog" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="loaitour" EntityType="Self.loaitour" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="migrations" EntityType="Self.migrations" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="nhanvien" EntityType="Self.nhanvien" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="nhomquyen" EntityType="Self.nhomquyen" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="password_reset_tokens" EntityType="Self.password_reset_tokens" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="personal_access_tokens" EntityType="Self.personal_access_tokens" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="phancongchucvu" EntityType="Self.phancongchucvu" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="phancongnhanvien" EntityType="Self.phancongnhanvien" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="phieuhuytour" EntityType="Self.phieuhuytour" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="phongban" EntityType="Self.phongban" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="phuongtien" EntityType="Self.phuongtien" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="phuongtientheochuongtrinh" EntityType="Self.phuongtientheochuongtrinh" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="tour" EntityType="Self.tour" Schema="ql_tourdulich" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="ql_tourdulich" store:Type="Tables" />
+          <AssociationSet Name="blogtour_loaiblog_id_foreign" Association="Self.blogtour_loaiblog_id_foreign">
+            <End Role="loaiblog" EntitySet="loaiblog" />
+            <End Role="blogtour" EntitySet="blogtour" />
+          </AssociationSet>
+          <AssociationSet Name="chitiettour_diemdulich_id_foreign" Association="Self.chitiettour_diemdulich_id_foreign">
+            <End Role="diemdulich" EntitySet="diemdulich" />
+            <End Role="chitiettour" EntitySet="chitiettour" />
+          </AssociationSet>
+          <AssociationSet Name="chitiettour_tour_id_foreign" Association="Self.chitiettour_tour_id_foreign">
+            <End Role="tour" EntitySet="tour" />
+            <End Role="chitiettour" EntitySet="chitiettour" />
+          </AssociationSet>
+          <AssociationSet Name="chuongtrinhtour_tour_id_foreign" Association="Self.chuongtrinhtour_tour_id_foreign">
+            <End Role="tour" EntitySet="tour" />
+            <End Role="chuongtrinhtour" EntitySet="chuongtrinhtour" />
+          </AssociationSet>
+          <AssociationSet Name="danhgia_khachhang_id_foreign" Association="Self.danhgia_khachhang_id_foreign">
+            <End Role="khachhang" EntitySet="khachhang" />
+            <End Role="danhgia" EntitySet="danhgia" />
+          </AssociationSet>
+          <AssociationSet Name="dattour_khachhang_id_foreign" Association="Self.dattour_khachhang_id_foreign">
+            <End Role="tour" EntitySet="tour" />
+            <End Role="dattour" EntitySet="dattour" />
+          </AssociationSet>
+          <AssociationSet Name="dattour_tour_id_foreign" Association="Self.dattour_tour_id_foreign">
+            <End Role="khachhang" EntitySet="khachhang" />
+            <End Role="dattour" EntitySet="dattour" />
+          </AssociationSet>
+          <AssociationSet Name="diachi_khachhang_id_foreign" Association="Self.diachi_khachhang_id_foreign">
+            <End Role="khachhang" EntitySet="khachhang" />
+            <End Role="diachi" EntitySet="diachi" />
+          </AssociationSet>
+          <AssociationSet Name="hinhanhtour_tour_id_foreign" Association="Self.hinhanhtour_tour_id_foreign">
+            <End Role="tour" EntitySet="tour" />
+            <End Role="hinhanhtour" EntitySet="hinhanhtour" />
+          </AssociationSet>
+          <AssociationSet Name="hoadon_khachhang_id_foreign" Association="Self.hoadon_khachhang_id_foreign">
+            <End Role="khachhang" EntitySet="khachhang" />
+            <End Role="hoadon" EntitySet="hoadon" />
+          </AssociationSet>
+          <AssociationSet Name="khachhang_user_id_foreign" Association="Self.khachhang_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="khachhang" EntitySet="khachhang" />
+          </AssociationSet>
+          <AssociationSet Name="khachsantheochuongtrinh_chuongtrinhtour_id_foreign" Association="Self.khachsantheochuongtrinh_chuongtrinhtour_id_foreign">
+            <End Role="chuongtrinhtour" EntitySet="chuongtrinhtour" />
+            <End Role="khachsantheochuongtrinh" EntitySet="khachsantheochuongtrinh" />
+          </AssociationSet>
+          <AssociationSet Name="khachsantheochuongtrinh_khachsan_id_foreign" Association="Self.khachsantheochuongtrinh_khachsan_id_foreign">
+            <End Role="khachsan" EntitySet="khachsan" />
+            <End Role="khachsantheochuongtrinh" EntitySet="khachsantheochuongtrinh" />
+          </AssociationSet>
+          <AssociationSet Name="nhanvien_phongban_id_foreign" Association="Self.nhanvien_phongban_id_foreign">
+            <End Role="phongban" EntitySet="phongban" />
+            <End Role="nhanvien" EntitySet="nhanvien" />
+          </AssociationSet>
+          <AssociationSet Name="phancongchucvu_idchucvu_foreign" Association="Self.phancongchucvu_idchucvu_foreign">
+            <End Role="chucvu" EntitySet="chucvu" />
+            <End Role="phancongchucvu" EntitySet="phancongchucvu" />
+          </AssociationSet>
+          <AssociationSet Name="phancongchucvu_idnhanvien_foreign" Association="Self.phancongchucvu_idnhanvien_foreign">
+            <End Role="nhanvien" EntitySet="nhanvien" />
+            <End Role="phancongchucvu" EntitySet="phancongchucvu" />
+          </AssociationSet>
+          <AssociationSet Name="phancongnhanvien_chuongtrinhtour_id_foreign" Association="Self.phancongnhanvien_chuongtrinhtour_id_foreign">
+            <End Role="chuongtrinhtour" EntitySet="chuongtrinhtour" />
+            <End Role="phancongnhanvien" EntitySet="phancongnhanvien" />
+          </AssociationSet>
+          <AssociationSet Name="phancongnhanvien_nhanvien_id_foreign" Association="Self.phancongnhanvien_nhanvien_id_foreign">
+            <End Role="nhanvien" EntitySet="nhanvien" />
+            <End Role="phancongnhanvien" EntitySet="phancongnhanvien" />
+          </AssociationSet>
+          <AssociationSet Name="phieuhuytour_hoadon_id_foreign" Association="Self.phieuhuytour_hoadon_id_foreign">
+            <End Role="hoadon" EntitySet="hoadon" />
+            <End Role="phieuhuytour" EntitySet="phieuhuytour" />
+          </AssociationSet>
+          <AssociationSet Name="phuongtientheochuongtrinh_chuongtrinhtour_id_foreign" Association="Self.phuongtientheochuongtrinh_chuongtrinhtour_id_foreign">
+            <End Role="chuongtrinhtour" EntitySet="chuongtrinhtour" />
+            <End Role="phuongtientheochuongtrinh" EntitySet="phuongtientheochuongtrinh" />
+          </AssociationSet>
+          <AssociationSet Name="phuongtientheochuongtrinh_phuongtien_id_foreign" Association="Self.phuongtientheochuongtrinh_phuongtien_id_foreign">
+            <End Role="phuongtien" EntitySet="phuongtien" />
+            <End Role="phuongtientheochuongtrinh" EntitySet="phuongtientheochuongtrinh" />
+          </AssociationSet>
+          <AssociationSet Name="tour_loaitour_id_foreign" Association="Self.tour_loaitour_id_foreign">
+            <End Role="loaitour" EntitySet="loaitour" />
+            <End Role="tour" EntitySet="tour" />
+          </AssociationSet>
+          <AssociationSet Name="users_nhomquyen_id_foreign" Association="Self.users_nhomquyen_id_foreign">
+            <End Role="nhomquyen" EntitySet="nhomquyen" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ql_tourdulichModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="blogtour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tieude" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="noidung" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="trangthai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="loaiblog_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="loaiblog" Relationship="Self.blogtour_loaiblog_id_foreign" FromRole="blogtour" ToRole="loaiblog" />
+        </EntityType>
+        <EntityType Name="chitiettour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ngaybatdau" Type="DateTime" Nullable="false" />
+          <Property Name="ngaykethuc" Type="DateTime" Nullable="false" />
+          <Property Name="gia" Type="Int64" Nullable="false" />
+          <Property Name="tour_id" Type="Int64" Nullable="false" />
+          <Property Name="diemdulich_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="diemdulich" Relationship="Self.chitiettour_diemdulich_id_foreign" FromRole="chitiettour" ToRole="diemdulich" />
+          <NavigationProperty Name="tour" Relationship="Self.chitiettour_tour_id_foreign" FromRole="chitiettour" ToRole="tour" />
+        </EntityType>
+        <EntityType Name="chucvu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenchucvu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hesoluong" Type="Double" Nullable="false" />
+          <NavigationProperty Name="nhanviens" Relationship="Self.phancongchucvu" FromRole="chucvu" ToRole="nhanvien" />
+        </EntityType>
+        <EntityType Name="chuongtrinhtour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tieude" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="thoigianbatdau" Type="DateTime" Nullable="false" />
+          <Property Name="thoigianketthuc" Type="DateTime" Nullable="false" />
+          <Property Name="mota" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tour_id" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="tour" Relationship="Self.chuongtrinhtour_tour_id_foreign" FromRole="chuongtrinhtour" ToRole="tour" />
+          <NavigationProperty Name="khachsantheochuongtrinhs" Relationship="Self.khachsantheochuongtrinh_chuongtrinhtour_id_foreign" FromRole="chuongtrinhtour" ToRole="khachsantheochuongtrinh" />
+          <NavigationProperty Name="phancongnhanviens" Relationship="Self.phancongnhanvien_chuongtrinhtour_id_foreign" FromRole="chuongtrinhtour" ToRole="phancongnhanvien" />
+          <NavigationProperty Name="phuongtientheochuongtrinhs" Relationship="Self.phuongtientheochuongtrinh_chuongtrinhtour_id_foreign" FromRole="chuongtrinhtour" ToRole="phuongtientheochuongtrinh" />
+        </EntityType>
+        <EntityType Name="danhgia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noidung" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="diemdanhgia" Type="Int64" Nullable="false" />
+          <Property Name="khachhang_id" Type="Int64" Nullable="false" />
+          <Property Name="ngaydanhgia" Type="DateTime" />
+          <NavigationProperty Name="khachhang" Relationship="Self.danhgia_khachhang_id_foreign" FromRole="danhgia" ToRole="khachhang" />
+        </EntityType>
+        <EntityType Name="dattour">
+          <Key>
+            <PropertyRef Name="tour_id" />
+            <PropertyRef Name="khachhang_id" />
+          </Key>
+          <Property Name="tour_id" Type="Int64" Nullable="false" />
+          <Property Name="khachhang_id" Type="Int64" Nullable="false" />
+          <Property Name="soluong" Type="Int64" Nullable="false" />
+          <Property Name="ngaydattour" Type="DateTime" Nullable="false" />
+          <Property Name="dongia" Type="Decimal" Nullable="false" />
+          <Property Name="trangthai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tour" Relationship="Self.dattour_khachhang_id_foreign" FromRole="dattour" ToRole="tour" />
+          <NavigationProperty Name="khachhang" Relationship="Self.dattour_tour_id_foreign" FromRole="dattour" ToRole="khachhang" />
+        </EntityType>
+        <EntityType Name="diachi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="xa" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="huyen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tinh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ghichu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="khachhang_id" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="khachhang" Relationship="Self.diachi_khachhang_id_foreign" FromRole="diachi" ToRole="khachhang" />
+        </EntityType>
+        <EntityType Name="diemdulich">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tendiem" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mota" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="chitiettours" Relationship="Self.chitiettour_diemdulich_id_foreign" FromRole="diemdulich" ToRole="chitiettour" />
+        </EntityType>
+        <EntityType Name="failed_jobs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uuid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="connection" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="queue" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="payload" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="exception" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="failed_at" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hinhanhtour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenhinh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="duongdan" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tour_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="tour" Relationship="Self.hinhanhtour_tour_id_foreign" FromRole="hinhanhtour" ToRole="tour" />
+        </EntityType>
+        <EntityType Name="hoadon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tongsotien" Type="Decimal" Nullable="false" />
+          <Property Name="trangthai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phuongthucthanhtoan" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="khachhang_id" Type="Int64" Nullable="false" />
+          <Property Name="ngaytao" Type="DateTime" />
+          <NavigationProperty Name="khachhang" Relationship="Self.hoadon_khachhang_id_foreign" FromRole="hoadon" ToRole="khachhang" />
+          <NavigationProperty Name="phieuhuytours" Relationship="Self.phieuhuytour_hoadon_id_foreign" FromRole="hoadon" ToRole="phieuhuytour" />
+        </EntityType>
+        <EntityType Name="khachhang">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hoten" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gioitinh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ngaysinh" Type="DateTime" Nullable="false" />
+          <Property Name="sodienthoai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hinhdaidien" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_id" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="danhgias" Relationship="Self.danhgia_khachhang_id_foreign" FromRole="khachhang" ToRole="danhgia" />
+          <NavigationProperty Name="dattours" Relationship="Self.dattour_tour_id_foreign" FromRole="khachhang" ToRole="dattour" />
+          <NavigationProperty Name="diachis" Relationship="Self.diachi_khachhang_id_foreign" FromRole="khachhang" ToRole="diachi" />
+          <NavigationProperty Name="hoadons" Relationship="Self.hoadon_khachhang_id_foreign" FromRole="khachhang" ToRole="hoadon" />
+          <NavigationProperty Name="user" Relationship="Self.khachhang_user_id_foreign" FromRole="khachhang" ToRole="users" />
+        </EntityType>
+        <EntityType Name="khachsan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenkhachsan" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="diachi" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sodienthoai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="chatluong" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="khachsantheochuongtrinhs" Relationship="Self.khachsantheochuongtrinh_khachsan_id_foreign" FromRole="khachsan" ToRole="khachsantheochuongtrinh" />
+        </EntityType>
+        <EntityType Name="khachsantheochuongtrinh">
+          <Key>
+            <PropertyRef Name="khachsan_id" />
+            <PropertyRef Name="chuongtrinhtour_id" />
+          </Key>
+          <Property Name="khachsan_id" Type="Int64" Nullable="false" />
+          <Property Name="chuongtrinhtour_id" Type="Int64" Nullable="false" />
+          <Property Name="vitri" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="succhua" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="chuongtrinhtour" Relationship="Self.khachsantheochuongtrinh_chuongtrinhtour_id_foreign" FromRole="khachsantheochuongtrinh" ToRole="chuongtrinhtour" />
+          <NavigationProperty Name="khachsan" Relationship="Self.khachsantheochuongtrinh_khachsan_id_foreign" FromRole="khachsantheochuongtrinh" ToRole="khachsan" />
+        </EntityType>
+        <EntityType Name="khuyenmai">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="thoigianbatdau" Type="DateTime" Nullable="false" />
+          <Property Name="thoigianketthuc" Type="DateTime" Nullable="false" />
+          <Property Name="phantramgiam" Type="Int32" Nullable="false" />
+          <Property Name="ngaytao" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="loaiblog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenloai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="blogtours" Relationship="Self.blogtour_loaiblog_id_foreign" FromRole="loaiblog" ToRole="blogtour" />
+        </EntityType>
+        <EntityType Name="loaitour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenloai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tours" Relationship="Self.tour_loaitour_id_foreign" FromRole="loaitour" ToRole="tour" />
+        </EntityType>
+        <EntityType Name="migration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="migration1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="batch" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="nhanvien">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hoten" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gioitinh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ngaysinh" Type="DateTime" Nullable="false" />
+          <Property Name="sodienthoai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="bangcap" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hinhdaidien" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="luong" Type="Int64" Nullable="false" />
+          <Property Name="ngayvaolam" Type="DateTime" Nullable="false" />
+          <Property Name="phongban_id" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="phongban" Relationship="Self.nhanvien_phongban_id_foreign" FromRole="nhanvien" ToRole="phongban" />
+          <NavigationProperty Name="phancongnhanviens" Relationship="Self.phancongnhanvien_nhanvien_id_foreign" FromRole="nhanvien" ToRole="phancongnhanvien" />
+          <NavigationProperty Name="chucvus" Relationship="Self.phancongchucvu" FromRole="nhanvien" ToRole="chucvu" />
+        </EntityType>
+        <EntityType Name="nhomquyen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tennhomquyen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="users" Relationship="Self.users_nhomquyen_id_foreign" FromRole="nhomquyen" ToRole="users" />
+        </EntityType>
+        <EntityType Name="password_reset_tokens">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="token" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="personal_access_tokens">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tokenable_type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tokenable_id" Type="Decimal" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="token" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="abilities" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="last_used_at" Type="DateTime" />
+          <Property Name="expires_at" Type="DateTime" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="phancongnhanvien">
+          <Key>
+            <PropertyRef Name="nhanvien_id" />
+            <PropertyRef Name="chuongtrinhtour_id" />
+          </Key>
+          <Property Name="nhanvien_id" Type="Int64" Nullable="false" />
+          <Property Name="chuongtrinhtour_id" Type="Int64" Nullable="false" />
+          <Property Name="nhiemvu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="chuongtrinhtour" Relationship="Self.phancongnhanvien_chuongtrinhtour_id_foreign" FromRole="phancongnhanvien" ToRole="chuongtrinhtour" />
+          <NavigationProperty Name="nhanvien" Relationship="Self.phancongnhanvien_nhanvien_id_foreign" FromRole="phancongnhanvien" ToRole="nhanvien" />
+        </EntityType>
+        <EntityType Name="phieuhuytour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sotienhoan" Type="Decimal" Nullable="false" />
+          <Property Name="lydohuy" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hoadon_id" Type="Int64" Nullable="false" />
+          <Property Name="ngayhuy" Type="DateTime" />
+          <NavigationProperty Name="hoadon" Relationship="Self.phieuhuytour_hoadon_id_foreign" FromRole="phieuhuytour" ToRole="hoadon" />
+        </EntityType>
+        <EntityType Name="phongban">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenphongban" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="nhanviens" Relationship="Self.nhanvien_phongban_id_foreign" FromRole="phongban" ToRole="nhanvien" />
+        </EntityType>
+        <EntityType Name="phuongtien">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenphuongtien" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sodienthoai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="phuongtientheochuongtrinhs" Relationship="Self.phuongtientheochuongtrinh_phuongtien_id_foreign" FromRole="phuongtien" ToRole="phuongtientheochuongtrinh" />
+        </EntityType>
+        <EntityType Name="phuongtientheochuongtrinh">
+          <Key>
+            <PropertyRef Name="chuongtrinhtour_id" />
+            <PropertyRef Name="phuongtien_id" />
+          </Key>
+          <Property Name="chuongtrinhtour_id" Type="Int64" Nullable="false" />
+          <Property Name="phuongtien_id" Type="Int64" Nullable="false" />
+          <Property Name="soluonghanhkhach" Type="Int64" Nullable="false" />
+          <Property Name="ghichu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="chuongtrinhtour" Relationship="Self.phuongtientheochuongtrinh_chuongtrinhtour_id_foreign" FromRole="phuongtientheochuongtrinh" ToRole="chuongtrinhtour" />
+          <NavigationProperty Name="phuongtien" Relationship="Self.phuongtientheochuongtrinh_phuongtien_id_foreign" FromRole="phuongtientheochuongtrinh" ToRole="phuongtien" />
+        </EntityType>
+        <EntityType Name="tour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tentour" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="motatour" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tinhtrang" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hinhdaidien" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="thoigiandi" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="noikhoihanh" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="loaitour_id" Type="Int64" Nullable="false" />
+          <Property Name="ngaytao" Type="DateTime" />
+          <NavigationProperty Name="chitiettours" Relationship="Self.chitiettour_tour_id_foreign" FromRole="tour" ToRole="chitiettour" />
+          <NavigationProperty Name="chuongtrinhtours" Relationship="Self.chuongtrinhtour_tour_id_foreign" FromRole="tour" ToRole="chuongtrinhtour" />
+          <NavigationProperty Name="dattours" Relationship="Self.dattour_khachhang_id_foreign" FromRole="tour" ToRole="dattour" />
+          <NavigationProperty Name="hinhanhtours" Relationship="Self.hinhanhtour_tour_id_foreign" FromRole="tour" ToRole="hinhanhtour" />
+          <NavigationProperty Name="loaitour" Relationship="Self.tour_loaitour_id_foreign" FromRole="tour" ToRole="loaitour" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email_verified_at" Type="DateTime" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="create_at" Type="DateTime" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="remember_token" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="nhomquyen_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="khachhangs" Relationship="Self.khachhang_user_id_foreign" FromRole="users" ToRole="khachhang" />
+          <NavigationProperty Name="nhomquyen" Relationship="Self.users_nhomquyen_id_foreign" FromRole="users" ToRole="nhomquyen" />
+        </EntityType>
+        <Association Name="blogtour_loaiblog_id_foreign">
+          <End Role="loaiblog" Type="Self.loaiblog" Multiplicity="1" />
+          <End Role="blogtour" Type="Self.blogtour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="loaiblog">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="blogtour">
+              <PropertyRef Name="loaiblog_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="chitiettour_diemdulich_id_foreign">
+          <End Role="diemdulich" Type="Self.diemdulich" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chitiettour" Type="Self.chitiettour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="diemdulich">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chitiettour">
+              <PropertyRef Name="diemdulich_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="chitiettour_tour_id_foreign">
+          <End Role="tour" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chitiettour" Type="Self.chitiettour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chitiettour">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="chuongtrinhtour_tour_id_foreign">
+          <End Role="tour" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="chuongtrinhtour" Type="Self.chuongtrinhtour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chuongtrinhtour">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="khachsantheochuongtrinh_chuongtrinhtour_id_foreign">
+          <End Role="chuongtrinhtour" Type="Self.chuongtrinhtour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="khachsantheochuongtrinh" Type="Self.khachsantheochuongtrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chuongtrinhtour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="khachsantheochuongtrinh">
+              <PropertyRef Name="chuongtrinhtour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phancongnhanvien_chuongtrinhtour_id_foreign">
+          <End Role="chuongtrinhtour" Type="Self.chuongtrinhtour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phancongnhanvien" Type="Self.phancongnhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chuongtrinhtour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phancongnhanvien">
+              <PropertyRef Name="chuongtrinhtour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phuongtientheochuongtrinh_chuongtrinhtour_id_foreign">
+          <End Role="chuongtrinhtour" Type="Self.chuongtrinhtour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phuongtientheochuongtrinh" Type="Self.phuongtientheochuongtrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="chuongtrinhtour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phuongtientheochuongtrinh">
+              <PropertyRef Name="chuongtrinhtour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="danhgia_khachhang_id_foreign">
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="danhgia" Type="Self.danhgia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="danhgia">
+              <PropertyRef Name="khachhang_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dattour_khachhang_id_foreign">
+          <End Role="tour" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="dattour" Type="Self.dattour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dattour">
+              <PropertyRef Name="khachhang_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="dattour_tour_id_foreign">
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="dattour" Type="Self.dattour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="dattour">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="diachi_khachhang_id_foreign">
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="1" />
+          <End Role="diachi" Type="Self.diachi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="diachi">
+              <PropertyRef Name="khachhang_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="hinhanhtour_tour_id_foreign">
+          <End Role="tour" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="hinhanhtour" Type="Self.hinhanhtour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hinhanhtour">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="hoadon_khachhang_id_foreign">
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="hoadon" Type="Self.hoadon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hoadon">
+              <PropertyRef Name="khachhang_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phieuhuytour_hoadon_id_foreign">
+          <End Role="hoadon" Type="Self.hoadon" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phieuhuytour" Type="Self.phieuhuytour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hoadon">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phieuhuytour">
+              <PropertyRef Name="hoadon_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="khachhang_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="khachhang" Type="Self.khachhang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="khachhang">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="khachsantheochuongtrinh_khachsan_id_foreign">
+          <End Role="khachsan" Type="Self.khachsan" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="khachsantheochuongtrinh" Type="Self.khachsantheochuongtrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="khachsan">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="khachsantheochuongtrinh">
+              <PropertyRef Name="khachsan_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_loaitour_id_foreign">
+          <End Role="loaitour" Type="Self.loaitour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour" Type="Self.tour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="loaitour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour">
+              <PropertyRef Name="loaitour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="nhanvien_phongban_id_foreign">
+          <End Role="phongban" Type="Self.phongban" Multiplicity="1" />
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phongban">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="nhanvien">
+              <PropertyRef Name="phongban_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phancongnhanvien_nhanvien_id_foreign">
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phancongnhanvien" Type="Self.phancongnhanvien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhanvien">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phancongnhanvien">
+              <PropertyRef Name="nhanvien_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="users_nhomquyen_id_foreign">
+          <End Role="nhomquyen" Type="Self.nhomquyen" Multiplicity="1" />
+          <End Role="users" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="nhomquyen">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="nhomquyen_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phuongtientheochuongtrinh_phuongtien_id_foreign">
+          <End Role="phuongtien" Type="Self.phuongtien" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="phuongtientheochuongtrinh" Type="Self.phuongtientheochuongtrinh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="phuongtien">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="phuongtientheochuongtrinh">
+              <PropertyRef Name="phuongtien_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="phancongchucvu">
+          <End Role="chucvu" Type="Self.chucvu" Multiplicity="*" />
+          <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="ql_tourdulichEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="blogtours" EntityType="Self.blogtour" />
+          <EntitySet Name="chitiettours" EntityType="Self.chitiettour" />
+          <EntitySet Name="chucvus" EntityType="Self.chucvu" />
+          <EntitySet Name="chuongtrinhtours" EntityType="Self.chuongtrinhtour" />
+          <EntitySet Name="danhgias" EntityType="Self.danhgia" />
+          <EntitySet Name="dattours" EntityType="Self.dattour" />
+          <EntitySet Name="diachis" EntityType="Self.diachi" />
+          <EntitySet Name="diemduliches" EntityType="Self.diemdulich" />
+          <EntitySet Name="failed_jobs" EntityType="Self.failed_jobs" />
+          <EntitySet Name="hinhanhtours" EntityType="Self.hinhanhtour" />
+          <EntitySet Name="hoadons" EntityType="Self.hoadon" />
+          <EntitySet Name="khachhangs" EntityType="Self.khachhang" />
+          <EntitySet Name="khachsans" EntityType="Self.khachsan" />
+          <EntitySet Name="khachsantheochuongtrinhs" EntityType="Self.khachsantheochuongtrinh" />
+          <EntitySet Name="khuyenmais" EntityType="Self.khuyenmai" />
+          <EntitySet Name="loaiblogs" EntityType="Self.loaiblog" />
+          <EntitySet Name="loaitours" EntityType="Self.loaitour" />
+          <EntitySet Name="migrations" EntityType="Self.migration" />
+          <EntitySet Name="nhanviens" EntityType="Self.nhanvien" />
+          <EntitySet Name="nhomquyens" EntityType="Self.nhomquyen" />
+          <EntitySet Name="password_reset_tokens" EntityType="Self.password_reset_tokens" />
+          <EntitySet Name="personal_access_tokens" EntityType="Self.personal_access_tokens" />
+          <EntitySet Name="phancongnhanviens" EntityType="Self.phancongnhanvien" />
+          <EntitySet Name="phieuhuytours" EntityType="Self.phieuhuytour" />
+          <EntitySet Name="phongbans" EntityType="Self.phongban" />
+          <EntitySet Name="phuongtiens" EntityType="Self.phuongtien" />
+          <EntitySet Name="phuongtientheochuongtrinhs" EntityType="Self.phuongtientheochuongtrinh" />
+          <EntitySet Name="tours" EntityType="Self.tour" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <AssociationSet Name="blogtour_loaiblog_id_foreign" Association="Self.blogtour_loaiblog_id_foreign">
+            <End Role="loaiblog" EntitySet="loaiblogs" />
+            <End Role="blogtour" EntitySet="blogtours" />
+          </AssociationSet>
+          <AssociationSet Name="chitiettour_diemdulich_id_foreign" Association="Self.chitiettour_diemdulich_id_foreign">
+            <End Role="diemdulich" EntitySet="diemduliches" />
+            <End Role="chitiettour" EntitySet="chitiettours" />
+          </AssociationSet>
+          <AssociationSet Name="chitiettour_tour_id_foreign" Association="Self.chitiettour_tour_id_foreign">
+            <End Role="tour" EntitySet="tours" />
+            <End Role="chitiettour" EntitySet="chitiettours" />
+          </AssociationSet>
+          <AssociationSet Name="chuongtrinhtour_tour_id_foreign" Association="Self.chuongtrinhtour_tour_id_foreign">
+            <End Role="tour" EntitySet="tours" />
+            <End Role="chuongtrinhtour" EntitySet="chuongtrinhtours" />
+          </AssociationSet>
+          <AssociationSet Name="khachsantheochuongtrinh_chuongtrinhtour_id_foreign" Association="Self.khachsantheochuongtrinh_chuongtrinhtour_id_foreign">
+            <End Role="chuongtrinhtour" EntitySet="chuongtrinhtours" />
+            <End Role="khachsantheochuongtrinh" EntitySet="khachsantheochuongtrinhs" />
+          </AssociationSet>
+          <AssociationSet Name="phancongnhanvien_chuongtrinhtour_id_foreign" Association="Self.phancongnhanvien_chuongtrinhtour_id_foreign">
+            <End Role="chuongtrinhtour" EntitySet="chuongtrinhtours" />
+            <End Role="phancongnhanvien" EntitySet="phancongnhanviens" />
+          </AssociationSet>
+          <AssociationSet Name="phuongtientheochuongtrinh_chuongtrinhtour_id_foreign" Association="Self.phuongtientheochuongtrinh_chuongtrinhtour_id_foreign">
+            <End Role="chuongtrinhtour" EntitySet="chuongtrinhtours" />
+            <End Role="phuongtientheochuongtrinh" EntitySet="phuongtientheochuongtrinhs" />
+          </AssociationSet>
+          <AssociationSet Name="danhgia_khachhang_id_foreign" Association="Self.danhgia_khachhang_id_foreign">
+            <End Role="khachhang" EntitySet="khachhangs" />
+            <End Role="danhgia" EntitySet="danhgias" />
+          </AssociationSet>
+          <AssociationSet Name="dattour_khachhang_id_foreign" Association="Self.dattour_khachhang_id_foreign">
+            <End Role="tour" EntitySet="tours" />
+            <End Role="dattour" EntitySet="dattours" />
+          </AssociationSet>
+          <AssociationSet Name="dattour_tour_id_foreign" Association="Self.dattour_tour_id_foreign">
+            <End Role="khachhang" EntitySet="khachhangs" />
+            <End Role="dattour" EntitySet="dattours" />
+          </AssociationSet>
+          <AssociationSet Name="diachi_khachhang_id_foreign" Association="Self.diachi_khachhang_id_foreign">
+            <End Role="khachhang" EntitySet="khachhangs" />
+            <End Role="diachi" EntitySet="diachis" />
+          </AssociationSet>
+          <AssociationSet Name="hinhanhtour_tour_id_foreign" Association="Self.hinhanhtour_tour_id_foreign">
+            <End Role="tour" EntitySet="tours" />
+            <End Role="hinhanhtour" EntitySet="hinhanhtours" />
+          </AssociationSet>
+          <AssociationSet Name="hoadon_khachhang_id_foreign" Association="Self.hoadon_khachhang_id_foreign">
+            <End Role="khachhang" EntitySet="khachhangs" />
+            <End Role="hoadon" EntitySet="hoadons" />
+          </AssociationSet>
+          <AssociationSet Name="phieuhuytour_hoadon_id_foreign" Association="Self.phieuhuytour_hoadon_id_foreign">
+            <End Role="hoadon" EntitySet="hoadons" />
+            <End Role="phieuhuytour" EntitySet="phieuhuytours" />
+          </AssociationSet>
+          <AssociationSet Name="khachhang_user_id_foreign" Association="Self.khachhang_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="khachhang" EntitySet="khachhangs" />
+          </AssociationSet>
+          <AssociationSet Name="khachsantheochuongtrinh_khachsan_id_foreign" Association="Self.khachsantheochuongtrinh_khachsan_id_foreign">
+            <End Role="khachsan" EntitySet="khachsans" />
+            <End Role="khachsantheochuongtrinh" EntitySet="khachsantheochuongtrinhs" />
+          </AssociationSet>
+          <AssociationSet Name="tour_loaitour_id_foreign" Association="Self.tour_loaitour_id_foreign">
+            <End Role="loaitour" EntitySet="loaitours" />
+            <End Role="tour" EntitySet="tours" />
+          </AssociationSet>
+          <AssociationSet Name="nhanvien_phongban_id_foreign" Association="Self.nhanvien_phongban_id_foreign">
+            <End Role="phongban" EntitySet="phongbans" />
+            <End Role="nhanvien" EntitySet="nhanviens" />
+          </AssociationSet>
+          <AssociationSet Name="phancongnhanvien_nhanvien_id_foreign" Association="Self.phancongnhanvien_nhanvien_id_foreign">
+            <End Role="nhanvien" EntitySet="nhanviens" />
+            <End Role="phancongnhanvien" EntitySet="phancongnhanviens" />
+          </AssociationSet>
+          <AssociationSet Name="users_nhomquyen_id_foreign" Association="Self.users_nhomquyen_id_foreign">
+            <End Role="nhomquyen" EntitySet="nhomquyens" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+          <AssociationSet Name="phuongtientheochuongtrinh_phuongtien_id_foreign" Association="Self.phuongtientheochuongtrinh_phuongtien_id_foreign">
+            <End Role="phuongtien" EntitySet="phuongtiens" />
+            <End Role="phuongtientheochuongtrinh" EntitySet="phuongtientheochuongtrinhs" />
+          </AssociationSet>
+          <AssociationSet Name="phancongchucvu" Association="Self.phancongchucvu">
+            <End Role="chucvu" EntitySet="chucvus" />
+            <End Role="nhanvien" EntitySet="nhanviens" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ql_tourdulichModelStoreContainer" CdmEntityContainer="ql_tourdulichEntities">
+          <EntitySetMapping Name="blogtours">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.blogtour">
+              <MappingFragment StoreEntitySet="blogtour">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tieude" ColumnName="tieude" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+                <ScalarProperty Name="loaiblog_id" ColumnName="loaiblog_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chitiettours">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.chitiettour">
+              <MappingFragment StoreEntitySet="chitiettour">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ngaybatdau" ColumnName="ngaybatdau" />
+                <ScalarProperty Name="ngaykethuc" ColumnName="ngaykethuc" />
+                <ScalarProperty Name="gia" ColumnName="gia" />
+                <ScalarProperty Name="tour_id" ColumnName="tour_id" />
+                <ScalarProperty Name="diemdulich_id" ColumnName="diemdulich_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chucvus">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.chucvu">
+              <MappingFragment StoreEntitySet="chucvu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tenchucvu" ColumnName="tenchucvu" />
+                <ScalarProperty Name="hesoluong" ColumnName="hesoluong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chuongtrinhtours">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.chuongtrinhtour">
+              <MappingFragment StoreEntitySet="chuongtrinhtour">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tieude" ColumnName="tieude" />
+                <ScalarProperty Name="thoigianbatdau" ColumnName="thoigianbatdau" />
+                <ScalarProperty Name="thoigianketthuc" ColumnName="thoigianketthuc" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="tour_id" ColumnName="tour_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="danhgias">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.danhgia">
+              <MappingFragment StoreEntitySet="danhgia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="diemdanhgia" ColumnName="diemdanhgia" />
+                <ScalarProperty Name="khachhang_id" ColumnName="khachhang_id" />
+                <ScalarProperty Name="ngaydanhgia" ColumnName="ngaydanhgia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dattours">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.dattour">
+              <MappingFragment StoreEntitySet="dattour">
+                <ScalarProperty Name="tour_id" ColumnName="tour_id" />
+                <ScalarProperty Name="khachhang_id" ColumnName="khachhang_id" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="ngaydattour" ColumnName="ngaydattour" />
+                <ScalarProperty Name="dongia" ColumnName="dongia" />
+                <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="diachis">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.diachi">
+              <MappingFragment StoreEntitySet="diachi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="xa" ColumnName="xa" />
+                <ScalarProperty Name="huyen" ColumnName="huyen" />
+                <ScalarProperty Name="tinh" ColumnName="tinh" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="khachhang_id" ColumnName="khachhang_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="diemduliches">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.diemdulich">
+              <MappingFragment StoreEntitySet="diemdulich">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tendiem" ColumnName="tendiem" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="failed_jobs">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.failed_jobs">
+              <MappingFragment StoreEntitySet="failed_jobs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="uuid" ColumnName="uuid" />
+                <ScalarProperty Name="connection" ColumnName="connection" />
+                <ScalarProperty Name="queue" ColumnName="queue" />
+                <ScalarProperty Name="payload" ColumnName="payload" />
+                <ScalarProperty Name="exception" ColumnName="exception" />
+                <ScalarProperty Name="failed_at" ColumnName="failed_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hinhanhtours">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.hinhanhtour">
+              <MappingFragment StoreEntitySet="hinhanhtour">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tenhinh" ColumnName="tenhinh" />
+                <ScalarProperty Name="duongdan" ColumnName="duongdan" />
+                <ScalarProperty Name="tour_id" ColumnName="tour_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hoadons">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.hoadon">
+              <MappingFragment StoreEntitySet="hoadon">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tongsotien" ColumnName="tongsotien" />
+                <ScalarProperty Name="trangthai" ColumnName="trangthai" />
+                <ScalarProperty Name="phuongthucthanhtoan" ColumnName="phuongthucthanhtoan" />
+                <ScalarProperty Name="khachhang_id" ColumnName="khachhang_id" />
+                <ScalarProperty Name="ngaytao" ColumnName="ngaytao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="khachhangs">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.khachhang">
+              <MappingFragment StoreEntitySet="khachhang">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="hoten" ColumnName="hoten" />
+                <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+                <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="hinhdaidien" ColumnName="hinhdaidien" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="khachsans">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.khachsan">
+              <MappingFragment StoreEntitySet="khachsan">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tenkhachsan" ColumnName="tenkhachsan" />
+                <ScalarProperty Name="diachi" ColumnName="diachi" />
+                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+                <ScalarProperty Name="chatluong" ColumnName="chatluong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="khachsantheochuongtrinhs">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.khachsantheochuongtrinh">
+              <MappingFragment StoreEntitySet="khachsantheochuongtrinh">
+                <ScalarProperty Name="khachsan_id" ColumnName="khachsan_id" />
+                <ScalarProperty Name="chuongtrinhtour_id" ColumnName="chuongtrinhtour_id" />
+                <ScalarProperty Name="vitri" ColumnName="vitri" />
+                <ScalarProperty Name="succhua" ColumnName="succhua" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="khuyenmais">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.khuyenmai">
+              <MappingFragment StoreEntitySet="khuyenmai">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="thoigianbatdau" ColumnName="thoigianbatdau" />
+                <ScalarProperty Name="thoigianketthuc" ColumnName="thoigianketthuc" />
+                <ScalarProperty Name="phantramgiam" ColumnName="phantramgiam" />
+                <ScalarProperty Name="ngaytao" ColumnName="ngaytao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="loaiblogs">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.loaiblog">
+              <MappingFragment StoreEntitySet="loaiblog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tenloai" ColumnName="tenloai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="loaitours">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.loaitour">
+              <MappingFragment StoreEntitySet="loaitour">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tenloai" ColumnName="tenloai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="migrations">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.migration">
+              <MappingFragment StoreEntitySet="migrations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="migration1" ColumnName="migration" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="nhanviens">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.nhanvien">
+              <MappingFragment StoreEntitySet="nhanvien">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="hoten" ColumnName="hoten" />
+                <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+                <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="bangcap" ColumnName="bangcap" />
+                <ScalarProperty Name="hinhdaidien" ColumnName="hinhdaidien" />
+                <ScalarProperty Name="luong" ColumnName="luong" />
+                <ScalarProperty Name="ngayvaolam" ColumnName="ngayvaolam" />
+                <ScalarProperty Name="phongban_id" ColumnName="phongban_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="nhomquyens">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.nhomquyen">
+              <MappingFragment StoreEntitySet="nhomquyen">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tennhomquyen" ColumnName="tennhomquyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="password_reset_tokens">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.password_reset_tokens">
+              <MappingFragment StoreEntitySet="password_reset_tokens">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="personal_access_tokens">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.personal_access_tokens">
+              <MappingFragment StoreEntitySet="personal_access_tokens">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tokenable_type" ColumnName="tokenable_type" />
+                <ScalarProperty Name="tokenable_id" ColumnName="tokenable_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="abilities" ColumnName="abilities" />
+                <ScalarProperty Name="last_used_at" ColumnName="last_used_at" />
+                <ScalarProperty Name="expires_at" ColumnName="expires_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phancongnhanviens">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.phancongnhanvien">
+              <MappingFragment StoreEntitySet="phancongnhanvien">
+                <ScalarProperty Name="nhanvien_id" ColumnName="nhanvien_id" />
+                <ScalarProperty Name="chuongtrinhtour_id" ColumnName="chuongtrinhtour_id" />
+                <ScalarProperty Name="nhiemvu" ColumnName="nhiemvu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phieuhuytours">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.phieuhuytour">
+              <MappingFragment StoreEntitySet="phieuhuytour">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="sotienhoan" ColumnName="sotienhoan" />
+                <ScalarProperty Name="lydohuy" ColumnName="lydohuy" />
+                <ScalarProperty Name="hoadon_id" ColumnName="hoadon_id" />
+                <ScalarProperty Name="ngayhuy" ColumnName="ngayhuy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phongbans">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.phongban">
+              <MappingFragment StoreEntitySet="phongban">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tenphongban" ColumnName="tenphongban" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phuongtiens">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.phuongtien">
+              <MappingFragment StoreEntitySet="phuongtien">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tenphuongtien" ColumnName="tenphuongtien" />
+                <ScalarProperty Name="sodienthoai" ColumnName="sodienthoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="phuongtientheochuongtrinhs">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.phuongtientheochuongtrinh">
+              <MappingFragment StoreEntitySet="phuongtientheochuongtrinh">
+                <ScalarProperty Name="chuongtrinhtour_id" ColumnName="chuongtrinhtour_id" />
+                <ScalarProperty Name="phuongtien_id" ColumnName="phuongtien_id" />
+                <ScalarProperty Name="soluonghanhkhach" ColumnName="soluonghanhkhach" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tours">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.tour">
+              <MappingFragment StoreEntitySet="tour">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tentour" ColumnName="tentour" />
+                <ScalarProperty Name="motatour" ColumnName="motatour" />
+                <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+                <ScalarProperty Name="hinhdaidien" ColumnName="hinhdaidien" />
+                <ScalarProperty Name="thoigiandi" ColumnName="thoigiandi" />
+                <ScalarProperty Name="noikhoihanh" ColumnName="noikhoihanh" />
+                <ScalarProperty Name="loaitour_id" ColumnName="loaitour_id" />
+                <ScalarProperty Name="ngaytao" ColumnName="ngaytao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="ql_tourdulichModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="email_verified_at" ColumnName="email_verified_at" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="create_at" ColumnName="create_at" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="remember_token" ColumnName="remember_token" />
+                <ScalarProperty Name="nhomquyen_id" ColumnName="nhomquyen_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="phancongchucvu" TypeName="ql_tourdulichModel.phancongchucvu" StoreEntitySet="phancongchucvu">
+            <EndProperty Name="chucvu">
+              <ScalarProperty Name="id" ColumnName="idchucvu" />
+            </EndProperty>
+            <EndProperty Name="nhanvien">
+              <ScalarProperty Name="id" ColumnName="idnhanvien" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
