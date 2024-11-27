@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class TourTypeBLL
+    public class TourTypeBLL
     {
+
     }
 }

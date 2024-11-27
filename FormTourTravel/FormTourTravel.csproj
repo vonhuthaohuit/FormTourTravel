@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>FormTourTravel</RootNamespace>
     <AssemblyName>FormTourTravel</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -36,6 +36,9 @@
   <ItemGroup>
     <Reference Include="BLL">
       <HintPath>..\BLL\bin\Debug\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DTO">
+      <HintPath>..\DTO\bin\Debug\DTO.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
@@ -67,13 +70,94 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ThuVien">
+      <HintPath>..\ThuVien\bin\Debug\ThuVien.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_Blog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Blog.Designer.cs">
+      <DependentUpon>frm_Blog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CapTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CapTaiKhoan.Designer.cs">
+      <DependentUpon>frm_CapTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ChiTietTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChiTietTour.Designer.cs">
+      <DependentUpon>frm_ChiTietTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ChuongTrinhTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChuongTrinhTour.Designer.cs">
+      <DependentUpon>frm_ChuongTrinhTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DangKy.Designer.cs">
+      <DependentUpon>frm_DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DangNhap.Designer.cs">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KhachHang.Designer.cs">
+      <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_LoaiBog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_LoaiBog.Designer.cs">
+      <DependentUpon>frm_LoaiBog.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhanVien.Designer.cs">
+      <DependentUpon>frm_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PhanCongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PhanCongNhanVien.Designer.cs">
+      <DependentUpon>frm_PhanCongNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SaoLuuPhucHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SaoLuuPhucHoi.Designer.cs">
+      <DependentUpon>frm_SaoLuuPhucHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>frm_ThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Tour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Tour.Designer.cs">
+      <DependentUpon>frm_Tour.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_TourTypecs.cs">
       <SubType>Form</SubType>
@@ -81,26 +165,47 @@
     <Compile Include="frm_TourTypecs.Designer.cs">
       <DependentUpon>frm_TourTypecs.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_XacNhanDatTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_XacNhanDatTour.Designer.cs">
+      <DependentUpon>frm_XacNhanDatTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_CapTaiKhoan.resx">
+      <DependentUpon>frm_CapTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DangNhap.resx">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhanVien.resx">
+      <DependentUpon>frm_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThongTinTaiKhoan.resx">
+      <DependentUpon>frm_ThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_TourTypecs.resx">
       <DependentUpon>frm_TourTypecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -108,10 +213,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh_dai_dien_dang_nhap.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

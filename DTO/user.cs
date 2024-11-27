@@ -16,22 +16,23 @@ namespace DTO
     {
         public user()
         {
-            this.khachhangs = new HashSet<khachhang>();
+            this.customers = new HashSet<customer>();
+            this.staffs = new HashSet<staff>();
         }
     
         public long id { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public Nullable<System.DateTime> email_verified_at { get; set; }
+        public string username { get; set; }
         public string password { get; set; }
-        public System.DateTime create_at { get; set; }
-        public string status { get; set; }
+        public bool status { get; set; }
+        public Nullable<System.DateTime> start_date { get; set; }
+        public long role_id { get; set; }
+        public Nullable<System.DateTime> email_verified_at { get; set; }
         public string remember_token { get; set; }
-        public long nhomquyen_id { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual ICollection<khachhang> khachhangs { get; set; }
-        public virtual nhomquyen nhomquyen { get; set; }
+        public virtual ICollection<customer> customers { get; set; }
+        public virtual role role { get; set; }
+        public virtual ICollection<staff> staffs { get; set; }
     }
 }

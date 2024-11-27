@@ -1,0 +1,2026 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ql_tourdulich_ptudtmModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="province_id" Type="uint" Nullable="false" />
+          <Property Name="district_id" Type="uint" Nullable="false" />
+          <Property Name="ward_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="book_tours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tour_id" Type="uint" Nullable="false" />
+          <Property Name="customer_id" Type="uint" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="booking_date" Type="date" Nullable="false" />
+          <Property Name="total_amount" Type="decimal" Precision="15" Scale="0" />
+          <Property Name="status" Type="bool" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="customers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="full_name" Type="varchar" MaxLength="255" />
+          <Property Name="sex" Type="varchar" MaxLength="255" />
+          <Property Name="dob" Type="date" />
+          <Property Name="phone" Type="varchar" MaxLength="255" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="image" Type="varchar" MaxLength="255" />
+          <Property Name="address" Type="varchar" MaxLength="255" />
+          <Property Name="user_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="departments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="districts">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="failed_jobs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uuid" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="connection" Type="text" Nullable="false" />
+          <Property Name="queue" Type="text" Nullable="false" />
+          <Property Name="payload" Type="longtext" Nullable="false" />
+          <Property Name="exception" Type="longtext" Nullable="false" />
+          <Property Name="failed_at" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hotels">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="quanlity" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="migrations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="migration" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="batch" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orders">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="total_amount" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="status" Type="bool" Nullable="false" />
+          <Property Name="payment_date" Type="date" />
+          <Property Name="payment_method" Type="varchar" MaxLength="255" />
+          <Property Name="create_bill_date" Type="date" />
+          <Property Name="book_tour_id" Type="uint" Nullable="false" />
+          <Property Name="customer_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="password_reset_tokens">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="token" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="personal_access_tokens">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tokenable_type" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tokenable_id" Type="ubigint" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="token" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="abilities" Type="text" />
+          <Property Name="last_used_at" Type="timestamp" Precision="0" />
+          <Property Name="expires_at" Type="timestamp" Precision="0" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="provinces">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="ratings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customer_id" Type="uint" Nullable="false" />
+          <Property Name="content" Type="varchar" MaxLength="255" />
+          <Property Name="rating_point" Type="int" />
+          <Property Name="rating_date" Type="date" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="schedules_hotels">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tour_schedule_id" Type="uint" Nullable="false" />
+          <Property Name="hotel_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="schedules_transports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="transport_id" Type="uint" Nullable="false" />
+          <Property Name="schedule_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="staffs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="diploma" Type="varchar" MaxLength="255" />
+          <Property Name="salary" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="date_of_entry" Type="date" />
+          <Property Name="user_id" Type="uint" Nullable="false" />
+          <Property Name="depart_id" Type="uint" Nullable="false" />
+          <Property Name="fullname" Type="varchar" MaxLength="255" />
+          <Property Name="sex" Type="varchar" MaxLength="255" />
+          <Property Name="address" Type="varchar" MaxLength="255" />
+          <Property Name="phone" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="image" Type="varchar" MaxLength="255" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tour_cancels">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="refunds" Type="decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="date_cancel" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="reason_cancel" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="order_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tour_details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tour_id" Type="uint" Nullable="false" />
+          <Property Name="tour_place_id" Type="uint" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="start_date" Type="date" Nullable="false" />
+          <Property Name="end_date" Type="date" Nullable="false" />
+          <Property Name="price" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tour_guides">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="staff_id" Type="uint" Nullable="false" />
+          <Property Name="tour_schedules_id" Type="uint" Nullable="false" />
+          <Property Name="task" Type="varchar" MaxLength="255" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tour_images">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tour_id" Type="uint" Nullable="false" />
+          <Property Name="image_name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="image" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tour_places">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="address" Type="varchar" MaxLength="255" />
+          <Property Name="description" Type="varchar" MaxLength="255" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tour_schedules">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="255" />
+          <Property Name="time_in_date" Type="date" />
+          <Property Name="description" Type="varchar" MaxLength="255" />
+          <Property Name="tour_detail_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tour_types">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="tours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="description" Type="varchar" MaxLength="255" />
+          <Property Name="start_date" Type="date" Nullable="false" />
+          <Property Name="status" Type="bool" Nullable="false" />
+          <Property Name="image" Type="varchar" MaxLength="255" />
+          <Property Name="time_go" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="start_place" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="type_id" Type="uint" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="transports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="status" Type="bool" Nullable="false" />
+          <Property Name="start_date" Type="date" />
+          <Property Name="role_id" Type="uint" Nullable="false" />
+          <Property Name="email_verified_at" Type="timestamp" Precision="0" />
+          <Property Name="remember_token" Type="varchar" MaxLength="100" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <EntityType Name="wards">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="created_at" Type="timestamp" Precision="0" />
+          <Property Name="updated_at" Type="timestamp" Precision="0" />
+        </EntityType>
+        <Association Name="address_district_id_foreign">
+          <End Role="districts" Type="Self.districts" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="address" Type="Self.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="districts">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="district_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="address_province_id_foreign">
+          <End Role="provinces" Type="Self.provinces" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="address" Type="Self.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provinces">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="province_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="address_ward_id_foreign">
+          <End Role="wards" Type="Self.wards" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="address" Type="Self.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="wards">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="ward_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="book_tours_customer_id_foreign">
+          <End Role="customers" Type="Self.customers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="book_tours" Type="Self.book_tours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="book_tours">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="book_tours_tour_id_foreign">
+          <End Role="tours" Type="Self.tours" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="book_tours" Type="Self.book_tours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="book_tours">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="customers_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="customers" Type="Self.customers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="customers">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders_book_tour_id_foreign">
+          <End Role="book_tours" Type="Self.book_tours" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book_tours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="book_tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders_customer_id_foreign">
+          <End Role="customers" Type="Self.customers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ratings_customer_id_foreign">
+          <End Role="customers" Type="Self.customers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ratings" Type="Self.ratings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ratings">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="schedules_hotels_hotel_id_foreign">
+          <End Role="hotels" Type="Self.hotels" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="schedules_hotels" Type="Self.schedules_hotels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hotels">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="schedules_hotels">
+              <PropertyRef Name="hotel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="schedules_hotels_tour_schedule_id_foreign">
+          <End Role="tour_schedules" Type="Self.tour_schedules" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="schedules_hotels" Type="Self.schedules_hotels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_schedules">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="schedules_hotels">
+              <PropertyRef Name="tour_schedule_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="schedules_transports_schedule_id_foreign">
+          <End Role="tour_schedules" Type="Self.tour_schedules" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="schedules_transports" Type="Self.schedules_transports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_schedules">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="schedules_transports">
+              <PropertyRef Name="schedule_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="schedules_transports_transport_id_foreign">
+          <End Role="transports" Type="Self.transports" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="schedules_transports" Type="Self.schedules_transports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="transports">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="schedules_transports">
+              <PropertyRef Name="transport_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="staffs_depart_id_foreign">
+          <End Role="departments" Type="Self.departments" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="staffs" Type="Self.staffs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="departments">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="staffs">
+              <PropertyRef Name="depart_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="staffs_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="staffs" Type="Self.staffs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="staffs">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_cancels_order_id_foreign">
+          <End Role="orders" Type="Self.orders" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_cancels" Type="Self.tour_cancels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_cancels">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_details_tour_id_foreign">
+          <End Role="tours" Type="Self.tours" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_details" Type="Self.tour_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_details">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_details_tour_place_id_foreign">
+          <End Role="tour_places" Type="Self.tour_places" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_details" Type="Self.tour_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_places">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_details">
+              <PropertyRef Name="tour_place_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_guides_staff_id_foreign">
+          <End Role="staffs" Type="Self.staffs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_guides" Type="Self.tour_guides" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staffs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_guides">
+              <PropertyRef Name="staff_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_guides_tour_schedules_id_foreign">
+          <End Role="tour_schedules" Type="Self.tour_schedules" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_guides" Type="Self.tour_guides" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_schedules">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_guides">
+              <PropertyRef Name="tour_schedules_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_images_tour_id_foreign">
+          <End Role="tours" Type="Self.tours" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_images" Type="Self.tour_images" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_images">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_schedules_tour_detail_id_foreign">
+          <End Role="tour_details" Type="Self.tour_details" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_schedules" Type="Self.tour_schedules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_details">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_schedules">
+              <PropertyRef Name="tour_detail_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tours_type_id_foreign">
+          <End Role="tour_types" Type="Self.tour_types" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tours" Type="Self.tours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_types">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tours">
+              <PropertyRef Name="type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="users_role_id_foreign">
+          <End Role="roles" Type="Self.roles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="users" Type="Self.users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ql_tourdulich_ptudtmModelStoreContainer">
+          <EntitySet Name="address" EntityType="Self.address" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="book_tours" EntityType="Self.book_tours" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="customers" EntityType="Self.customers" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="departments" EntityType="Self.departments" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="districts" EntityType="Self.districts" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="failed_jobs" EntityType="Self.failed_jobs" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="hotels" EntityType="Self.hotels" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="migrations" EntityType="Self.migrations" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="orders" EntityType="Self.orders" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="password_reset_tokens" EntityType="Self.password_reset_tokens" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="personal_access_tokens" EntityType="Self.personal_access_tokens" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="provinces" EntityType="Self.provinces" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="ratings" EntityType="Self.ratings" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="roles" EntityType="Self.roles" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="schedules_hotels" EntityType="Self.schedules_hotels" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="schedules_transports" EntityType="Self.schedules_transports" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="staffs" EntityType="Self.staffs" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="tour_cancels" EntityType="Self.tour_cancels" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="tour_details" EntityType="Self.tour_details" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="tour_guides" EntityType="Self.tour_guides" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="tour_images" EntityType="Self.tour_images" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="tour_places" EntityType="Self.tour_places" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="tour_schedules" EntityType="Self.tour_schedules" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="tour_types" EntityType="Self.tour_types" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="tours" EntityType="Self.tours" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="transports" EntityType="Self.transports" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <EntitySet Name="wards" EntityType="Self.wards" Schema="ql_tourdulich_ptudtm" store:Type="Tables" />
+          <AssociationSet Name="address_district_id_foreign" Association="Self.address_district_id_foreign">
+            <End Role="districts" EntitySet="districts" />
+            <End Role="address" EntitySet="address" />
+          </AssociationSet>
+          <AssociationSet Name="address_province_id_foreign" Association="Self.address_province_id_foreign">
+            <End Role="provinces" EntitySet="provinces" />
+            <End Role="address" EntitySet="address" />
+          </AssociationSet>
+          <AssociationSet Name="address_ward_id_foreign" Association="Self.address_ward_id_foreign">
+            <End Role="wards" EntitySet="wards" />
+            <End Role="address" EntitySet="address" />
+          </AssociationSet>
+          <AssociationSet Name="book_tours_customer_id_foreign" Association="Self.book_tours_customer_id_foreign">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="book_tours" EntitySet="book_tours" />
+          </AssociationSet>
+          <AssociationSet Name="book_tours_tour_id_foreign" Association="Self.book_tours_tour_id_foreign">
+            <End Role="tours" EntitySet="tours" />
+            <End Role="book_tours" EntitySet="book_tours" />
+          </AssociationSet>
+          <AssociationSet Name="customers_user_id_foreign" Association="Self.customers_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="customers" EntitySet="customers" />
+          </AssociationSet>
+          <AssociationSet Name="orders_book_tour_id_foreign" Association="Self.orders_book_tour_id_foreign">
+            <End Role="book_tours" EntitySet="book_tours" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="orders_customer_id_foreign" Association="Self.orders_customer_id_foreign">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="ratings_customer_id_foreign" Association="Self.ratings_customer_id_foreign">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="ratings" EntitySet="ratings" />
+          </AssociationSet>
+          <AssociationSet Name="schedules_hotels_hotel_id_foreign" Association="Self.schedules_hotels_hotel_id_foreign">
+            <End Role="hotels" EntitySet="hotels" />
+            <End Role="schedules_hotels" EntitySet="schedules_hotels" />
+          </AssociationSet>
+          <AssociationSet Name="schedules_hotels_tour_schedule_id_foreign" Association="Self.schedules_hotels_tour_schedule_id_foreign">
+            <End Role="tour_schedules" EntitySet="tour_schedules" />
+            <End Role="schedules_hotels" EntitySet="schedules_hotels" />
+          </AssociationSet>
+          <AssociationSet Name="schedules_transports_schedule_id_foreign" Association="Self.schedules_transports_schedule_id_foreign">
+            <End Role="tour_schedules" EntitySet="tour_schedules" />
+            <End Role="schedules_transports" EntitySet="schedules_transports" />
+          </AssociationSet>
+          <AssociationSet Name="schedules_transports_transport_id_foreign" Association="Self.schedules_transports_transport_id_foreign">
+            <End Role="transports" EntitySet="transports" />
+            <End Role="schedules_transports" EntitySet="schedules_transports" />
+          </AssociationSet>
+          <AssociationSet Name="staffs_depart_id_foreign" Association="Self.staffs_depart_id_foreign">
+            <End Role="departments" EntitySet="departments" />
+            <End Role="staffs" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="staffs_user_id_foreign" Association="Self.staffs_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="staffs" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="tour_cancels_order_id_foreign" Association="Self.tour_cancels_order_id_foreign">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="tour_cancels" EntitySet="tour_cancels" />
+          </AssociationSet>
+          <AssociationSet Name="tour_details_tour_id_foreign" Association="Self.tour_details_tour_id_foreign">
+            <End Role="tours" EntitySet="tours" />
+            <End Role="tour_details" EntitySet="tour_details" />
+          </AssociationSet>
+          <AssociationSet Name="tour_details_tour_place_id_foreign" Association="Self.tour_details_tour_place_id_foreign">
+            <End Role="tour_places" EntitySet="tour_places" />
+            <End Role="tour_details" EntitySet="tour_details" />
+          </AssociationSet>
+          <AssociationSet Name="tour_guides_staff_id_foreign" Association="Self.tour_guides_staff_id_foreign">
+            <End Role="staffs" EntitySet="staffs" />
+            <End Role="tour_guides" EntitySet="tour_guides" />
+          </AssociationSet>
+          <AssociationSet Name="tour_guides_tour_schedules_id_foreign" Association="Self.tour_guides_tour_schedules_id_foreign">
+            <End Role="tour_schedules" EntitySet="tour_schedules" />
+            <End Role="tour_guides" EntitySet="tour_guides" />
+          </AssociationSet>
+          <AssociationSet Name="tour_images_tour_id_foreign" Association="Self.tour_images_tour_id_foreign">
+            <End Role="tours" EntitySet="tours" />
+            <End Role="tour_images" EntitySet="tour_images" />
+          </AssociationSet>
+          <AssociationSet Name="tour_schedules_tour_detail_id_foreign" Association="Self.tour_schedules_tour_detail_id_foreign">
+            <End Role="tour_details" EntitySet="tour_details" />
+            <End Role="tour_schedules" EntitySet="tour_schedules" />
+          </AssociationSet>
+          <AssociationSet Name="tours_type_id_foreign" Association="Self.tours_type_id_foreign">
+            <End Role="tour_types" EntitySet="tour_types" />
+            <End Role="tours" EntitySet="tours" />
+          </AssociationSet>
+          <AssociationSet Name="users_role_id_foreign" Association="Self.users_role_id_foreign">
+            <End Role="roles" EntitySet="roles" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ql_tourdulich_ptudtmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="province_id" Type="Int64" Nullable="false" />
+          <Property Name="district_id" Type="Int64" Nullable="false" />
+          <Property Name="ward_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="district" Relationship="Self.address_district_id_foreign" FromRole="address" ToRole="districts" />
+          <NavigationProperty Name="province" Relationship="Self.address_province_id_foreign" FromRole="address" ToRole="provinces" />
+          <NavigationProperty Name="ward" Relationship="Self.address_ward_id_foreign" FromRole="address" ToRole="wards" />
+        </EntityType>
+        <EntityType Name="book_tours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tour_id" Type="Int64" Nullable="false" />
+          <Property Name="customer_id" Type="Int64" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="booking_date" Type="DateTime" Nullable="false" />
+          <Property Name="total_amount" Type="Decimal" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="customer" Relationship="Self.book_tours_customer_id_foreign" FromRole="book_tours" ToRole="customers" />
+          <NavigationProperty Name="tour" Relationship="Self.book_tours_tour_id_foreign" FromRole="book_tours" ToRole="tours" />
+          <NavigationProperty Name="orders" Relationship="Self.orders_book_tour_id_foreign" FromRole="book_tours" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="full_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="dob" Type="DateTime" />
+          <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="user_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="book_tours" Relationship="Self.book_tours_customer_id_foreign" FromRole="customers" ToRole="book_tours" />
+          <NavigationProperty Name="user" Relationship="Self.customers_user_id_foreign" FromRole="customers" ToRole="users" />
+          <NavigationProperty Name="orders" Relationship="Self.orders_customer_id_foreign" FromRole="customers" ToRole="orders" />
+          <NavigationProperty Name="ratings" Relationship="Self.ratings_customer_id_foreign" FromRole="customers" ToRole="ratings" />
+        </EntityType>
+        <EntityType Name="department">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="staffs" Relationship="Self.staffs_depart_id_foreign" FromRole="departments" ToRole="staffs" />
+        </EntityType>
+        <EntityType Name="district">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="addresses" Relationship="Self.address_district_id_foreign" FromRole="districts" ToRole="address" />
+        </EntityType>
+        <EntityType Name="failed_jobs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uuid" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="connection" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="queue" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="payload" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="exception" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="failed_at" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hotel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="quanlity" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="schedules_hotels" Relationship="Self.schedules_hotels_hotel_id_foreign" FromRole="hotels" ToRole="schedules_hotels" />
+        </EntityType>
+        <EntityType Name="migration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="migration1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="batch" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="total_amount" Type="Decimal" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="payment_date" Type="DateTime" />
+          <Property Name="payment_method" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="create_bill_date" Type="DateTime" />
+          <Property Name="book_tour_id" Type="Int64" Nullable="false" />
+          <Property Name="customer_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="book_tours" Relationship="Self.orders_book_tour_id_foreign" FromRole="orders" ToRole="book_tours" />
+          <NavigationProperty Name="customer" Relationship="Self.orders_customer_id_foreign" FromRole="orders" ToRole="customers" />
+          <NavigationProperty Name="tour_cancels" Relationship="Self.tour_cancels_order_id_foreign" FromRole="orders" ToRole="tour_cancels" />
+        </EntityType>
+        <EntityType Name="password_reset_tokens">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="token" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="personal_access_tokens">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tokenable_type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tokenable_id" Type="Decimal" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="token" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="abilities" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="last_used_at" Type="DateTime" />
+          <Property Name="expires_at" Type="DateTime" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="province">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="addresses" Relationship="Self.address_province_id_foreign" FromRole="provinces" ToRole="address" />
+        </EntityType>
+        <EntityType Name="rating">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customer_id" Type="Int64" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="rating_point" Type="Int32" />
+          <Property Name="rating_date" Type="DateTime" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="customer" Relationship="Self.ratings_customer_id_foreign" FromRole="ratings" ToRole="customers" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="users" Relationship="Self.users_role_id_foreign" FromRole="roles" ToRole="users" />
+        </EntityType>
+        <EntityType Name="schedules_hotels">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tour_schedule_id" Type="Int64" Nullable="false" />
+          <Property Name="hotel_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="hotel" Relationship="Self.schedules_hotels_hotel_id_foreign" FromRole="schedules_hotels" ToRole="hotels" />
+          <NavigationProperty Name="tour_schedules" Relationship="Self.schedules_hotels_tour_schedule_id_foreign" FromRole="schedules_hotels" ToRole="tour_schedules" />
+        </EntityType>
+        <EntityType Name="schedules_transports">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="transport_id" Type="Int64" Nullable="false" />
+          <Property Name="schedule_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="tour_schedules" Relationship="Self.schedules_transports_schedule_id_foreign" FromRole="schedules_transports" ToRole="tour_schedules" />
+          <NavigationProperty Name="transport" Relationship="Self.schedules_transports_transport_id_foreign" FromRole="schedules_transports" ToRole="transports" />
+        </EntityType>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="diploma" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="salary" Type="Decimal" />
+          <Property Name="date_of_entry" Type="DateTime" />
+          <Property Name="user_id" Type="Int64" Nullable="false" />
+          <Property Name="depart_id" Type="Int64" Nullable="false" />
+          <Property Name="fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="sex" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="department" Relationship="Self.staffs_depart_id_foreign" FromRole="staffs" ToRole="departments" />
+          <NavigationProperty Name="user" Relationship="Self.staffs_user_id_foreign" FromRole="staffs" ToRole="users" />
+          <NavigationProperty Name="tour_guides" Relationship="Self.tour_guides_staff_id_foreign" FromRole="staffs" ToRole="tour_guides" />
+        </EntityType>
+        <EntityType Name="tour_cancels">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="refunds" Type="Decimal" Nullable="false" />
+          <Property Name="date_cancel" Type="DateTime" Nullable="false" />
+          <Property Name="reason_cancel" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="order_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="order" Relationship="Self.tour_cancels_order_id_foreign" FromRole="tour_cancels" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="tour_details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tour_id" Type="Int64" Nullable="false" />
+          <Property Name="tour_place_id" Type="Int64" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" />
+          <Property Name="end_date" Type="DateTime" Nullable="false" />
+          <Property Name="price" Type="Decimal" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="tour" Relationship="Self.tour_details_tour_id_foreign" FromRole="tour_details" ToRole="tours" />
+          <NavigationProperty Name="tour_places" Relationship="Self.tour_details_tour_place_id_foreign" FromRole="tour_details" ToRole="tour_places" />
+          <NavigationProperty Name="tour_schedules" Relationship="Self.tour_schedules_tour_detail_id_foreign" FromRole="tour_details" ToRole="tour_schedules" />
+        </EntityType>
+        <EntityType Name="tour_guides">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="staff_id" Type="Int64" Nullable="false" />
+          <Property Name="tour_schedules_id" Type="Int64" Nullable="false" />
+          <Property Name="task" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="staff" Relationship="Self.tour_guides_staff_id_foreign" FromRole="tour_guides" ToRole="staffs" />
+          <NavigationProperty Name="tour_schedules" Relationship="Self.tour_guides_tour_schedules_id_foreign" FromRole="tour_guides" ToRole="tour_schedules" />
+        </EntityType>
+        <EntityType Name="tour_images">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tour_id" Type="Int64" Nullable="false" />
+          <Property Name="image_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="tour" Relationship="Self.tour_images_tour_id_foreign" FromRole="tour_images" ToRole="tours" />
+        </EntityType>
+        <EntityType Name="tour_places">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="tour_details" Relationship="Self.tour_details_tour_place_id_foreign" FromRole="tour_places" ToRole="tour_details" />
+        </EntityType>
+        <EntityType Name="tour_schedules">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="time_in_date" Type="DateTime" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tour_detail_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="schedules_hotels" Relationship="Self.schedules_hotels_tour_schedule_id_foreign" FromRole="tour_schedules" ToRole="schedules_hotels" />
+          <NavigationProperty Name="schedules_transports" Relationship="Self.schedules_transports_schedule_id_foreign" FromRole="tour_schedules" ToRole="schedules_transports" />
+          <NavigationProperty Name="tour_details" Relationship="Self.tour_schedules_tour_detail_id_foreign" FromRole="tour_schedules" ToRole="tour_details" />
+          <NavigationProperty Name="tour_guides" Relationship="Self.tour_guides_tour_schedules_id_foreign" FromRole="tour_schedules" ToRole="tour_guides" />
+        </EntityType>
+        <EntityType Name="tour_types">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="tours" Relationship="Self.tours_type_id_foreign" FromRole="tour_types" ToRole="tours" />
+        </EntityType>
+        <EntityType Name="tour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="start_date" Type="DateTime" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="time_go" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="start_place" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="type_id" Type="Int64" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="book_tours" Relationship="Self.book_tours_tour_id_foreign" FromRole="tours" ToRole="book_tours" />
+          <NavigationProperty Name="tour_details" Relationship="Self.tour_details_tour_id_foreign" FromRole="tours" ToRole="tour_details" />
+          <NavigationProperty Name="tour_images" Relationship="Self.tour_images_tour_id_foreign" FromRole="tours" ToRole="tour_images" />
+          <NavigationProperty Name="tour_types" Relationship="Self.tours_type_id_foreign" FromRole="tours" ToRole="tour_types" />
+        </EntityType>
+        <EntityType Name="transport">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="schedules_transports" Relationship="Self.schedules_transports_transport_id_foreign" FromRole="transports" ToRole="schedules_transports" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="start_date" Type="DateTime" />
+          <Property Name="role_id" Type="Int64" Nullable="false" />
+          <Property Name="email_verified_at" Type="DateTime" />
+          <Property Name="remember_token" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="customers" Relationship="Self.customers_user_id_foreign" FromRole="users" ToRole="customers" />
+          <NavigationProperty Name="role" Relationship="Self.users_role_id_foreign" FromRole="users" ToRole="roles" />
+          <NavigationProperty Name="staffs" Relationship="Self.staffs_user_id_foreign" FromRole="users" ToRole="staffs" />
+        </EntityType>
+        <EntityType Name="ward">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" />
+          <Property Name="updated_at" Type="DateTime" />
+          <NavigationProperty Name="addresses" Relationship="Self.address_ward_id_foreign" FromRole="wards" ToRole="address" />
+        </EntityType>
+        <Association Name="address_district_id_foreign">
+          <End Role="districts" Type="Self.district" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="address" Type="Self.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="districts">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="district_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="address_province_id_foreign">
+          <End Role="provinces" Type="Self.province" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="address" Type="Self.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provinces">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="province_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="address_ward_id_foreign">
+          <End Role="wards" Type="Self.ward" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="address" Type="Self.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="wards">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="ward_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="book_tours_customer_id_foreign">
+          <End Role="customers" Type="Self.customer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="book_tours" Type="Self.book_tours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="book_tours">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="book_tours_tour_id_foreign">
+          <End Role="tours" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="book_tours" Type="Self.book_tours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="book_tours">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders_book_tour_id_foreign">
+          <End Role="book_tours" Type="Self.book_tours" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book_tours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="book_tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="customers_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="customers" Type="Self.customer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="customers">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders_customer_id_foreign">
+          <End Role="customers" Type="Self.customer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ratings_customer_id_foreign">
+          <End Role="customers" Type="Self.customer" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ratings" Type="Self.rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ratings">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="staffs_depart_id_foreign">
+          <End Role="departments" Type="Self.department" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="staffs" Type="Self.staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="departments">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="staffs">
+              <PropertyRef Name="depart_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="schedules_hotels_hotel_id_foreign">
+          <End Role="hotels" Type="Self.hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="schedules_hotels" Type="Self.schedules_hotels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hotels">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="schedules_hotels">
+              <PropertyRef Name="hotel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_cancels_order_id_foreign">
+          <End Role="orders" Type="Self.order" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_cancels" Type="Self.tour_cancels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_cancels">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="users_role_id_foreign">
+          <End Role="roles" Type="Self.role" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="users" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="schedules_hotels_tour_schedule_id_foreign">
+          <End Role="tour_schedules" Type="Self.tour_schedules" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="schedules_hotels" Type="Self.schedules_hotels" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_schedules">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="schedules_hotels">
+              <PropertyRef Name="tour_schedule_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="schedules_transports_schedule_id_foreign">
+          <End Role="tour_schedules" Type="Self.tour_schedules" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="schedules_transports" Type="Self.schedules_transports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_schedules">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="schedules_transports">
+              <PropertyRef Name="schedule_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="schedules_transports_transport_id_foreign">
+          <End Role="transports" Type="Self.transport" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="schedules_transports" Type="Self.schedules_transports" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="transports">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="schedules_transports">
+              <PropertyRef Name="transport_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="staffs_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="staffs" Type="Self.staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="staffs">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_guides_staff_id_foreign">
+          <End Role="staffs" Type="Self.staff" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_guides" Type="Self.tour_guides" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staffs">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_guides">
+              <PropertyRef Name="staff_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_details_tour_id_foreign">
+          <End Role="tours" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_details" Type="Self.tour_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_details">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_details_tour_place_id_foreign">
+          <End Role="tour_places" Type="Self.tour_places" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_details" Type="Self.tour_details" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_places">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_details">
+              <PropertyRef Name="tour_place_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_schedules_tour_detail_id_foreign">
+          <End Role="tour_details" Type="Self.tour_details" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_schedules" Type="Self.tour_schedules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_details">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_schedules">
+              <PropertyRef Name="tour_detail_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_guides_tour_schedules_id_foreign">
+          <End Role="tour_schedules" Type="Self.tour_schedules" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_guides" Type="Self.tour_guides" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_schedules">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_guides">
+              <PropertyRef Name="tour_schedules_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tour_images_tour_id_foreign">
+          <End Role="tours" Type="Self.tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tour_images" Type="Self.tour_images" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tours">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tour_images">
+              <PropertyRef Name="tour_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tours_type_id_foreign">
+          <End Role="tour_types" Type="Self.tour_types" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tours" Type="Self.tour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tour_types">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tours">
+              <PropertyRef Name="type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ql_tourdulich_ptudtmEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="addresses" EntityType="Self.address" />
+          <EntitySet Name="book_tours" EntityType="Self.book_tours" />
+          <EntitySet Name="customers" EntityType="Self.customer" />
+          <EntitySet Name="departments" EntityType="Self.department" />
+          <EntitySet Name="districts" EntityType="Self.district" />
+          <EntitySet Name="failed_jobs" EntityType="Self.failed_jobs" />
+          <EntitySet Name="hotels" EntityType="Self.hotel" />
+          <EntitySet Name="migrations" EntityType="Self.migration" />
+          <EntitySet Name="orders" EntityType="Self.order" />
+          <EntitySet Name="password_reset_tokens" EntityType="Self.password_reset_tokens" />
+          <EntitySet Name="personal_access_tokens" EntityType="Self.personal_access_tokens" />
+          <EntitySet Name="provinces" EntityType="Self.province" />
+          <EntitySet Name="ratings" EntityType="Self.rating" />
+          <EntitySet Name="roles" EntityType="Self.role" />
+          <EntitySet Name="schedules_hotels" EntityType="Self.schedules_hotels" />
+          <EntitySet Name="schedules_transports" EntityType="Self.schedules_transports" />
+          <EntitySet Name="staffs" EntityType="Self.staff" />
+          <EntitySet Name="tour_cancels" EntityType="Self.tour_cancels" />
+          <EntitySet Name="tour_details" EntityType="Self.tour_details" />
+          <EntitySet Name="tour_guides" EntityType="Self.tour_guides" />
+          <EntitySet Name="tour_images" EntityType="Self.tour_images" />
+          <EntitySet Name="tour_places" EntityType="Self.tour_places" />
+          <EntitySet Name="tour_schedules" EntityType="Self.tour_schedules" />
+          <EntitySet Name="tour_types" EntityType="Self.tour_types" />
+          <EntitySet Name="tours" EntityType="Self.tour" />
+          <EntitySet Name="transports" EntityType="Self.transport" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="wards" EntityType="Self.ward" />
+          <AssociationSet Name="address_district_id_foreign" Association="Self.address_district_id_foreign">
+            <End Role="districts" EntitySet="districts" />
+            <End Role="address" EntitySet="addresses" />
+          </AssociationSet>
+          <AssociationSet Name="address_province_id_foreign" Association="Self.address_province_id_foreign">
+            <End Role="provinces" EntitySet="provinces" />
+            <End Role="address" EntitySet="addresses" />
+          </AssociationSet>
+          <AssociationSet Name="address_ward_id_foreign" Association="Self.address_ward_id_foreign">
+            <End Role="wards" EntitySet="wards" />
+            <End Role="address" EntitySet="addresses" />
+          </AssociationSet>
+          <AssociationSet Name="book_tours_customer_id_foreign" Association="Self.book_tours_customer_id_foreign">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="book_tours" EntitySet="book_tours" />
+          </AssociationSet>
+          <AssociationSet Name="book_tours_tour_id_foreign" Association="Self.book_tours_tour_id_foreign">
+            <End Role="tours" EntitySet="tours" />
+            <End Role="book_tours" EntitySet="book_tours" />
+          </AssociationSet>
+          <AssociationSet Name="orders_book_tour_id_foreign" Association="Self.orders_book_tour_id_foreign">
+            <End Role="book_tours" EntitySet="book_tours" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="customers_user_id_foreign" Association="Self.customers_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="customers" EntitySet="customers" />
+          </AssociationSet>
+          <AssociationSet Name="orders_customer_id_foreign" Association="Self.orders_customer_id_foreign">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="ratings_customer_id_foreign" Association="Self.ratings_customer_id_foreign">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="ratings" EntitySet="ratings" />
+          </AssociationSet>
+          <AssociationSet Name="staffs_depart_id_foreign" Association="Self.staffs_depart_id_foreign">
+            <End Role="departments" EntitySet="departments" />
+            <End Role="staffs" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="schedules_hotels_hotel_id_foreign" Association="Self.schedules_hotels_hotel_id_foreign">
+            <End Role="hotels" EntitySet="hotels" />
+            <End Role="schedules_hotels" EntitySet="schedules_hotels" />
+          </AssociationSet>
+          <AssociationSet Name="tour_cancels_order_id_foreign" Association="Self.tour_cancels_order_id_foreign">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="tour_cancels" EntitySet="tour_cancels" />
+          </AssociationSet>
+          <AssociationSet Name="users_role_id_foreign" Association="Self.users_role_id_foreign">
+            <End Role="roles" EntitySet="roles" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+          <AssociationSet Name="schedules_hotels_tour_schedule_id_foreign" Association="Self.schedules_hotels_tour_schedule_id_foreign">
+            <End Role="tour_schedules" EntitySet="tour_schedules" />
+            <End Role="schedules_hotels" EntitySet="schedules_hotels" />
+          </AssociationSet>
+          <AssociationSet Name="schedules_transports_schedule_id_foreign" Association="Self.schedules_transports_schedule_id_foreign">
+            <End Role="tour_schedules" EntitySet="tour_schedules" />
+            <End Role="schedules_transports" EntitySet="schedules_transports" />
+          </AssociationSet>
+          <AssociationSet Name="schedules_transports_transport_id_foreign" Association="Self.schedules_transports_transport_id_foreign">
+            <End Role="transports" EntitySet="transports" />
+            <End Role="schedules_transports" EntitySet="schedules_transports" />
+          </AssociationSet>
+          <AssociationSet Name="staffs_user_id_foreign" Association="Self.staffs_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="staffs" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="tour_guides_staff_id_foreign" Association="Self.tour_guides_staff_id_foreign">
+            <End Role="staffs" EntitySet="staffs" />
+            <End Role="tour_guides" EntitySet="tour_guides" />
+          </AssociationSet>
+          <AssociationSet Name="tour_details_tour_id_foreign" Association="Self.tour_details_tour_id_foreign">
+            <End Role="tours" EntitySet="tours" />
+            <End Role="tour_details" EntitySet="tour_details" />
+          </AssociationSet>
+          <AssociationSet Name="tour_details_tour_place_id_foreign" Association="Self.tour_details_tour_place_id_foreign">
+            <End Role="tour_places" EntitySet="tour_places" />
+            <End Role="tour_details" EntitySet="tour_details" />
+          </AssociationSet>
+          <AssociationSet Name="tour_schedules_tour_detail_id_foreign" Association="Self.tour_schedules_tour_detail_id_foreign">
+            <End Role="tour_details" EntitySet="tour_details" />
+            <End Role="tour_schedules" EntitySet="tour_schedules" />
+          </AssociationSet>
+          <AssociationSet Name="tour_guides_tour_schedules_id_foreign" Association="Self.tour_guides_tour_schedules_id_foreign">
+            <End Role="tour_schedules" EntitySet="tour_schedules" />
+            <End Role="tour_guides" EntitySet="tour_guides" />
+          </AssociationSet>
+          <AssociationSet Name="tour_images_tour_id_foreign" Association="Self.tour_images_tour_id_foreign">
+            <End Role="tours" EntitySet="tours" />
+            <End Role="tour_images" EntitySet="tour_images" />
+          </AssociationSet>
+          <AssociationSet Name="tours_type_id_foreign" Association="Self.tours_type_id_foreign">
+            <End Role="tour_types" EntitySet="tour_types" />
+            <End Role="tours" EntitySet="tours" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ql_tourdulich_ptudtmModelStoreContainer" CdmEntityContainer="ql_tourdulich_ptudtmEntities">
+          <EntitySetMapping Name="addresses">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.address">
+              <MappingFragment StoreEntitySet="address">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="province_id" ColumnName="province_id" />
+                <ScalarProperty Name="district_id" ColumnName="district_id" />
+                <ScalarProperty Name="ward_id" ColumnName="ward_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="book_tours">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.book_tours">
+              <MappingFragment StoreEntitySet="book_tours">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tour_id" ColumnName="tour_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="booking_date" ColumnName="booking_date" />
+                <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customers">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.customer">
+              <MappingFragment StoreEntitySet="customers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="full_name" ColumnName="full_name" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="departments">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.department">
+              <MappingFragment StoreEntitySet="departments">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="districts">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.district">
+              <MappingFragment StoreEntitySet="districts">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="failed_jobs">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.failed_jobs">
+              <MappingFragment StoreEntitySet="failed_jobs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="uuid" ColumnName="uuid" />
+                <ScalarProperty Name="connection" ColumnName="connection" />
+                <ScalarProperty Name="queue" ColumnName="queue" />
+                <ScalarProperty Name="payload" ColumnName="payload" />
+                <ScalarProperty Name="exception" ColumnName="exception" />
+                <ScalarProperty Name="failed_at" ColumnName="failed_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hotels">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.hotel">
+              <MappingFragment StoreEntitySet="hotels">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="quanlity" ColumnName="quanlity" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="migrations">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.migration">
+              <MappingFragment StoreEntitySet="migrations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="migration1" ColumnName="migration" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orders">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.order">
+              <MappingFragment StoreEntitySet="orders">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="payment_date" ColumnName="payment_date" />
+                <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+                <ScalarProperty Name="create_bill_date" ColumnName="create_bill_date" />
+                <ScalarProperty Name="book_tour_id" ColumnName="book_tour_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="password_reset_tokens">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.password_reset_tokens">
+              <MappingFragment StoreEntitySet="password_reset_tokens">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="personal_access_tokens">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.personal_access_tokens">
+              <MappingFragment StoreEntitySet="personal_access_tokens">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tokenable_type" ColumnName="tokenable_type" />
+                <ScalarProperty Name="tokenable_id" ColumnName="tokenable_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="abilities" ColumnName="abilities" />
+                <ScalarProperty Name="last_used_at" ColumnName="last_used_at" />
+                <ScalarProperty Name="expires_at" ColumnName="expires_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provinces">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.province">
+              <MappingFragment StoreEntitySet="provinces">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ratings">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.rating">
+              <MappingFragment StoreEntitySet="ratings">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="rating_point" ColumnName="rating_point" />
+                <ScalarProperty Name="rating_date" ColumnName="rating_date" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="roles">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.role">
+              <MappingFragment StoreEntitySet="roles">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="schedules_hotels">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.schedules_hotels">
+              <MappingFragment StoreEntitySet="schedules_hotels">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tour_schedule_id" ColumnName="tour_schedule_id" />
+                <ScalarProperty Name="hotel_id" ColumnName="hotel_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="schedules_transports">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.schedules_transports">
+              <MappingFragment StoreEntitySet="schedules_transports">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="transport_id" ColumnName="transport_id" />
+                <ScalarProperty Name="schedule_id" ColumnName="schedule_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="staffs">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.staff">
+              <MappingFragment StoreEntitySet="staffs">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="diploma" ColumnName="diploma" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="date_of_entry" ColumnName="date_of_entry" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="depart_id" ColumnName="depart_id" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tour_cancels">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.tour_cancels">
+              <MappingFragment StoreEntitySet="tour_cancels">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="refunds" ColumnName="refunds" />
+                <ScalarProperty Name="date_cancel" ColumnName="date_cancel" />
+                <ScalarProperty Name="reason_cancel" ColumnName="reason_cancel" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tour_details">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.tour_details">
+              <MappingFragment StoreEntitySet="tour_details">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tour_id" ColumnName="tour_id" />
+                <ScalarProperty Name="tour_place_id" ColumnName="tour_place_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="end_date" ColumnName="end_date" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tour_guides">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.tour_guides">
+              <MappingFragment StoreEntitySet="tour_guides">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+                <ScalarProperty Name="tour_schedules_id" ColumnName="tour_schedules_id" />
+                <ScalarProperty Name="task" ColumnName="task" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tour_images">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.tour_images">
+              <MappingFragment StoreEntitySet="tour_images">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tour_id" ColumnName="tour_id" />
+                <ScalarProperty Name="image_name" ColumnName="image_name" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tour_places">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.tour_places">
+              <MappingFragment StoreEntitySet="tour_places">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tour_schedules">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.tour_schedules">
+              <MappingFragment StoreEntitySet="tour_schedules">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="time_in_date" ColumnName="time_in_date" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="tour_detail_id" ColumnName="tour_detail_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tour_types">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.tour_types">
+              <MappingFragment StoreEntitySet="tour_types">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tours">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.tour">
+              <MappingFragment StoreEntitySet="tours">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="time_go" ColumnName="time_go" />
+                <ScalarProperty Name="start_place" ColumnName="start_place" />
+                <ScalarProperty Name="type_id" ColumnName="type_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="transports">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.transport">
+              <MappingFragment StoreEntitySet="transports">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="start_date" ColumnName="start_date" />
+                <ScalarProperty Name="role_id" ColumnName="role_id" />
+                <ScalarProperty Name="email_verified_at" ColumnName="email_verified_at" />
+                <ScalarProperty Name="remember_token" ColumnName="remember_token" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wards">
+            <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.ward">
+              <MappingFragment StoreEntitySet="wards">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
