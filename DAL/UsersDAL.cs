@@ -1,4 +1,5 @@
 ﻿using System;
+using BCrypt.Net;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,6 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using DTO;
 using System.Linq;
-
 
 namespace DAL
 {
@@ -18,13 +18,34 @@ namespace DAL
         public long layMaTaiKhoan(string userName, string passWord)
         {
             var user = db.users
-                .Where(t => t.tentaikhoan.Equals(userName) && t.matkhau.Equals(passWord))
-                .Select(t => t.mataikhoan) 
+                .Where(t => t.tentaikhoan.Equals(userName))
                 .FirstOrDefault();
+
             if (user == null)
                 return -1;
-            return user; 
+
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(passWord, user.matkhau);
+
+            if (isPasswordValid)
+                return user.mataikhoan;
+            else
+                return -1;
         }
+
+        public bool kiemTraDangNhap(string userName, string passWord)
+        {
+            var user = db.users
+                .Where(t => t.tentaikhoan == userName)
+                .FirstOrDefault();
+
+            if (user != null && BCrypt.Net.BCrypt.Verify(passWord, user.matkhau))
+            {
+                return true;
+            }
+
+            return false; 
+        }
+
         public long kiemTraNhomQuyen(long maTaiKhoan)
         {
             var nhomQuyen = db.nhomquyens
@@ -35,23 +56,10 @@ namespace DAL
             return nhomQuyen;
         }
 
-        public bool kiemTraDangNhap(string userName, string passWord)
-        {
-            var user = db.users
-                .Where(t => t.tentaikhoan == userName && t.matkhau == passWord)
-                .FirstOrDefault();
-
-            return user != null; 
-        }
-
         public List<user> LayTatCaUser()
         {
-            List<user> users = new List<user>();
-            users = db.users.ToList();
+            List<user> users = db.users.ToList();
             return users;
         }
-
-
-
     }
 }
