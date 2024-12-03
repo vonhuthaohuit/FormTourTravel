@@ -25,33 +25,44 @@ namespace DTO
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<address> addresses { get; set; }
-        public DbSet<book_tours> book_tours { get; set; }
-        public DbSet<customer> customers { get; set; }
-        public DbSet<department> departments { get; set; }
-        public DbSet<district> districts { get; set; }
+        public DbSet<backup_schedules> backup_schedules { get; set; }
+        public DbSet<blogtour> blogtours { get; set; }
+        public DbSet<chitietkhachsantour> chitietkhachsantours { get; set; }
+        public DbSet<chitietphieudattour> chitietphieudattours { get; set; }
+        public DbSet<chitietphuongtientour> chitietphuongtientours { get; set; }
+        public DbSet<chitiettour> chitiettours { get; set; }
+        public DbSet<chucvu> chucvus { get; set; }
+        public DbSet<chuongtrinhtour> chuongtrinhtours { get; set; }
+        public DbSet<danhgia> danhgias { get; set; }
+        public DbSet<diemdulich> diemduliches { get; set; }
         public DbSet<failed_jobs> failed_jobs { get; set; }
-        public DbSet<hotel> hotels { get; set; }
+        public DbSet<footer_grid_ones> footer_grid_ones { get; set; }
+        public DbSet<footer_grid_threes> footer_grid_threes { get; set; }
+        public DbSet<footer_grid_twos> footer_grid_twos { get; set; }
+        public DbSet<footer_socials> footer_socials { get; set; }
+        public DbSet<footer_titles> footer_titles { get; set; }
+        public DbSet<hinhanhtour> hinhanhtours { get; set; }
+        public DbSet<hoadon> hoadons { get; set; }
+        public DbSet<khachhang> khachhangs { get; set; }
+        public DbSet<khachsan> khachsans { get; set; }
+        public DbSet<khuyenmai> khuyenmais { get; set; }
+        public DbSet<loaiblog> loaiblogs { get; set; }
+        public DbSet<loaikhachhang> loaikhachhangs { get; set; }
+        public DbSet<loaitour> loaitours { get; set; }
         public DbSet<migration> migrations { get; set; }
-        public DbSet<order> orders { get; set; }
+        public DbSet<nhanvien> nhanviens { get; set; }
+        public DbSet<nhomquyen> nhomquyens { get; set; }
         public DbSet<password_reset_tokens> password_reset_tokens { get; set; }
         public DbSet<personal_access_tokens> personal_access_tokens { get; set; }
-        public DbSet<province> provinces { get; set; }
-        public DbSet<rating> ratings { get; set; }
-        public DbSet<role> roles { get; set; }
-        public DbSet<schedules_hotels> schedules_hotels { get; set; }
-        public DbSet<schedules_transports> schedules_transports { get; set; }
-        public DbSet<staff> staffs { get; set; }
-        public DbSet<tour_cancels> tour_cancels { get; set; }
-        public DbSet<tour_details> tour_details { get; set; }
-        public DbSet<tour_guides> tour_guides { get; set; }
-        public DbSet<tour_images> tour_images { get; set; }
-        public DbSet<tour_places> tour_places { get; set; }
-        public DbSet<tour_schedules> tour_schedules { get; set; }
-        public DbSet<tour_types> tour_types { get; set; }
+        public DbSet<phancongchucvu> phancongchucvus { get; set; }
+        public DbSet<phancongnhanvien> phancongnhanviens { get; set; }
+        public DbSet<phieudattour> phieudattours { get; set; }
+        public DbSet<phieuhuytour> phieuhuytours { get; set; }
+        public DbSet<phongban> phongbans { get; set; }
+        public DbSet<phuongtien> phuongtiens { get; set; }
+        public DbSet<quyen> quyens { get; set; }
+        public DbSet<quyen_nhomquyen> quyen_nhomquyen { get; set; }
         public DbSet<tour> tours { get; set; }
-        public DbSet<transport> transports { get; set; }
         public DbSet<user> users { get; set; }
-        public DbSet<ward> wards { get; set; }
     }
 }

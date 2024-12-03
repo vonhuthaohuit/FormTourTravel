@@ -12,15 +12,14 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class schedules_hotels
+    public partial class backup_schedules
     {
-        public long id { get; set; }
-        public long tour_schedule_id { get; set; }
-        public long hotel_id { get; set; }
+        public decimal id { get; set; }
+        public string frequency { get; set; }
+        public string backup_time { get; set; }
+        public string backup_day { get; set; }
+        public Nullable<int> backup_day_of_month { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
-    
-        public virtual hotel hotel { get; set; }
-        public virtual tour_schedules tour_schedules { get; set; }
     }
 }

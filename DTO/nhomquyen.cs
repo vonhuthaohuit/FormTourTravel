@@ -12,18 +12,20 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class province
+    public partial class nhomquyen
     {
-        public province()
+        public nhomquyen()
         {
-            this.addresses = new HashSet<address>();
+            this.quyen_nhomquyen = new HashSet<quyen_nhomquyen>();
+            this.users = new HashSet<user>();
         }
     
-        public long id { get; set; }
-        public string name { get; set; }
+        public long manhomquyen { get; set; }
+        public string tennhomquyen { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual ICollection<address> addresses { get; set; }
+        public virtual ICollection<quyen_nhomquyen> quyen_nhomquyen { get; set; }
+        public virtual ICollection<user> users { get; set; }
     }
 }

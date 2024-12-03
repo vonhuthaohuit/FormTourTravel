@@ -12,7 +12,7 @@ namespace BLL
     {
         private NhanVienDAL nhanVienDal = new NhanVienDAL();
 
-        public List<staff> LayDanhSachNhanVien()
+        public List<nhanvien> LayDanhSachNhanVien()
         {
             return nhanVienDal.LayDanhSachNhanVien();
         }

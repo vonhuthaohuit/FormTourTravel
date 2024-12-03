@@ -12,7 +12,7 @@ namespace BLL
     public class RoleBLL
     {
         private RoleDAL roleBll = new RoleDAL();
-        public List<role> LayNhomQuyen()
+        public List<nhomquyen> LayNhomQuyen()
         {
             return roleBll.LayNhomQuyen();
         }

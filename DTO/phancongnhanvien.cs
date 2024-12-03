@@ -12,21 +12,15 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class hotel
+    public partial class phancongnhanvien
     {
-        public hotel()
-        {
-            this.schedules_hotels = new HashSet<schedules_hotels>();
-        }
-    
-        public long id { get; set; }
-        public string name { get; set; }
-        public string address { get; set; }
-        public string phone { get; set; }
-        public string quanlity { get; set; }
+        public long manhanvien { get; set; }
+        public long matour { get; set; }
+        public string nhiemvu { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual ICollection<schedules_hotels> schedules_hotels { get; set; }
+        public virtual nhanvien nhanvien { get; set; }
+        public virtual tour tour { get; set; }
     }
 }

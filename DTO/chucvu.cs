@@ -12,18 +12,18 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class ward
+    public partial class chucvu
     {
-        public ward()
+        public chucvu()
         {
-            this.addresses = new HashSet<address>();
+            this.phancongchucvus = new HashSet<phancongchucvu>();
         }
     
-        public long id { get; set; }
-        public string name { get; set; }
+        public long machucvu { get; set; }
+        public string tenchucvu { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual ICollection<address> addresses { get; set; }
+        public virtual ICollection<phancongchucvu> phancongchucvus { get; set; }
     }
 }

@@ -12,18 +12,14 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class department
+    public partial class quyen_nhomquyen
     {
-        public department()
-        {
-            this.staffs = new HashSet<staff>();
-        }
-    
-        public long id { get; set; }
-        public string name { get; set; }
+        public long maquyen { get; set; }
+        public long manhomquyen { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual ICollection<staff> staffs { get; set; }
+        public virtual nhomquyen nhomquyen { get; set; }
+        public virtual quyen quyen { get; set; }
     }
 }

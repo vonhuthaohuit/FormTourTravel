@@ -12,15 +12,16 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class tour_images
+    public partial class loaiblog
     {
-        public long id { get; set; }
-        public long tour_id { get; set; }
-        public string image_name { get; set; }
-        public string image { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public loaiblog()
+        {
+            this.blogtours = new HashSet<blogtour>();
+        }
     
-        public virtual tour tour { get; set; }
+        public long maloaiblog { get; set; }
+        public string tenloaiblog { get; set; }
+    
+        public virtual ICollection<blogtour> blogtours { get; set; }
     }
 }

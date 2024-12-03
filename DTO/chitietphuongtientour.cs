@@ -12,18 +12,14 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class role
+    public partial class chitietphuongtientour
     {
-        public role()
-        {
-            this.users = new HashSet<user>();
-        }
+        public long matour { get; set; }
+        public long maphuongtien { get; set; }
+        public long soluonghanhkhach { get; set; }
+        public string ghichu { get; set; }
     
-        public long id { get; set; }
-        public string name { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
-    
-        public virtual ICollection<user> users { get; set; }
+        public virtual phuongtien phuongtien { get; set; }
+        public virtual tour tour { get; set; }
     }
 }

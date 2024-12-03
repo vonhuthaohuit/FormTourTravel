@@ -12,15 +12,17 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class schedules_transports
+    public partial class loaikhachhang
     {
-        public long id { get; set; }
-        public long transport_id { get; set; }
-        public long schedule_id { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public loaikhachhang()
+        {
+            this.khachhangs = new HashSet<khachhang>();
+        }
     
-        public virtual tour_schedules tour_schedules { get; set; }
-        public virtual transport transport { get; set; }
+        public long maloaikhachhang { get; set; }
+        public string tenloaikhachhang { get; set; }
+        public int mucapdunggia { get; set; }
+    
+        public virtual ICollection<khachhang> khachhangs { get; set; }
     }
 }

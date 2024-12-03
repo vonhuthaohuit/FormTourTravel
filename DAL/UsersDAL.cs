@@ -18,8 +18,8 @@ namespace DAL
         public long layMaTaiKhoan(string userName, string passWord)
         {
             var user = db.users
-                .Where(t => t.username.Equals(userName) && t.password.Equals(passWord))
-                .Select(t => t.id) 
+                .Where(t => t.tentaikhoan.Equals(userName) && t.matkhau.Equals(passWord))
+                .Select(t => t.mataikhoan) 
                 .FirstOrDefault();
             if (user == null)
                 return -1;
@@ -27,9 +27,9 @@ namespace DAL
         }
         public long kiemTraNhomQuyen(long maTaiKhoan)
         {
-            var nhomQuyen = db.roles
-                .Where(nq => nq.users.Any(u => u.id == maTaiKhoan))
-                .Select(nq => nq.id)
+            var nhomQuyen = db.nhomquyens
+                .Where(nq => nq.users.Any(u => u.mataikhoan == maTaiKhoan))
+                .Select(nq => nq.manhomquyen)
                 .FirstOrDefault();
 
             return nhomQuyen;
@@ -38,7 +38,7 @@ namespace DAL
         public bool kiemTraDangNhap(string userName, string passWord)
         {
             var user = db.users
-                .Where(t => t.username == userName && t.password == passWord)
+                .Where(t => t.tentaikhoan == userName && t.matkhau == passWord)
                 .FirstOrDefault();
 
             return user != null; 

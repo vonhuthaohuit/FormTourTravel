@@ -64,32 +64,86 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="address.cs">
+    <Compile Include="backup_schedules.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
-    <Compile Include="book_tours.cs">
+    <Compile Include="blogtour.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chitietkhachsantour.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chitietphieudattour.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chitietphuongtientour.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chitiettour.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chucvu.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="chuongtrinhtour.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
-    <Compile Include="customer.cs">
+    <Compile Include="danhgia.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
-    <Compile Include="department.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="district.cs">
+    <Compile Include="diemdulich.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
     <Compile Include="failed_jobs.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
-    <Compile Include="hotel.cs">
+    <Compile Include="footer_grid_ones.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="footer_grid_threes.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="footer_grid_twos.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="footer_socials.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="footer_titles.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hinhanhtour.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hoadon.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="khachhang.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="khachsan.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="khuyenmai.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="loaiblog.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="loaikhachhang.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="loaitour.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
     <Compile Include="migration.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
-    <Compile Include="order.cs">
+    <Compile Include="nhanvien.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nhomquyen.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
     <Compile Include="password_reset_tokens.cs">
@@ -98,10 +152,25 @@
     <Compile Include="personal_access_tokens.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="province.cs">
+    <Compile Include="phancongchucvu.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
+    <Compile Include="phancongnhanvien.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="phieudattour.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="phieuhuytour.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="phongban.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="phuongtien.cs">
+      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ql_tourdulich_ptudtm.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,52 +186,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ql_tourdulich_ptudtm.edmx</DependentUpon>
     </Compile>
-    <Compile Include="rating.cs">
+    <Compile Include="quyen.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
-    <Compile Include="role.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="schedules_hotels.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="schedules_transports.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="staff.cs">
+    <Compile Include="quyen_nhomquyen.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
     <Compile Include="tour.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
-    <Compile Include="tour_cancels.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tour_details.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tour_guides.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tour_images.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tour_places.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tour_schedules.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tour_types.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="transport.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
     <Compile Include="user.cs">
-      <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ward.cs">
       <DependentUpon>ql_tourdulich_ptudtm.tt</DependentUpon>
     </Compile>
   </ItemGroup>

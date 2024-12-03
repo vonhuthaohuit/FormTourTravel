@@ -12,7 +12,7 @@ namespace BLL
     public class PhongBanBLL
     {
         private PhongBanDAL phongBanDal = new PhongBanDAL();
-        public List<department> LayDanhSachPhongBan()
+        public List<phongban> LayDanhSachPhongBan()
         {
             return phongBanDal.LayDanhSachPhongBan();
         }

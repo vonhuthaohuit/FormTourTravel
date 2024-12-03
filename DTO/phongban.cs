@@ -12,28 +12,20 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class phongban
     {
-        public user()
+        public phongban()
         {
-            this.khachhangs = new HashSet<khachhang>();
             this.nhanviens = new HashSet<nhanvien>();
         }
     
-        public long mataikhoan { get; set; }
-        public string tentaikhoan { get; set; }
-        public string email { get; set; }
-        public Nullable<System.DateTime> email_verified_at { get; set; }
-        public string matkhau { get; set; }
-        public string trangthai { get; set; }
-        public string remember_token { get; set; }
-        public long manhomquyen { get; set; }
-        public string google_id { get; set; }
+        public long maphongban { get; set; }
+        public string tenphongban { get; set; }
+        public long truongphong { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual ICollection<khachhang> khachhangs { get; set; }
+        public virtual nhanvien nhanvien { get; set; }
         public virtual ICollection<nhanvien> nhanviens { get; set; }
-        public virtual nhomquyen nhomquyen { get; set; }
     }
 }

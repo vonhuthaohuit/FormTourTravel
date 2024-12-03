@@ -12,25 +12,22 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class tour_details
+    public partial class khachsan
     {
-        public tour_details()
+        public khachsan()
         {
-            this.tour_schedules = new HashSet<tour_schedules>();
+            this.chitietkhachsantours = new HashSet<chitietkhachsantour>();
         }
     
-        public long id { get; set; }
-        public long tour_id { get; set; }
-        public long tour_place_id { get; set; }
-        public string title { get; set; }
-        public System.DateTime start_date { get; set; }
-        public System.DateTime end_date { get; set; }
-        public decimal price { get; set; }
+        public long makhachsan { get; set; }
+        public string tenkhachsan { get; set; }
+        public string diachi { get; set; }
+        public string sodienthoai { get; set; }
+        public string chatluong { get; set; }
+        public double giakhachsan { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual tour tour { get; set; }
-        public virtual tour_places tour_places { get; set; }
-        public virtual ICollection<tour_schedules> tour_schedules { get; set; }
+        public virtual ICollection<chitietkhachsantour> chitietkhachsantours { get; set; }
     }
 }

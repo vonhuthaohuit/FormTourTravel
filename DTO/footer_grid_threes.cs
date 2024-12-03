@@ -12,20 +12,13 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class tour_places
+    public partial class footer_grid_threes
     {
-        public tour_places()
-        {
-            this.tour_details = new HashSet<tour_details>();
-        }
-    
-        public long id { get; set; }
+        public decimal id { get; set; }
         public string name { get; set; }
-        public string address { get; set; }
-        public string description { get; set; }
+        public string url { get; set; }
+        public bool status { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
-    
-        public virtual ICollection<tour_details> tour_details { get; set; }
     }
 }

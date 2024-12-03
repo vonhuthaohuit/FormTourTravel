@@ -16,26 +16,38 @@ namespace DTO
     {
         public tour()
         {
-            this.book_tours = new HashSet<book_tours>();
-            this.tour_details = new HashSet<tour_details>();
-            this.tour_images = new HashSet<tour_images>();
+            this.chitietkhachsantours = new HashSet<chitietkhachsantour>();
+            this.chitietphuongtientours = new HashSet<chitietphuongtientour>();
+            this.chitiettours = new HashSet<chitiettour>();
+            this.chuongtrinhtours = new HashSet<chuongtrinhtour>();
+            this.hinhanhtours = new HashSet<hinhanhtour>();
+            this.phancongnhanviens = new HashSet<phancongnhanvien>();
+            this.phieudattours = new HashSet<phieudattour>();
         }
     
-        public long id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public System.DateTime start_date { get; set; }
-        public bool status { get; set; }
-        public string image { get; set; }
-        public string time_go { get; set; }
-        public string start_place { get; set; }
-        public long type_id { get; set; }
+        public long matour { get; set; }
+        public string tentour { get; set; }
+        public string slug { get; set; }
+        public string motatour { get; set; }
+        public sbyte tinhtrang { get; set; }
+        public string hinhdaidien { get; set; }
+        public string noikhoihanh { get; set; }
+        public string thoigiandi { get; set; }
+        public long giatour { get; set; }
+        public Nullable<double> giatourgiam { get; set; }
+        public long maloaitour { get; set; }
+        public Nullable<long> makhuyenmai { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual ICollection<book_tours> book_tours { get; set; }
-        public virtual ICollection<tour_details> tour_details { get; set; }
-        public virtual ICollection<tour_images> tour_images { get; set; }
-        public virtual tour_types tour_types { get; set; }
+        public virtual ICollection<chitietkhachsantour> chitietkhachsantours { get; set; }
+        public virtual ICollection<chitietphuongtientour> chitietphuongtientours { get; set; }
+        public virtual ICollection<chitiettour> chitiettours { get; set; }
+        public virtual ICollection<chuongtrinhtour> chuongtrinhtours { get; set; }
+        public virtual ICollection<hinhanhtour> hinhanhtours { get; set; }
+        public virtual khuyenmai khuyenmai { get; set; }
+        public virtual loaitour loaitour { get; set; }
+        public virtual ICollection<phancongnhanvien> phancongnhanviens { get; set; }
+        public virtual ICollection<phieudattour> phieudattours { get; set; }
     }
 }

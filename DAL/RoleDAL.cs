@@ -10,10 +10,10 @@ namespace DAL
     public class RoleDAL
     {
         private ql_tourdulich_ptudtmEntities db = new ql_tourdulich_ptudtmEntities();
-        public List<role> LayNhomQuyen()
+        public List<nhomquyen> LayNhomQuyen()
         {
-            List<role> roles = new List<role>();
-            roles = db.roles.ToList();
+            List<nhomquyen> roles = new List<nhomquyen>();
+            roles = db.nhomquyens.ToList();
             return roles;
         }
     }

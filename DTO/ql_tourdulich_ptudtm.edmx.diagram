@@ -4,59 +4,76 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1b68492b6e654d7086165349b9cc5d78" Name="Diagram1">
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.address" Width="1.5" PointX="17" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.book_tours" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.customer" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.department" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.district" Width="1.5" PointX="14.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.failed_jobs" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.hotel" Width="1.5" PointX="10.5" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.migration" Width="1.5" PointX="2.75" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.order" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.password_reset_tokens" Width="1.5" PointX="14.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.personal_access_tokens" Width="1.5" PointX="15.75" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.province" Width="1.5" PointX="14.75" PointY="17.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.rating" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.role" Width="1.5" PointX="1.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.schedules_hotels" Width="1.5" PointX="12.75" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.schedules_transports" Width="1.5" PointX="15.75" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.staff" Width="1.5" PointX="10.5" PointY="13.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour_cancels" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour_details" Width="1.5" PointX="8.25" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour_guides" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour_images" Width="1.5" PointX="5.25" PointY="18" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour_places" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour_schedules" Width="1.5" PointX="10.5" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour_types" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.transport" Width="1.5" PointX="13.5" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.user" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.ward" Width="1.5" PointX="14.75" PointY="20.125" IsExpanded="true" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.address_district_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.address_province_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.address_ward_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.book_tours_customer_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.book_tours_tour_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.orders_book_tour_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.customers_user_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.orders_customer_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.ratings_customer_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.staffs_depart_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.schedules_hotels_hotel_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_cancels_order_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.users_role_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.schedules_hotels_tour_schedule_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.schedules_transports_schedule_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.schedules_transports_transport_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.staffs_user_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_guides_staff_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_details_tour_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_details_tour_place_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_schedules_tour_detail_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_guides_tour_schedules_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_images_tour_id_foreign" ManuallyRouted="false" />
-        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tours_type_id_foreign" ManuallyRouted="false" />
+      <Diagram DiagramId="b834d913a3fb43e59b25ea7308188006" Name="Diagram1">
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.backup_schedules" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.blogtour" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.chitietkhachsantour" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.chitietphieudattour" Width="1.5" PointX="7.5" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.chitietphuongtientour" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.chitiettour" Width="1.5" PointX="8.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.chucvu" Width="1.5" PointX="9" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.chuongtrinhtour" Width="1.5" PointX="5.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.danhgia" Width="1.5" PointX="7.5" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.diemdulich" Width="1.5" PointX="6" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.failed_jobs" Width="1.5" PointX="10.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.footer_grid_ones" Width="1.5" PointX="11.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.footer_grid_threes" Width="1.5" PointX="10.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.footer_grid_twos" Width="1.5" PointX="12.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.footer_socials" Width="1.5" PointX="12.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.footer_titles" Width="1.5" PointX="13.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.hinhanhtour" Width="1.5" PointX="5.25" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.hoadon" Width="1.5" PointX="10.5" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.khachhang" Width="1.5" PointX="5.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.khachsan" Width="1.5" PointX="3" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.khuyenmai" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.loaiblog" Width="1.5" PointX="6" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.loaikhachhang" Width="1.5" PointX="3" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.loaitour" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.migration" Width="1.5" PointX="13.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.nhanvien" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.nhomquyen" Width="1.5" PointX="1.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.password_reset_tokens" Width="1.5" PointX="14.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.personal_access_tokens" Width="1.5" PointX="14.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.phancongchucvu" Width="1.5" PointX="11.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.phancongnhanvien" Width="1.5" PointX="8.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.phieudattour" Width="1.5" PointX="5.25" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.phieuhuytour" Width="1.5" PointX="8.25" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.phongban" Width="1.5" PointX="3.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.phuongtien" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.quyen" Width="1.5" PointX="4.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.quyen_nhomquyen" Width="1.5" PointX="6.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.tour" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.user" Width="1.5" PointX="3.75" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.blogtour_maloaiblog_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.blogtour_manhanvien_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.khachsan_tour_makhachsan_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.khachsan_tour_matour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.chitietphieudattour_makhachhang_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.chitietphieudattour_maphieudattour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.phuongtien_tour_maphuongtien_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.phuongtien_tour_matour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.chitiettour_madiemdulich_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.chitiettour_matour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.phancongchucvu_machucvu_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.chuongtrinhtour_matour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.danhgia_makhachhang_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.hinhanhtour_matour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.hoadon_maphieudattour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.hoadon_maphieuhuytour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.khachhang_maloaikhachhang_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.khachhang_mataikhoan_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_makhuyenmai_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.tour_maloaitour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.fk_truongphong_nhanvien" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.nhanvien_maphongban_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.nhanvien_mataikhoan_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.phancongchucvu_manhanvien_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.phancongnhanvien_manhanvien_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.quyen_nhomquyen_manhomquyen_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.users_manhomquyen_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.phancongnhanvien_matour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.phieudattour_matour_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="ql_tourdulich_ptudtmModel.quyen_nhomquyen_maquyen_foreign" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

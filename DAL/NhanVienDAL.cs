@@ -11,9 +11,9 @@ namespace DAL
     {
         private ql_tourdulich_ptudtmEntities db = new ql_tourdulich_ptudtmEntities();
 
-        public List<staff> LayDanhSachNhanVien()
+        public List<nhanvien> LayDanhSachNhanVien()
         {
-            return db.staffs.ToList();
+            return db.nhanviens.ToList();
         }
     }
 }

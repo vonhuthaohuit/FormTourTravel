@@ -12,25 +12,21 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class book_tours
+    public partial class phuongtien
     {
-        public book_tours()
+        public phuongtien()
         {
-            this.orders = new HashSet<order>();
+            this.chitietphuongtientours = new HashSet<chitietphuongtientour>();
         }
     
-        public long id { get; set; }
-        public long tour_id { get; set; }
-        public long customer_id { get; set; }
-        public int quantity { get; set; }
-        public System.DateTime booking_date { get; set; }
-        public Nullable<decimal> total_amount { get; set; }
-        public bool status { get; set; }
+        public long maphuongtien { get; set; }
+        public string tenphuongtien { get; set; }
+        public int sochongoi { get; set; }
+        public string sodienthoai { get; set; }
+        public long giaphuongtien { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual customer customer { get; set; }
-        public virtual tour tour { get; set; }
-        public virtual ICollection<order> orders { get; set; }
+        public virtual ICollection<chitietphuongtientour> chitietphuongtientours { get; set; }
     }
 }

@@ -12,16 +12,14 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class rating
+    public partial class footer_socials
     {
-        public long id { get; set; }
-        public long customer_id { get; set; }
-        public string content { get; set; }
-        public Nullable<int> rating_point { get; set; }
-        public Nullable<System.DateTime> rating_date { get; set; }
+        public decimal id { get; set; }
+        public string icon { get; set; }
+        public string name { get; set; }
+        public string url { get; set; }
+        public bool status { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
-    
-        public virtual customer customer { get; set; }
     }
 }

@@ -12,9 +12,9 @@ namespace DAL
     {
         private ql_tourdulich_ptudtmEntities db = new ql_tourdulich_ptudtmEntities();
 
-        public List<department> LayDanhSachPhongBan()
+        public List<phongban> LayDanhSachPhongBan()
         {
-            return db.departments.ToList();
+            return db.phongbans.ToList();
         }
     }
 }

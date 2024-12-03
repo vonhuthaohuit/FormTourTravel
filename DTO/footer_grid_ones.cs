@@ -12,19 +12,15 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class transport
+    public partial class footer_grid_ones
     {
-        public transport()
-        {
-            this.schedules_transports = new HashSet<schedules_transports>();
-        }
-    
-        public long id { get; set; }
-        public string name { get; set; }
+        public decimal id { get; set; }
+        public string logo { get; set; }
         public string phone { get; set; }
+        public string email { get; set; }
+        public string address { get; set; }
+        public string copyright { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
-    
-        public virtual ICollection<schedules_transports> schedules_transports { get; set; }
     }
 }

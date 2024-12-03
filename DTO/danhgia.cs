@@ -12,17 +12,17 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class address
+    public partial class danhgia
     {
-        public long id { get; set; }
-        public long province_id { get; set; }
-        public long district_id { get; set; }
-        public long ward_id { get; set; }
+        public long madanhgia { get; set; }
+        public string noidung { get; set; }
+        public long diemdanhgia { get; set; }
+        public long makhachhang { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
+        public Nullable<int> matour { get; set; }
+        public Nullable<int> tinhtrang { get; set; }
     
-        public virtual district district { get; set; }
-        public virtual province province { get; set; }
-        public virtual ward ward { get; set; }
+        public virtual khachhang khachhang { get; set; }
     }
 }

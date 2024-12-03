@@ -12,18 +12,19 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class tour_types
+    public partial class quyen
     {
-        public tour_types()
+        public quyen()
         {
-            this.tours = new HashSet<tour>();
+            this.quyen_nhomquyen = new HashSet<quyen_nhomquyen>();
         }
     
-        public long id { get; set; }
-        public string name { get; set; }
+        public long maquyen { get; set; }
+        public string tenquyen { get; set; }
+        public string mota { get; set; }
         public Nullable<System.DateTime> created_at { get; set; }
         public Nullable<System.DateTime> updated_at { get; set; }
     
-        public virtual ICollection<tour> tours { get; set; }
+        public virtual ICollection<quyen_nhomquyen> quyen_nhomquyen { get; set; }
     }
 }

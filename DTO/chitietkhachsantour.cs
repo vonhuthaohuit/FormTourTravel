@@ -12,18 +12,14 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class district
+    public partial class chitietkhachsantour
     {
-        public district()
-        {
-            this.addresses = new HashSet<address>();
-        }
+        public long makhachsan { get; set; }
+        public long matour { get; set; }
+        public string vitriphong { get; set; }
+        public long succhua { get; set; }
     
-        public long id { get; set; }
-        public string name { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
-    
-        public virtual ICollection<address> addresses { get; set; }
+        public virtual khachsan khachsan { get; set; }
+        public virtual tour tour { get; set; }
     }
 }

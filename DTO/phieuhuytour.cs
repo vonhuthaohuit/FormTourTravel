@@ -12,16 +12,18 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class tour_cancels
+    public partial class phieuhuytour
     {
-        public long id { get; set; }
-        public decimal refunds { get; set; }
-        public System.DateTime date_cancel { get; set; }
-        public string reason_cancel { get; set; }
-        public long order_id { get; set; }
-        public Nullable<System.DateTime> created_at { get; set; }
-        public Nullable<System.DateTime> updated_at { get; set; }
+        public phieuhuytour()
+        {
+            this.hoadons = new HashSet<hoadon>();
+        }
     
-        public virtual order order { get; set; }
+        public long maphieuhuytour { get; set; }
+        public decimal sotienhoan { get; set; }
+        public string lydohuy { get; set; }
+        public Nullable<System.DateTime> ngayhuy { get; set; }
+    
+        public virtual ICollection<hoadon> hoadons { get; set; }
     }
 }
