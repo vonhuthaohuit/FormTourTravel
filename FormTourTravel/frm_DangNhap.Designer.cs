@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dangNhap1 = new ThuVien.Usercontrol_Edit.DangNhap();
-            this.SuspendLayout();
-            // 
-            // dangNhap1
-            // 
-            this.dangNhap1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dangNhap1.Location = new System.Drawing.Point(0, 0);
-            this.dangNhap1.Name = "dangNhap1";
-            this.dangNhap1.Size = new System.Drawing.Size(885, 433);
-            this.dangNhap1.TabIndex = 0;
-            // 
-            // frm_DangNhap
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 433);
-            this.Controls.Add(this.dangNhap1);
-            this.Name = "frm_DangNhap";
-            this.Text = "frm_DangNhap";
-            this.ResumeLayout(false);
+			this.dangNhap1 = new ThuVien.Usercontrol_Edit.DangNhap();
+			this.SuspendLayout();
+			// 
+			// dangNhap1
+			// 
+			this.dangNhap1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dangNhap1.Location = new System.Drawing.Point(0, 0);
+			this.dangNhap1.Name = "dangNhap1";
+			this.dangNhap1.Size = new System.Drawing.Size(885, 433);
+			this.dangNhap1.TabIndex = 0;
+			// 
+			// frm_DangNhap
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(885, 433);
+			this.Controls.Add(this.dangNhap1);
+			this.Name = "frm_DangNhap";
+			this.Text = "frm_DangNhap";
+			this.ResumeLayout(false);
 
         }
 

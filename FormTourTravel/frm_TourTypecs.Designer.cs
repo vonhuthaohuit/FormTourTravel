@@ -28,19 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frm_TourTypecs
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 450);
-            this.Name = "frm_TourTypecs";
-            this.Text = "frm_TourTypecs";
-            this.ResumeLayout(false);
+			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+			this.SuspendLayout();
+			// 
+			// simpleButton1
+			// 
+			this.simpleButton1.Location = new System.Drawing.Point(334, 171);
+			this.simpleButton1.Name = "simpleButton1";
+			this.simpleButton1.Size = new System.Drawing.Size(193, 35);
+			this.simpleButton1.TabIndex = 0;
+			this.simpleButton1.Text = "simpleButton1";
+			// 
+			// frm_TourTypecs
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(900, 450);
+			this.Controls.Add(this.simpleButton1);
+			this.Name = "frm_TourTypecs";
+			this.Text = "frm_TourTypecs";
+			this.ResumeLayout(false);
 
         }
 
-        #endregion
-    }
+		#endregion
+
+		private DevExpress.XtraEditors.SimpleButton simpleButton1;
+	}
 }
