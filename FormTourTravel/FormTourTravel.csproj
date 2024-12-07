@@ -46,16 +46,28 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.5.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Diagram.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Images.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDiagram.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -107,6 +119,7 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.9.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -146,6 +159,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="ZstdSharp, Version=0.8.3.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdSharp.Port.0.8.3\lib\net462\ZstdSharp.dll</HintPath>
     </Reference>
@@ -192,6 +206,12 @@
     </Compile>
     <Compile Include="frm_KhachHang.Designer.cs">
       <DependentUpon>frm_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_KhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KhuyenMai.Designer.cs">
+      <DependentUpon>frm_KhuyenMai.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_LoaiBog.cs">
       <SubType>Form</SubType>
@@ -278,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KhuyenMai.resx">
+      <DependentUpon>frm_KhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>

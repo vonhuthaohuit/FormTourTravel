@@ -84,6 +84,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhGiaDAL.cs" />
+    <Compile Include="DiscountDAL.cs" />
     <Compile Include="NhanVienDAL.cs" />
     <Compile Include="PhongBanDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

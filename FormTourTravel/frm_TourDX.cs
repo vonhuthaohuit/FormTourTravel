@@ -40,7 +40,7 @@ namespace FormTourTravel
 				// Kiểm tra xem cột có tồn tại hay không trước khi thao tác
 				//if (gridView.Columns["chitietkhachsantours"] != null)
 				//{
-				gridView.Columns["chitietkhachsantours"].Visible = false;
+				//gridView.Columns["chitietkhachsantours"].Visible = false;
 				//}
 
 				// Tương tự cho các cột khác

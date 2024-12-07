@@ -1,6 +1,6 @@
 ﻿namespace FormTourTravel
 {
-    partial class frm_CapTaiKhoan
+    partial class frm_KhuyenMai
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.capQuyenTaiKhoan1 = new ThuVien.Usercontrol_Edit.CapQuyenTaiKhoan();
+            this.khuyenMai1 = new ThuVien.Usercontrol_Edit.khuyenMai();
             this.SuspendLayout();
             // 
-            // capQuyenTaiKhoan1
+            // khuyenMai1
             // 
-            this.capQuyenTaiKhoan1.CboNhomQuyen_DataSource = null;
-            this.capQuyenTaiKhoan1.CboTaiKhoan_DataSource = null;
-            this.capQuyenTaiKhoan1.DataSourceDatagirdView = null;
-            this.capQuyenTaiKhoan1.Location = new System.Drawing.Point(2, -2);
-            this.capQuyenTaiKhoan1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.capQuyenTaiKhoan1.Name = "capQuyenTaiKhoan1";
-            this.capQuyenTaiKhoan1.Size = new System.Drawing.Size(886, 439);
-            this.capQuyenTaiKhoan1.TabIndex = 0;
+            this.khuyenMai1.DataSourceDatagirdView = null;
+            this.khuyenMai1.Location = new System.Drawing.Point(12, 12);
+            this.khuyenMai1.Name = "khuyenMai1";
+            this.khuyenMai1.Size = new System.Drawing.Size(482, 437);
+            this.khuyenMai1.TabIndex = 0;
             // 
-            // frm_CapTaiKhoan
+            // frm_KhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 458);
-            this.Controls.Add(this.capQuyenTaiKhoan1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "frm_CapTaiKhoan";
-            this.Text = "frm_CapTaiKhoan";
+            this.ClientSize = new System.Drawing.Size(505, 440);
+            this.Controls.Add(this.khuyenMai1);
+            this.Name = "frm_KhuyenMai";
+            this.Text = "frm_KhuyenMai";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ThuVien.Usercontrol_Edit.CapQuyenTaiKhoan capQuyenTaiKhoan1;
+        private ThuVien.Usercontrol_Edit.khuyenMai khuyenMai1;
     }
 }
