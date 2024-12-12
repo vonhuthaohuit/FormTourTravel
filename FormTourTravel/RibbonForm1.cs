@@ -119,7 +119,36 @@ namespace FormTourTravel
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
+			frm_DanhGia frm = new frm_DanhGia();
+			showFormInPanel(frm);
+        }
 
+        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_CapTaiKhoan frm = new frm_CapTaiKhoan();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_TaoTaiKhoan	frm = new frm_TaoTaiKhoan();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem23_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_NhomQuyen frm = new frm_NhomQuyen();
+            showFormInPanel(frm);
         }
     }
 }

@@ -35,6 +35,10 @@
             this.ngayketthuc = new System.Windows.Forms.DateTimePicker();
             this.txt_phantramgiam = new System.Windows.Forms.TextBox();
             this.dgv_KhuyenMai = new System.Windows.Forms.DataGridView();
+            this.makhuyenmai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianbatdau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoigianketthuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phantramgiam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -44,10 +48,6 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.txt_makhuyenmai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.makhuyenmai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoigianbatdau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoigianketthuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phantramgiam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KhuyenMai)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,6 +120,32 @@
             this.dgv_KhuyenMai.TabIndex = 6;
             this.dgv_KhuyenMai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KhuyenMai_CellClick);
             // 
+            // makhuyenmai
+            // 
+            this.makhuyenmai.DataPropertyName = "makhuyenmai";
+            this.makhuyenmai.HeaderText = "Mã KM";
+            this.makhuyenmai.Name = "makhuyenmai";
+            this.makhuyenmai.Width = 70;
+            // 
+            // thoigianbatdau
+            // 
+            this.thoigianbatdau.DataPropertyName = "thoigianbatdau";
+            this.thoigianbatdau.HeaderText = "Ngày bắt đầu";
+            this.thoigianbatdau.Name = "thoigianbatdau";
+            // 
+            // thoigianketthuc
+            // 
+            this.thoigianketthuc.DataPropertyName = "thoigianketthuc";
+            this.thoigianketthuc.HeaderText = "Ngày kết thúc";
+            this.thoigianketthuc.Name = "thoigianketthuc";
+            // 
+            // phantramgiam
+            // 
+            this.phantramgiam.DataPropertyName = "phantramgiam";
+            this.phantramgiam.HeaderText = "Phần trăm giảm";
+            this.phantramgiam.Name = "phantramgiam";
+            this.phantramgiam.Width = 130;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgv_KhuyenMai);
@@ -182,35 +208,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(11, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Phần trăm giảm";
-            // 
-            // makhuyenmai
-            // 
-            this.makhuyenmai.DataPropertyName = "makhuyenmai";
-            this.makhuyenmai.HeaderText = "Mã KM";
-            this.makhuyenmai.Name = "makhuyenmai";
-            this.makhuyenmai.Width = 70;
-            // 
-            // thoigianbatdau
-            // 
-            this.thoigianbatdau.DataPropertyName = "thoigianbatdau";
-            this.thoigianbatdau.HeaderText = "Ngày bắt đầu";
-            this.thoigianbatdau.Name = "thoigianbatdau";
-            // 
-            // thoigianketthuc
-            // 
-            this.thoigianketthuc.DataPropertyName = "thoigianketthuc";
-            this.thoigianketthuc.HeaderText = "Ngày kết thúc";
-            this.thoigianketthuc.Name = "thoigianketthuc";
-            // 
-            // phantramgiam
-            // 
-            this.phantramgiam.DataPropertyName = "phantramgiam";
-            this.phantramgiam.HeaderText = "Phần trăm giảm";
-            this.phantramgiam.Name = "phantramgiam";
-            this.phantramgiam.Width = 130;
+            this.label4.Text = "Mã khuyến mãi";
             // 
             // khuyenMai
             // 
