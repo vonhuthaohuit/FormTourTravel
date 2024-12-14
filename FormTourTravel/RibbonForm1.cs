@@ -200,5 +200,11 @@ namespace FormTourTravel
 			frm_ChuanDoanTour frm_ChuanDoanTour = new frm_ChuanDoanTour();
             showFormInPanel(frm_ChuanDoanTour);
         }
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_ThongKe frm_ThongKe = new frm_ThongKe();
+            showFormInPanel(frm_ThongKe);
+        }
     }
 }
