@@ -220,6 +220,12 @@ namespace FormTourTravel
    //         showFormInPanel(frm);
    //     }
 
+   //     private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+   //     {
+			//frm_KhuyenMai frm = new frm_KhuyenMai();
+   //         showFormInPanel(frm);
+   //     }
+
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
 			frm_DanhGia frm = new frm_DanhGia();
