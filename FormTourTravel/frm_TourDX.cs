@@ -7,9 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
-
 using System.Windows.Forms;
-using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace FormTourTravel
 {
@@ -93,30 +91,7 @@ namespace FormTourTravel
 
 			if (e.Button.Properties.Caption == "Print")
 			{
-				ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-
-				using (ExcelPackage package = new ExcelPackage())
-				{
-					var worksheet = package.Workbook.Worksheets.Add("Data");
-
-					for (int i = 0; i < dataGridView1.Columns.Count; i++)
-					{
-						worksheet.Cells[1, i + 1].Value = dataGridView1.Columns[i].HeaderText;
-					}
-					for (int i = 0; i < dataGridView1.Rows.Count; i++)
-					{
-						for (int j = 0; j < dataGridView1.Columns.Count; j++)
-						{
-							worksheet.Cells[i + 2, j + 1].Value = dataGridView1.Rows[i].Cells[j].Value;
-						}
-					}
-
-					using (var stream = new MemoryStream())
-					{
-						package.SaveAs(stream);
-						stream.Position = 0;
-					}
-				}
+				
 			}
 			if (e.Button.Properties.Caption == "Chương trình tour")
 			{

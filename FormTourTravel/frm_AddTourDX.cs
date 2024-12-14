@@ -14,6 +14,7 @@ using System.IO;
 using DevExpress.Utils.CommonDialogs;
 using System.Globalization;
 using DevExpress.XtraLayout.Filtering.Templates;
+using System.Resources;
 
 namespace FormTourTravel
 {
@@ -192,6 +193,8 @@ namespace FormTourTravel
 				MessageBox.Show("Thêm tour thất bại");
 			}
 		}
+
+
 
 		private void txt_thoigiandi_KeyPress(object sender, KeyPressEventArgs e)
 		{
