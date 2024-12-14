@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btn_timkiem = new System.Windows.Forms.Button();
+            this.btn_xuatexcel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_huytour)).BeginInit();
@@ -54,6 +55,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_xuatexcel);
             this.panel1.Controls.Add(this.btn_timkiem);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btn_huy);
@@ -209,6 +211,16 @@
             this.btn_timkiem.UseVisualStyleBackColor = true;
             this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
             // 
+            // btn_xuatexcel
+            // 
+            this.btn_xuatexcel.Location = new System.Drawing.Point(626, 47);
+            this.btn_xuatexcel.Name = "btn_xuatexcel";
+            this.btn_xuatexcel.Size = new System.Drawing.Size(75, 23);
+            this.btn_xuatexcel.TabIndex = 5;
+            this.btn_xuatexcel.Text = "Xuất Excel";
+            this.btn_xuatexcel.UseVisualStyleBackColor = true;
+            this.btn_xuatexcel.Click += new System.EventHandler(this.btn_xuatexcel_Click);
+            // 
             // frm_HuyTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,5 +259,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_nguoidaidien;
+        private System.Windows.Forms.Button btn_xuatexcel;
     }
 }

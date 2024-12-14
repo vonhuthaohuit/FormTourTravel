@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DevExpress.CodeParser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using ThuVien;
 
 namespace FormTourTravel
 {
@@ -27,7 +30,7 @@ namespace FormTourTravel
 
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
-            string nguoiDaiDien = txt_nguoidaidien.Text; 
+            string nguoiDaiDien = txt_nguoidaidien.Text;
             DateTime? ngayDatTour = dateTimePicker1.Checked ? dateTimePicker1.Value.Date : (DateTime?)null;
 
             var tours = tourBLL.TimKiemHoaDonVaPhieuDat(nguoiDaiDien, ngayDatTour);
@@ -45,7 +48,7 @@ namespace FormTourTravel
 
         private void dgv_huytour_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btn_huy_Click(object sender, EventArgs e)
@@ -70,6 +73,12 @@ namespace FormTourTravel
                     MessageBox.Show("Hủy tour thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btn_xuatexcel_Click(object sender, EventArgs e)
+        {
+            ThuVien.Code.ExportExcel exportExcel = new ThuVien.Code.ExportExcel();
+            exportExcel.ExportToExcelWithHeader(dgv_huytour, "Các tour đã đặt");
         }
     }
 }

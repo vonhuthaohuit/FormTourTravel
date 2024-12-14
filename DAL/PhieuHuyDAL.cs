@@ -23,9 +23,29 @@ namespace DAL
                                         SoTienHoan = ph.sotienhoan,
                                         LyDoHuy = ph.lydohuy,
                                         NgayHuy = ph.ngayhuy,
-                                        TenTour = t.tentour
+                                        TenTour = t.tentour,
+                                        NguoiDaiDien = hd.nguoidaidien,
                                     }).ToList();
 
+            return danhSachPhieuHuy.Cast<dynamic>().ToList();
+        }
+
+        public List<dynamic> LayDanhSachPhieuHuyTheoThang(int thang)
+        {
+            var danhSachPhieuHuy = (from ph in db.phieuhuytours
+                                    join hd in db.hoadons on ph.maphieuhuytour equals hd.maphieuhuytour
+                                    join pd in db.phieudattours on hd.maphieudattour equals pd.maphieudattour
+                                    join t in db.tours on pd.matour equals t.matour
+                                    where ph.ngayhuy.Value.Month == thang
+                                    select new
+                                    {
+                                        MaPhieuHuyTour = ph.maphieuhuytour,
+                                        SoTienHoan = ph.sotienhoan,
+                                        LyDoHuy = ph.lydohuy,
+                                        NgayHuy = ph.ngayhuy,
+                                        TenTour = t.tentour,
+                                        NguoiDaiDien = hd.nguoidaidien,
+                                    }).ToList();
             return danhSachPhieuHuy.Cast<dynamic>().ToList();
         }
     }

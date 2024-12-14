@@ -13,5 +13,10 @@ namespace BLL
         {
             return phieuHuyDAL.LayDanhSachPhieuHuy();
         }
+
+        public List<dynamic> LayDanhSachPhieuHuyTheoThang(int thang)
+        {
+            return phieuHuyDAL.LayDanhSachPhieuHuyTheoThang(thang);
+        }
     }
 }

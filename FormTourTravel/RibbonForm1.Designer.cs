@@ -61,6 +61,7 @@
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbon_tour = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.Tour = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -77,7 +78,6 @@
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.QUna = new DevExpress.XtraBars.BarButtonItem();
             this.panel = new DevExpress.XtraEditors.PanelControl();
-            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel)).BeginInit();
@@ -320,10 +320,17 @@
             // 
             // barButtonItem24
             // 
-            this.barButtonItem24.Caption = "Hủy tour";
+            this.barButtonItem24.Caption = "Tour đã đặt";
             this.barButtonItem24.Id = 32;
             this.barButtonItem24.Name = "barButtonItem24";
             this.barButtonItem24.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem24_ItemClick);
+            // 
+            // barButtonItem25
+            // 
+            this.barButtonItem25.Caption = "Tour đã hủy";
+            this.barButtonItem25.Id = 33;
+            this.barButtonItem25.Name = "barButtonItem25";
+            this.barButtonItem25.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem25_ItemClick);
             // 
             // ribbon_tour
             // 
@@ -430,13 +437,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1163, 415);
             this.panel.TabIndex = 1;
-            // 
-            // barButtonItem25
-            // 
-            this.barButtonItem25.Caption = "barButtonItem25";
-            this.barButtonItem25.Id = 33;
-            this.barButtonItem25.Name = "barButtonItem25";
-            this.barButtonItem25.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem25_ItemClick);
             // 
             // RibbonForm1
             // 
