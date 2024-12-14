@@ -88,5 +88,28 @@ namespace FormTourTravel
             }
         }
 
+        private void barButtonItem_HoaDon_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_HoaDon frm_HoaDon = new frm_HoaDon();
+            showFormInPanel(frm_HoaDon);
+        }
+
+        private void barButtonItem_TaoHoaDon_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_ThemHoaDon frm_ThemHoaDon = new frm_ThemHoaDon();
+            frm_ThemHoaDon.ShowDialog();
+        }
+
+        private void barButtonItem_ThongKe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_ThongKe frm_ThongKe = new frm_ThongKe();
+            showFormInPanel(frm_ThongKe);
+        }
+
+        private void barButtonItem_ChuanDoanTour_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_ChuanDoanTour frm_ChuanDoanTour = new frm_ChuanDoanTour();
+            showFormInPanel(frm_ChuanDoanTour);
+        }
     }
 }

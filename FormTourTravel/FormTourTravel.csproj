@@ -461,7 +461,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ChuongTrinhTour.resx">
       <DependentUpon>frm_ChuongTrinhTour.cs</DependentUpon>
-
+    </EmbeddedResource>
     <Compile Include="frm_DanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -473,7 +473,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ChuanDoanTour.resx">
       <DependentUpon>frm_ChuanDoanTour.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
@@ -481,7 +480,7 @@
 
     <EmbeddedResource Include="frm_KhachSanTour.resx">
       <DependentUpon>frm_KhachSanTour.cs</DependentUpon>
-
+  </EmbeddedResource>
     <EmbeddedResource Include="frm_HoaDon.resx">
       <DependentUpon>frm_HoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -506,7 +505,7 @@
 
     <EmbeddedResource Include="frm_PhuongTienTour.resx">
       <DependentUpon>frm_PhuongTienTour.cs</DependentUpon>
-
+  </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemHoaDon.resx">
       <DependentUpon>frm_ThemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
