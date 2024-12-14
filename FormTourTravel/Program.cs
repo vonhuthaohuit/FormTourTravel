@@ -16,7 +16,7 @@ namespace FormTourTravel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RibbonForm1());
+            Application.Run(new frm_Ribbon());
         }
     }
 }

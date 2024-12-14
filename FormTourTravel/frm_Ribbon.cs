@@ -36,7 +36,7 @@ namespace FormTourTravel
             if (splashScreenManager == null)
                 splashScreenManager = new SplashScreenManager(this, typeof(WaitForm1), true, true);
         }
-        private async void showFormInPanel(Form form)
+        public async void showFormInPanel(Form form)
         {
             try
             {
@@ -111,5 +111,17 @@ namespace FormTourTravel
             frm_ChuanDoanTour frm_ChuanDoanTour = new frm_ChuanDoanTour();
             showFormInPanel(frm_ChuanDoanTour);
         }
-    }
+
+		private void barButtonItem_Tour_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			frm_TourDX frm_TourDX = new frm_TourDX(this);
+			showFormInPanel(frm_TourDX);
+		}
+
+		private void barButtonItem_LoaiTour_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			frm_TourTypecs frm_TourTypecs = new frm_TourTypecs();
+			showFormInPanel(frm_TourTypecs);
+		}
+	}
 }

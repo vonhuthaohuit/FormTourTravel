@@ -13,14 +13,14 @@ namespace FormTourTravel
 {
 	public partial class frm_TourDX : XtraForm
 	{
-		private RibbonForm1 ribbonForm1;
+		private frm_Ribbon ribbonForm1;
 		private readonly ql_tourdulich_ptudtmEntities db = new ql_tourdulich_ptudtmEntities();
 		private TourBLL tourBLL = new TourBLL();
-		public frm_TourDX(RibbonForm1 ribbonForm)
+		public frm_TourDX(frm_Ribbon frm_Ribbon)
 		{
 			InitializeComponent();
-			ribbonForm1 = ribbonForm;
 			GetDataSource();
+			this.ribbonForm1 = frm_Ribbon;
 			dataGridView1.Dock = DockStyle.Fill;
 		}
 		void windowsUIButtonPanel_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
@@ -77,9 +77,9 @@ namespace FormTourTravel
 			{
 				if (dataGridView1.SelectedRows.Count > 0)
 				{
-					//long matour = long.Parse(dataGridView1.SelectedRows[0].Cells["matour"].Value.ToString());
-					//frm_ChiTietTour frmChiTietTour = new frm_ChiTietTour(matour);
-					//ribbonForm1.showFormInPanel(frmChiTietTour);
+					long matour = long.Parse(dataGridView1.SelectedRows[0].Cells["matour"].Value.ToString());
+					frm_ChiTietTour frmChiTietTour = new frm_ChiTietTour(matour);
+					ribbonForm1.showFormInPanel(frmChiTietTour);
 
 				}
 				else
@@ -107,8 +107,8 @@ namespace FormTourTravel
 				}
 				var chuongTrinhTourBLL = new ChuongTrinhTourBLL();
 				var listChuongTrinhTour = chuongTrinhTourBLL.GetListChuongTrinh(matour);
-				//frm_ChuongTrinhTour frm = new frm_ChuongTrinhTour(matour);
-				//ribbonForm1.showFormInPanel(frm);
+				frm_ChuongTrinhTour frm = new frm_ChuongTrinhTour(matour);
+				ribbonForm1.showFormInPanel(frm);
 			}
 			if (e.Button.Properties.Caption == "Phương tiện")
 			{
@@ -185,6 +185,9 @@ namespace FormTourTravel
 			return selectedData;
 		}
 
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
 
+		}
 	}
 }

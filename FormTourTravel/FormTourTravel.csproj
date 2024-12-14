@@ -236,11 +236,29 @@
     <Compile Include="frm_Blog.Designer.cs">
       <DependentUpon>frm_Blog.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_CapTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CapTaiKhoan.Designer.cs">
+      <DependentUpon>frm_CapTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ChiTietTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChiTietTour.Designer.cs">
+      <DependentUpon>frm_ChiTietTour.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_ChuanDoanTour.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_ChuanDoanTour.Designer.cs">
       <DependentUpon>frm_ChuanDoanTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ChuongTrinhTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChuongTrinhTour.Designer.cs">
+      <DependentUpon>frm_ChuongTrinhTour.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DangKy.cs">
       <SubType>Form</SubType>
@@ -356,6 +374,12 @@
     <Compile Include="frm_tourDaHuy.Designer.cs">
       <DependentUpon>frm_tourDaHuy.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_TourTypecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TourTypecs.Designer.cs">
+      <DependentUpon>frm_TourTypecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_XacNhanDatTour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,12 +388,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RibbonForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RibbonForm1.Designer.cs">
-      <DependentUpon>RibbonForm1.cs</DependentUpon>
-    </Compile>
     <Compile Include="SplashScreen1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -403,31 +421,27 @@
     <EmbeddedResource Include="frm_AddTourDX.resx">
       <DependentUpon>frm_AddTourDX.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_CapTaiKhoan.resx">
-      <DependentUpon>frm_CapTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_ChiTietTour.resx">
-      <DependentUpon>frm_ChiTietTour.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_ChuongTrinhTour.resx">
-      <DependentUpon>frm_ChuongTrinhTour.cs</DependentUpon>
-    </EmbeddedResource>
     <Compile Include="frm_DanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_DanhGia.Designer.cs">
       <DependentUpon>frm_DanhGia.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_ChiTietTour.resx">
+      <DependentUpon>frm_ChiTietTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ChuanDoanTour.resx">
       <DependentUpon>frm_ChuanDoanTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ChuongTrinhTour.resx">
+      <DependentUpon>frm_ChuongTrinhTour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="frm_KhachSanTour.resx">
       <DependentUpon>frm_KhachSanTour.cs</DependentUpon>
-  </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_HoaDon.resx">
       <DependentUpon>frm_HoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -449,10 +463,9 @@
     <EmbeddedResource Include="frm_Ribbon.resx">
       <DependentUpon>frm_Ribbon.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="frm_PhuongTienTour.resx">
       <DependentUpon>frm_PhuongTienTour.cs</DependentUpon>
-  </EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ThemHoaDon.resx">
       <DependentUpon>frm_ThemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -482,9 +495,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RibbonForm1.resx">
-      <DependentUpon>RibbonForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>

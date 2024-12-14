@@ -251,7 +251,14 @@ namespace FormTourTravel
 			tour.noikhoihanh = txt_noikhoihanh.Text;
 			tour.thoigiandi = txt_thoigiandi.Text;
 			tour.maloaitour = long.Parse(cbx_maloaitour.SelectedValue.ToString());
-			tour.makhuyenmai = long.Parse(cbx_makhuyenmai.SelectedValue.ToString());
+			if (cbx_makhuyenmai.SelectedValue == null)
+			{
+				tour.makhuyenmai = null;
+			}
+			else
+			{
+				tour.makhuyenmai = long.Parse(cbx_makhuyenmai.SelectedValue.ToString());
+			}
 
 			if (!string.IsNullOrEmpty(openFileDialog1.FileName) && openFileDialog1.FileName != txt_hinhdaidien.Text) 
 			{

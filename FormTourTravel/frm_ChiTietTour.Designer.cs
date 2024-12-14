@@ -1,6 +1,6 @@
 ﻿namespace FormTourTravel
 {
-	partial class frm_PhuongTienTour
+	partial class frm_ChiTietTour
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -35,14 +35,16 @@
 			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
 			this.windowsUIButtonPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.cbx_xe = new System.Windows.Forms.ComboBox();
-			this.txt_ghichu = new DevExpress.XtraEditors.MemoEdit();
-			this.txt_soluong = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
+			this.txt_matour = new System.Windows.Forms.TextBox();
+			this.txt_giatour = new System.Windows.Forms.TextBox();
+			this.cbx_diemdulich = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txt_ghichu.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// windowsUIButtonPanel
@@ -74,12 +76,12 @@
 			this.windowsUIButtonPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.windowsUIButtonPanel.EnableImageTransparency = true;
 			this.windowsUIButtonPanel.ForeColor = System.Drawing.Color.White;
-			this.windowsUIButtonPanel.Location = new System.Drawing.Point(0, 581);
+			this.windowsUIButtonPanel.Location = new System.Drawing.Point(0, 583);
 			this.windowsUIButtonPanel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
 			this.windowsUIButtonPanel.MaximumSize = new System.Drawing.Size(0, 74);
 			this.windowsUIButtonPanel.MinimumSize = new System.Drawing.Size(70, 74);
 			this.windowsUIButtonPanel.Name = "windowsUIButtonPanel";
-			this.windowsUIButtonPanel.Size = new System.Drawing.Size(1202, 74);
+			this.windowsUIButtonPanel.Size = new System.Drawing.Size(1336, 74);
 			this.windowsUIButtonPanel.TabIndex = 5;
 			this.windowsUIButtonPanel.Text = "windowsUIButtonPanel";
 			this.windowsUIButtonPanel.UseButtonBackgroundImages = false;
@@ -88,86 +90,119 @@
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(129, 235);
+			this.dataGridView1.Location = new System.Drawing.Point(49, 188);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(958, 216);
+			this.dataGridView1.Size = new System.Drawing.Size(1055, 282);
 			this.dataGridView1.TabIndex = 6;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label3.Location = new System.Drawing.Point(650, 28);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(74, 20);
-			this.label3.TabIndex = 10;
-			this.label3.Text = "Ghi chú";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label2.Location = new System.Drawing.Point(125, 35);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(70, 20);
-			this.label2.TabIndex = 11;
-			this.label2.Text = "Loại xe";
+			this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label1.Location = new System.Drawing.Point(125, 159);
+			this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.label1.Location = new System.Drawing.Point(45, 46);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(137, 20);
-			this.label1.TabIndex = 12;
-			this.label1.Text = "Số lượng khách";
+			this.label1.Size = new System.Drawing.Size(104, 21);
+			this.label1.TabIndex = 7;
+			this.label1.Text = "Chi tiết tour:";
 			// 
-			// cbx_xe
+			// label2
 			// 
-			this.cbx_xe.FormattingEnabled = true;
-			this.cbx_xe.Location = new System.Drawing.Point(127, 64);
-			this.cbx_xe.Name = "cbx_xe";
-			this.cbx_xe.Size = new System.Drawing.Size(413, 24);
-			this.cbx_xe.TabIndex = 9;
-			this.cbx_xe.SelectedIndexChanged += new System.EventHandler(this.cbx_xe_SelectedIndexChanged);
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.label2.Location = new System.Drawing.Point(155, 46);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(54, 21);
+			this.label2.TabIndex = 8;
+			this.label2.Text = "label2";
 			// 
-			// txt_ghichu
+			// dateTimePicker1
 			// 
-			this.txt_ghichu.Location = new System.Drawing.Point(654, 63);
-			this.txt_ghichu.Name = "txt_ghichu";
-			this.txt_ghichu.Size = new System.Drawing.Size(414, 142);
-			this.txt_ghichu.TabIndex = 8;
+			this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.dateTimePicker1.Location = new System.Drawing.Point(743, 143);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(293, 28);
+			this.dateTimePicker1.TabIndex = 15;
 			// 
-			// txt_soluong
+			// label3
 			// 
-			this.txt_soluong.Location = new System.Drawing.Point(127, 182);
-			this.txt_soluong.Name = "txt_soluong";
-			this.txt_soluong.Size = new System.Drawing.Size(415, 23);
-			this.txt_soluong.TabIndex = 7;
-			this.txt_soluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_soluong_KeyPress);
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.label3.Location = new System.Drawing.Point(740, 108);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(109, 21);
+			this.label3.TabIndex = 12;
+			this.label3.Text = "Ngày bắt đầu";
 			// 
-			// frm_PhuongTienTour
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.label4.Location = new System.Drawing.Point(442, 114);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(69, 21);
+			this.label4.TabIndex = 13;
+			this.label4.Text = "Giá tour";
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.label5.Location = new System.Drawing.Point(45, 110);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(102, 21);
+			this.label5.TabIndex = 14;
+			this.label5.Text = "Điểm du lich";
+			// 
+			// txt_matour
+			// 
+			this.txt_matour.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.txt_matour.Location = new System.Drawing.Point(995, 82);
+			this.txt_matour.Name = "txt_matour";
+			this.txt_matour.Size = new System.Drawing.Size(129, 28);
+			this.txt_matour.TabIndex = 10;
+			this.txt_matour.Visible = false;
+			// 
+			// txt_giatour
+			// 
+			this.txt_giatour.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.txt_giatour.Location = new System.Drawing.Point(446, 143);
+			this.txt_giatour.Name = "txt_giatour";
+			this.txt_giatour.Size = new System.Drawing.Size(221, 28);
+			this.txt_giatour.TabIndex = 11;
+			// 
+			// cbx_diemdulich
+			// 
+			this.cbx_diemdulich.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+			this.cbx_diemdulich.FormattingEnabled = true;
+			this.cbx_diemdulich.Location = new System.Drawing.Point(49, 142);
+			this.cbx_diemdulich.Name = "cbx_diemdulich";
+			this.cbx_diemdulich.Size = new System.Drawing.Size(292, 29);
+			this.cbx_diemdulich.TabIndex = 9;
+			// 
+			// frm_ChiTietTour
 			// 
 			this.Appearance.BackColor = System.Drawing.Color.White;
 			this.Appearance.Options.UseBackColor = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1202, 655);
+			this.ClientSize = new System.Drawing.Size(1336, 657);
+			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.txt_matour);
+			this.Controls.Add(this.txt_giatour);
+			this.Controls.Add(this.cbx_diemdulich);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.cbx_xe);
-			this.Controls.Add(this.txt_ghichu);
-			this.Controls.Add(this.txt_soluong);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.windowsUIButtonPanel);
 			this.Margin = new System.Windows.Forms.Padding(4);
-			this.Name = "frm_PhuongTienTour";
+			this.Name = "frm_ChiTietTour";
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txt_ghichu.Properties)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -176,11 +211,14 @@
 		#endregion
 		private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ComboBox cbx_xe;
-		private DevExpress.XtraEditors.MemoEdit txt_ghichu;
-		private System.Windows.Forms.TextBox txt_soluong;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox txt_matour;
+		private System.Windows.Forms.TextBox txt_giatour;
+		private System.Windows.Forms.ComboBox cbx_diemdulich;
 	}
 }
