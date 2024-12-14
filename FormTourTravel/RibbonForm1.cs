@@ -51,7 +51,9 @@ namespace FormTourTravel
 
 				panel.Controls.Clear();
 				panel.Controls.Add(form);
-				panel.Tag = form;
+                panel.AutoScroll = true;
+				//panel.AutoScrollPosition = new System.Drawing.Point(0, 100);
+                panel.Tag = form;
 
 				form.Show();
 			}
@@ -110,5 +112,87 @@ namespace FormTourTravel
 		{
 
 		}
-	}
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barEditItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void skinRibbonGalleryBarItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void panel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_HoaDon frm = new frm_HoaDon();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_ThemHoaDon frm_ThemHoaDon = new frm_ThemHoaDon();
+            showFormInPanel(frm_ThemHoaDon);
+        }
+    }
 }

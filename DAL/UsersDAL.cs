@@ -61,5 +61,26 @@ namespace DAL
             List<user> users = db.users.ToList();
             return users;
         }
+        public user TaoTaiKhoanNguoiDaiDien(string userName, string email)
+        {
+            try
+            {
+                var user = new user
+                {
+                    tentaikhoan = userName,
+                    email = email,
+                    matkhau = BCrypt.Net.BCrypt.HashPassword("123456"),
+                    manhomquyen = 2
+                };
+                db.users.Add(user);
+                db.SaveChanges();
+                return user;
+            }
+            catch
+            {
+                return null;
+
+            }
+        }
     }
 }

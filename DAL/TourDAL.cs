@@ -14,5 +14,10 @@ namespace DAL
 		{
 			return db.tours.ToList();
 		}
+		public List<DateTime> LayDanhSachNgayDi(int tourId)
+		{
+            var ngaydi = db.chitiettours.Where(x => x.matour == tourId).Select(x => x.ngaybatdau).ToList();
+            return ngaydi;
+        }
 	}
 }

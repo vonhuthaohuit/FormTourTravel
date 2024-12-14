@@ -28,6 +28,18 @@ namespace BLL
         {
             return usersDAL.LayTatCaUser();
         }
-        
+        public user TaoTaiKhoanNguoiDaiDien(string tenTaiKhoan,string email)
+        {
+            try
+            {
+                return usersDAL.TaoTaiKhoanNguoiDaiDien(tenTaiKhoan, email);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ql_tourdulich_ptudtmModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ql_tourdulich_ptudtmModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="backup_schedules">
           <Key>
             <PropertyRef Name="id" />
@@ -198,13 +198,12 @@
           <Property Name="created_at" Type="timestamp" Precision="0" />
           <Property Name="updated_at" Type="timestamp" Precision="0" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6005: The data type 'udouble' is currently not supported for the target Entity Framework version; the column 'tongsotien' in the table 'def.ql_tourdulich_ptudtm.hoadon' was excluded.-->
         <EntityType Name="hoadon">
           <Key>
             <PropertyRef Name="mahoadon" />
           </Key>
-          <Property Name="mahoadon" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mahoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tongsotien" Type="double" Nullable="false" />
           <Property Name="trangthaithanhtoan" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="phuongthucthanhtoan" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="masothue" Type="varchar" MaxLength="255" />
@@ -355,8 +354,6 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
           <Property Name="created_at" Type="timestamp" Precision="0" />
           <Property Name="updated_at" Type="timestamp" Precision="0" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6005: The data type 'udouble' is currently not supported for the target Entity Framework version; the column 'tongtienphieudattour' in the table 'def.ql_tourdulich_ptudtm.phieudattour' was excluded.-->
         <EntityType Name="phieudattour">
           <Key>
             <PropertyRef Name="maphieudattour" />
@@ -365,6 +362,7 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
           <Property Name="matour" Type="uint" Nullable="false" />
           <Property Name="ngaydattour" Type="date" Nullable="false" />
           <Property Name="ngaybatdau" Type="date" />
+          <Property Name="tongtienphieudattour" Type="double" Nullable="false" />
           <Property Name="trangthaidattour" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="tongsoluong" Type="int" Nullable="false" />
           <Property Name="nguoidaidien" Type="varchar" MaxLength="255" Nullable="false" />
@@ -1030,8 +1028,7 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
             <End Role="users" EntitySet="users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ql_tourdulich_ptudtmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1247,7 +1244,7 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
           <Key>
             <PropertyRef Name="mahoadon" />
           </Key>
-          <Property Name="mahoadon" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mahoadon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="trangthaithanhtoan" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="phuongthucthanhtoan" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="masothue" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
@@ -1261,6 +1258,7 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
           <Property Name="updated_at" Type="DateTime" />
           <NavigationProperty Name="phieudattour" Relationship="Self.hoadon_maphieudattour_foreign" FromRole="hoadon" ToRole="phieudattour" />
           <NavigationProperty Name="phieuhuytour" Relationship="Self.hoadon_maphieuhuytour_foreign" FromRole="hoadon" ToRole="phieuhuytour" />
+          <Property Name="tongsotien" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="khachhang">
           <Key>
@@ -1435,6 +1433,7 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
           <NavigationProperty Name="chitietphieudattours" Relationship="Self.chitietphieudattour_maphieudattour_foreign" FromRole="phieudattour" ToRole="chitietphieudattour" />
           <NavigationProperty Name="hoadons" Relationship="Self.hoadon_maphieudattour_foreign" FromRole="phieudattour" ToRole="hoadon" />
           <NavigationProperty Name="tour" Relationship="Self.phieudattour_matour_foreign" FromRole="phieudattour" ToRole="tour" />
+          <Property Name="tongtienphieudattour" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="phieuhuytour">
           <Key>
@@ -2330,6 +2329,7 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
           <EntitySetMapping Name="hoadons">
             <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.hoadon">
               <MappingFragment StoreEntitySet="hoadon">
+                <ScalarProperty Name="tongsotien" ColumnName="tongsotien" />
                 <ScalarProperty Name="mahoadon" ColumnName="mahoadon" />
                 <ScalarProperty Name="trangthaithanhtoan" ColumnName="trangthaithanhtoan" />
                 <ScalarProperty Name="phuongthucthanhtoan" ColumnName="phuongthucthanhtoan" />
@@ -2497,6 +2497,7 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
           <EntitySetMapping Name="phieudattours">
             <EntityTypeMapping TypeName="ql_tourdulich_ptudtmModel.phieudattour">
               <MappingFragment StoreEntitySet="phieudattour">
+                <ScalarProperty Name="tongtienphieudattour" ColumnName="tongtienphieudattour" />
                 <ScalarProperty Name="maphieudattour" ColumnName="maphieudattour" />
                 <ScalarProperty Name="matour" ColumnName="matour" />
                 <ScalarProperty Name="ngaydattour" ColumnName="ngaydattour" />
@@ -2615,7 +2616,7 @@ warning 6005: The data type 'udouble' is currently not supported for the target 
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

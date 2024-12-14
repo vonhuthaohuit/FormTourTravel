@@ -14,5 +14,9 @@ namespace BLL
 		{
 			return tourDAL.LayDanhSachTour();
 		}
-	}
+		public List<DateTime> LayDanhSachNgayDi(int tourId)
+        {
+            return tourDAL.LayDanhSachNgayDi(tourId);
+        }
+    }
 }
