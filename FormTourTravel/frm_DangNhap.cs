@@ -38,7 +38,7 @@ namespace FormTourTravel
                 long nhomQuyen = usersBll.kiemTraNhomQuyen(maTaiKhoan);
 
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                frm_Main frm_main = new frm_Main(nhomQuyen);
+                frm_Ribbon frm_main = new frm_Ribbon();
                 frm_main.Show();
                 this.Hide();
             }
