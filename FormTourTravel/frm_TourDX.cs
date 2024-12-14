@@ -77,9 +77,9 @@ namespace FormTourTravel
 			{
 				if (dataGridView1.SelectedRows.Count > 0)
 				{
-					long matour = long.Parse(dataGridView1.SelectedRows[0].Cells["matour"].Value.ToString());
-					frm_ChiTietTour frmChiTietTour = new frm_ChiTietTour(matour);
-					ribbonForm1.showFormInPanel(frmChiTietTour);
+					//long matour = long.Parse(dataGridView1.SelectedRows[0].Cells["matour"].Value.ToString());
+					//frm_ChiTietTour frmChiTietTour = new frm_ChiTietTour(matour);
+					//ribbonForm1.showFormInPanel(frmChiTietTour);
 
 				}
 				else
@@ -107,8 +107,8 @@ namespace FormTourTravel
 				}
 				var chuongTrinhTourBLL = new ChuongTrinhTourBLL();
 				var listChuongTrinhTour = chuongTrinhTourBLL.GetListChuongTrinh(matour);
-				frm_ChuongTrinhTour frm = new frm_ChuongTrinhTour(matour);
-				ribbonForm1.showFormInPanel(frm);
+				//frm_ChuongTrinhTour frm = new frm_ChuongTrinhTour(matour);
+				//ribbonForm1.showFormInPanel(frm);
 			}
 			if (e.Button.Properties.Caption == "Phương tiện")
 			{

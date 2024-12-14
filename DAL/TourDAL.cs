@@ -123,7 +123,6 @@ namespace DAL
             return ngaydi;
         }
 
-	}
 
 		public List<dynamic> LayTourDaDat()
 		{

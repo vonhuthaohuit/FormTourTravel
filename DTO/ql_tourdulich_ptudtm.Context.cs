@@ -15,8 +15,7 @@ namespace DTO
     
     public partial class ql_tourdulich_ptudtmEntities : DbContext
     {
-        public ql_tourdulich_ptudtmEntities()
-            : base("name=ql_tourdulich_ptudtmEntities")
+        public ql_tourdulich_ptudtmEntities() : base("name=ql_tourdulich_ptudtmEntities")
         {
         }
     

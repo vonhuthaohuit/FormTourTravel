@@ -70,9 +70,9 @@ namespace FormTourTravel
 
         private void cấpTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_CapTaiKhoan frmCapTaiKhoan = new frm_CapTaiKhoan();
-            ShowFormInPanel(frmCapTaiKhoan);
-            tieuDeChucNang1.LblTieuDe.Text = "Cấp Tài Khoản";
+            //frm_CapTaiKhoan frmCapTaiKhoan = new frm_CapTaiKhoan();
+            //ShowFormInPanel(frmCapTaiKhoan);
+            //tieuDeChucNang1.LblTieuDe.Text = "Cấp Tài Khoản";
         }
 
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)

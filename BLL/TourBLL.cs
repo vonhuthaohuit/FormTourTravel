@@ -53,13 +53,13 @@ namespace BLL
 			return tourDAL.getTenTour(matour);
 		}
 
-	}
+
 
 		public List<DateTime> LayDanhSachNgayDi(int tourId)
         {
             return tourDAL.LayDanhSachNgayDi(tourId);
         }
-    }
+    
 
         public List<dynamic> LayTourDaDat()
         {
