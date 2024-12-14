@@ -117,4 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="windowsUIButtonImageOptions1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAgdEVYdFRpdGxlAEVkaXQ7QmFycztSaWJib247U3Rh
+        bmRhcmQ7MBPD2wAAAU9JREFUWEfNlO0NQjEIRZ3DWYjRcUycwegYDuY8z/ACDV5oS/2o/jjRR+FytMnb
+        LMuy+SWuMBtXmI0rKES0vMgZs1q4ghIEj3AmIs4oYH5aAOstWhLYq7gChmG9ReufwF7FFTAM6y0CgSKB
+        vQoPbYnoQkR3IjpiGA60CJYXCexVeIiX2+a9hN3kudxjRFKg+kN4iH+5Nl4laCcLWMItHaQrcNLlMsB3
+        tv5t/CxCIa2ztICEHORTlyvl7oLglcRZX0Aa97A8LRFhZnIC0szXgAJpCQxPCeBgRkL6nr5jjjnrC+Bw
+        VsL0u5o5ywlgyKhEjSGBb0gMC6gEv4TksyaxvjF7vCQg8GBNYn1pYVjEuwJl0EiU5ZmrwBwEl1YFJOxg
+        l+N5RJRjcYXMoH1l4xnS63OF7GCWXo4rZAez9HJcAQc/Beb/v8AsXGE2rjAbV5jNA6jZif5KTcs4AAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="windowsUIButtonImageOptions2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAOdEVYdFRpdGxlAENvbHVtbnM7bCBblgAAAJBJREFU
+        WEftzzEKgDAQRNHcKaf1tCu2K1PMZ6IRLD6EafJ2VNV4s9sw56yV9f+2BlzvZN8FHC26Y0AqDFAXuTsG
+        pMIAdZG7Y0AqDFAXuTsGpMIAdZG7Y0AqDFAXuTsGpMIAdZG7Y0AqDFAXuTsGpMIAdZG7Y0AqDFAXuTsG
+        pMIAdZG7Y0CqH2ADltT/2w/wdCfXtVE3ZDWuVQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="windowsUIButtonImageOptions3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAASdEVYdFRpdGxlAERyaXZpbmc7Q2FyO7bj1MUAAAFNSURBVFhH1ZO9TQNBEIUtaIEGkMiRA4pA
+        aGpAJETYRUwBUAIRPUxCQO4EUQZEBiFIWDTWnrR6b+/2AN8AwZe8fT9zFsxSSrPfhIRoSIiGhGhIiIaE
+        aEgQtRoHonYtak+ilho8Zq9nsIf2SMCAqM1F7bUy1OJF1A6xD/dIwICo3Ynah6gdDRVBxr2eucU+zJEA
+        gZP8NTetInzPGc8eD+VIKMy7ovYgam+itl8ZaOEZz96L2s53DjjLX3BVKR+LZ73jtNNwrxxeVv6QnkVt
+        D0Nj8ayorSu9y85TmtG0+Xos/SqidlnpTd17aVyhaUJWdEBxyKIS2Ab+b3mBe7UD3PxeKfgpm07c6zuA
+        jOVbC8wN9Y42lm8tMDfU22ucCtz7kwdMCu6RgBdvG9z7VwfQz9kA86MPOMdQ1sg7RF8P+igYDQnRkBAN
+        CdGQEA0J0XwCtx6kvyRsYhMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="windowsUIButtonImageOptions4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAC3RFWHRUaXRsZQBIb21lOx50
+        ZDgAAAENSURBVFhHxZRRDsIwDEM52M6GxMmLipaps9PUWabxYQlcx3788Gqtvf4pMp7W6cu2bZ4aaHx7
+        dwW3ru4C6OPm9c94N1UFwIbGcXxb6ipANI6ZUFcAlHEZIguQGZcgsgDR+GcX+iFEFiAat0wKIgMwHd/z
+        /d3+B2SIJcBQjmU4foysILA/BEiO48gUQgXwylfjKYgIYFaujB8jK4gIAMNdmfHTyAwiA3Bl3DSFUAEq
+        4yYXQgG4Y9xEECuAO8dNJ4gI4Dc+wLgab5wf4MrbIIBsGQpzyg0ZlTLMKTdkVMowp9yQUSnDnHJDRqUM
+        c8oNGZUyzCk3ZFTKMKfckFEpw5xyQ0alDHPKDRlPi4yn9QVMw1FWfi8KUgAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

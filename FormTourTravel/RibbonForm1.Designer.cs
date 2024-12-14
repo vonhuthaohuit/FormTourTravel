@@ -29,6 +29,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonForm1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -156,6 +157,7 @@
             this.skinRibbonGalleryBarItem1,
             this.barSubItem2,
             this.barButtonItem10,
+
             this.btn_tour,
             this.btn_loaitour,
             this.barButtonItem11,
@@ -200,6 +202,150 @@
             this.ribbonPage2});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
+
+			this.ribbonControl1.Size = new System.Drawing.Size(1368, 209);
+			this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl_SelectedPageChanged);
+			// 
+			// barButtonItem1
+			// 
+			this.barButtonItem1.Caption = "barButtonItem1";
+			this.barButtonItem1.Id = 1;
+			this.barButtonItem1.Name = "barButtonItem1";
+			// 
+			// barButtonItem2
+			// 
+			this.barButtonItem2.Caption = "barButtonItem2";
+			this.barButtonItem2.Id = 2;
+			this.barButtonItem2.Name = "barButtonItem2";
+			// 
+			// barButtonItem3
+			// 
+			this.barButtonItem3.Caption = "barButtonItem3";
+			this.barButtonItem3.Id = 3;
+			this.barButtonItem3.Name = "barButtonItem3";
+			// 
+			// barSubItem1
+			// 
+			this.barSubItem1.Caption = "barSubItem1";
+			this.barSubItem1.Id = 4;
+			this.barSubItem1.Name = "barSubItem1";
+			// 
+			// barButtonItem4
+			// 
+			this.barButtonItem4.Caption = "Tour";
+			this.barButtonItem4.Id = 5;
+			this.barButtonItem4.Name = "barButtonItem4";
+			// 
+			// barButtonItem5
+			// 
+			this.barButtonItem5.Caption = "barButtonItem5";
+			this.barButtonItem5.Id = 6;
+			this.barButtonItem5.Name = "barButtonItem5";
+			// 
+			// barEditItem1
+			// 
+			this.barEditItem1.Caption = "barEditItem1";
+			this.barEditItem1.Edit = this.repositoryItemButtonEdit1;
+			this.barEditItem1.Id = 7;
+			this.barEditItem1.Name = "barEditItem1";
+			// 
+			// repositoryItemButtonEdit1
+			// 
+			this.repositoryItemButtonEdit1.AutoHeight = false;
+			this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+			this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+			// 
+			// barButtonItem6
+			// 
+			this.barButtonItem6.Caption = "Chi tiết tour";
+			this.barButtonItem6.Id = 8;
+			this.barButtonItem6.Name = "barButtonItem6";
+			// 
+			// barButtonItem7
+			// 
+			this.barButtonItem7.Caption = "Chương trình tour";
+			this.barButtonItem7.Id = 9;
+			this.barButtonItem7.Name = "barButtonItem7";
+			// 
+			// barButtonItem8
+			// 
+			this.barButtonItem8.Caption = "Loại tour";
+			this.barButtonItem8.Id = 10;
+			this.barButtonItem8.Name = "barButtonItem8";
+			// 
+			// barButtonItem9
+			// 
+			this.barButtonItem9.Caption = "Tour";
+			this.barButtonItem9.Id = 11;
+			this.barButtonItem9.Name = "barButtonItem9";
+			// 
+			// skinRibbonGalleryBarItem1
+			// 
+			this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+			this.skinRibbonGalleryBarItem1.Id = 12;
+			this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+			// 
+			// barSubItem2
+			// 
+			this.barSubItem2.Caption = "barSubItem2";
+			this.barSubItem2.Id = 13;
+			this.barSubItem2.Name = "barSubItem2";
+			// 
+			// barButtonItem10
+			// 
+			this.barButtonItem10.Caption = "barButtonItem10";
+			this.barButtonItem10.Id = 14;
+			this.barButtonItem10.Name = "barButtonItem10";
+			// 
+			// btn_loaitour
+			// 
+			this.btn_loaitour.Caption = "Loại tour du lich";
+			this.btn_loaitour.Id = 16;
+			this.btn_loaitour.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_loaitour.ImageOptions.Image")));
+			this.btn_loaitour.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_loaitour.ImageOptions.LargeImage")));
+			this.btn_loaitour.Name = "btn_loaitour";
+			this.btn_loaitour.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_loaitour_ItemClick);
+			// 
+			// ChiTietTour
+			// 
+			this.ChiTietTour.Id = 22;
+			this.ChiTietTour.Name = "ChiTietTour";
+			// 
+			// btn_tourr
+			// 
+			this.btn_tourr.Caption = "Tour du lich";
+			this.btn_tourr.Id = 18;
+			this.btn_tourr.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_tourr.ImageOptions.Image")));
+			this.btn_tourr.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_tourr.ImageOptions.LargeImage")));
+			this.btn_tourr.Name = "btn_tourr";
+			this.btn_tourr.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tourr_ItemClick);
+			// 
+			// barButtonItem13
+			// 
+			this.barButtonItem13.Caption = "Sửa";
+			this.barButtonItem13.Id = 21;
+			this.barButtonItem13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
+			this.barButtonItem13.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
+			this.barButtonItem13.Name = "barButtonItem13";
+			// 
+			// ribbon_taikhoan
+			// 
+			this.ribbon_taikhoan.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup11});
+			this.ribbon_taikhoan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbon_taikhoan.ImageOptions.Image")));
+			this.ribbon_taikhoan.Name = "ribbon_taikhoan";
+			this.ribbon_taikhoan.Text = "Tài khoản";
+			// 
+			// ribbonPageGroup11
+			// 
+			this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+			this.ribbonPageGroup11.Text = "ribbonPageGroup11";
+			// 
+			// ribbon_tour
+			// 
+			this.ribbon_tour.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+
             this.ribbonControl1.Size = new System.Drawing.Size(1163, 177);
             // 
             // barButtonItem1
@@ -563,6 +709,7 @@
             // ribbon_tour
             // 
             this.ribbon_tour.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+
             this.Tour,
             this.ribbonPageGroup9,
             this.ribbonPageGroup2,
@@ -682,6 +829,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
             this.ribbonPageGroup9});
+
             this.ribbon_tour.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbon_tour.ImageOptions.Image")));
             this.ribbon_tour.Name = "ribbon_tour";
             this.ribbon_tour.Text = "Tour";
@@ -826,12 +974,13 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+
 		}
 
 		#endregion
 
 		private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+		private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_taikhoan;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_tour;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem2;
@@ -848,11 +997,17 @@
 		private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
 		private DevExpress.XtraBars.BarSubItem barSubItem2;
 		private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+		private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_khachhang;
+		private DevExpress.XtraBars.Ribbon.RibbonPage ribbon_blog;
+		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
+		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
+
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage9;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage10;
-		private DevExpress.XtraBars.BarButtonItem btn_tour;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup Tour;
 		private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage12;
 		private DevExpress.XtraBars.BarButtonItem btn_loaitour;
@@ -881,6 +1036,10 @@
     }
 		private DevExpress.XtraEditors.PanelControl panel;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
+		private DevExpress.XtraBars.BarButtonItem ChiTietTour;
+		private DevExpress.XtraBars.BarButtonItem btn_tourr;
+		private DevExpress.XtraBars.BarButtonItem btn_tour;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
@@ -891,4 +1050,5 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
+
 }
