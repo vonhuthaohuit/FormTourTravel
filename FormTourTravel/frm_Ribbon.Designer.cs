@@ -260,7 +260,7 @@
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Khuyến mãi";
             // 
             // ribbonPageGroup3
             // 
