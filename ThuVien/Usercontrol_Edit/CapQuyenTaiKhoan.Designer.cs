@@ -195,7 +195,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(880, 392);
+            this.groupBox2.Size = new System.Drawing.Size(1042, 392);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách tài khoản";
@@ -207,7 +207,7 @@
             this.dgv_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_TaiKhoan.Name = "dgv_TaiKhoan";
             this.dgv_TaiKhoan.RowTemplate.Height = 24;
-            this.dgv_TaiKhoan.Size = new System.Drawing.Size(872, 371);
+            this.dgv_TaiKhoan.Size = new System.Drawing.Size(1034, 371);
             this.dgv_TaiKhoan.TabIndex = 0;
             this.dgv_TaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TaiKhoan_CellClick);
             // 
@@ -259,7 +259,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CapQuyenTaiKhoan";
-            this.Size = new System.Drawing.Size(1133, 399);
+            this.Size = new System.Drawing.Size(1295, 399);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -123,5 +123,52 @@ namespace FormTourTravel
 			frm_TourTypecs frm_TourTypecs = new frm_TourTypecs();
 			showFormInPanel(frm_TourTypecs);
 		}
-	}
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_CapTaiKhoan frm_CapTaiKhoan = new frm_CapTaiKhoan();
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_NhomQuyen frm_NhomQuyen = new frm_NhomQuyen();
+            showFormInPanel(frm_NhomQuyen);
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_DanhGia frm_DanhGia = new frm_DanhGia();
+            showFormInPanel(frm_DanhGia);
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_KhuyenMai frm_KhuyenMai = new frm_KhuyenMai();
+            showFormInPanel(frm_KhuyenMai);
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_CapTaiKhoan frm_CapTaiKhoan = new frm_CapTaiKhoan();
+            showFormInPanel(frm_CapTaiKhoan);
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_NhomQuyen frm_NhomQuyen = new frm_NhomQuyen();
+            showFormInPanel(frm_NhomQuyen);
+        }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_HuyTour frm_HuyTour = new frm_HuyTour();
+            showFormInPanel(frm_HuyTour);   
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_tourDaHuy frm_TourDaHuy = new frm_tourDaHuy();
+            showFormInPanel(frm_TourDaHuy);
+        }
+    }
 }

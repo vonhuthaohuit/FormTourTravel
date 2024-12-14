@@ -427,6 +427,9 @@
     <Compile Include="frm_DanhGia.Designer.cs">
       <DependentUpon>frm_DanhGia.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_CapTaiKhoan.resx">
+      <DependentUpon>frm_CapTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_ChiTietTour.resx">
       <DependentUpon>frm_ChiTietTour.cs</DependentUpon>
     </EmbeddedResource>

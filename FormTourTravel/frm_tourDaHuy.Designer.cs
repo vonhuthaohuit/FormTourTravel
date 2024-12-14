@@ -33,8 +33,14 @@
             this.btn_xuatexcel = new System.Windows.Forms.Button();
             this.cbo_thang = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_loc = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maphieuhuytour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tentour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nguoidaidien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +64,7 @@
             this.ngayhuy});
             this.dgv_phieuhuytour.Location = new System.Drawing.Point(6, 19);
             this.dgv_phieuhuytour.Name = "dgv_phieuhuytour";
-            this.dgv_phieuhuytour.Size = new System.Drawing.Size(1112, 263);
+            this.dgv_phieuhuytour.Size = new System.Drawing.Size(1268, 263);
             this.dgv_phieuhuytour.TabIndex = 0;
             // 
             // groupBox1
@@ -66,7 +72,7 @@
             this.groupBox1.Controls.Add(this.dgv_phieuhuytour);
             this.groupBox1.Location = new System.Drawing.Point(12, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1127, 289);
+            this.groupBox1.Size = new System.Drawing.Size(1287, 289);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách tour đã hủy";
@@ -102,15 +108,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tháng";
-            // 
             // btn_loc
             // 
             this.btn_loc.Location = new System.Drawing.Point(244, 31);
@@ -120,6 +117,56 @@
             this.btn_loc.Text = "Lọc";
             this.btn_loc.UseVisualStyleBackColor = true;
             this.btn_loc.Click += new System.EventHandler(this.btn_loc_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tháng";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "maphieuhuytour";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã phiếu hủy";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "tentour";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên tour";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 400;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nguoidaidien";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Người hủy";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "lydohuy";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Lý do hủy";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "sotienhoan";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Số tiền hoàn";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ngayhuy";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Ngày Hủy";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 170;
             // 
             // maphieuhuytour
             // 
@@ -139,7 +186,7 @@
             this.nguoidaidien.DataPropertyName = "nguoidaidien";
             this.nguoidaidien.HeaderText = "Người hủy";
             this.nguoidaidien.Name = "nguoidaidien";
-            this.nguoidaidien.Width = 150;
+            this.nguoidaidien.Width = 170;
             // 
             // lydohuy
             // 
@@ -153,18 +200,20 @@
             this.sotienhoan.DataPropertyName = "sotienhoan";
             this.sotienhoan.HeaderText = "Số tiền hoàn";
             this.sotienhoan.Name = "sotienhoan";
+            this.sotienhoan.Width = 170;
             // 
             // ngayhuy
             // 
             this.ngayhuy.DataPropertyName = "ngayhuy";
             this.ngayhuy.HeaderText = "Ngày Hủy";
             this.ngayhuy.Name = "ngayhuy";
+            this.ngayhuy.Width = 170;
             // 
             // frm_tourDaHuy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 450);
+            this.ClientSize = new System.Drawing.Size(1345, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_tourDaHuy";
@@ -193,5 +242,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lydohuy;
         private System.Windows.Forms.DataGridViewTextBoxColumn sotienhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayhuy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }
