@@ -5,8 +5,8 @@
 ---
 
 ### THÔNG TIN NHÓM:
-1. **Võ Nhựt Hào**
-   - Email: vonhuthao11235@gmail.com - 2001215754
+1. **Võ Nhựt Hào** - 2001215754
+   - Email: vonhuthao11235@gmail.com
 
 2. **Nguyễn Văn Khánh** - 2001215891
    - Email: nguyenvankhanhdev@gmail.com
