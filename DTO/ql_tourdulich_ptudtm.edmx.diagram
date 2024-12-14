@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b834d913a3fb43e59b25ea7308188006" Name="Diagram1">
+      <Diagram DiagramId="5f81224ef1c845a1b860c862fe613e8e" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.backup_schedules" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.blogtour" Width="1.5" PointX="8.25" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ql_tourdulich_ptudtmModel.chitietkhachsantour" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />

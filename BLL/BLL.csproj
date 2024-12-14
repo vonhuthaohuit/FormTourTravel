@@ -47,7 +47,14 @@
     <Compile Include="DiemDuLichBLL.cs" />
     <Compile Include="KhachSanTourBLL.cs" />
     <Compile Include="KhuyenMaiBLL.cs" />
+    <Compile Include="DanhGiaBLL.cs" />
+    <Compile Include="DiscountBLL.cs" />
+    <Compile Include="ChiTietPhieuDatTourBLL.cs" />
+    <Compile Include="HoaDonBLL.cs" />
+    <Compile Include="KhachHangBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
+    <Compile Include="PhieuHuyBLL.cs" />
+    <Compile Include="PhieuDatTourBLL.cs" />
     <Compile Include="PhongBanBLL.cs" />
     <Compile Include="PhuongTienTourBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

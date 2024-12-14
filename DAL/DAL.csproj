@@ -121,12 +121,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="ChiTietTourDAL.cs" />
     <Compile Include="ChuongTrinhTourDAL.cs" />
     <Compile Include="DiemDuLichDAL.cs" />
     <Compile Include="KhachSanTourDAL.cs" />
     <Compile Include="KhuyenMaiDAL.cs" />
+
+    <Compile Include="DanhGiaDAL.cs" />
+    <Compile Include="DiscountDAL.cs" />
+    <Compile Include="ChiTietPhieuDatTourDAL.cs" />
+    <Compile Include="HoaDonDAL.cs" />
+    <Compile Include="KhachHangDAL.cs" />
+
     <Compile Include="NhanVienDAL.cs" />
+    <Compile Include="PhieuHuyDAL.cs" />
+    <Compile Include="PhieuDatTourDAL.cs" />
     <Compile Include="PhongBanDAL.cs" />
     <Compile Include="PhuongTienTourDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

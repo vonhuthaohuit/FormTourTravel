@@ -170,6 +170,7 @@ namespace FormTourTravel
 			{
 				var selectedRow = dataGridView1.SelectedRows[0];
 
+
 				foreach (DataGridViewCell cell in selectedRow.Cells)
 				{
 					var columnName = dataGridView1.Columns[cell.ColumnIndex].Name;

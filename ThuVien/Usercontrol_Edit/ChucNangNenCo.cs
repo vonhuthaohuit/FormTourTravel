@@ -27,6 +27,7 @@ namespace ThuVien.Usercontrol_Edit
             btn_Luu.Click += Btn_Luu_Click;
             btn_Thoat.Click += Btn_Thoat_Click;
             btn_clear.Click += Btn_clear_Click;
+            
         }
 
         private void Btn_clear_Click(object sender, EventArgs e)
@@ -57,6 +58,14 @@ namespace ThuVien.Usercontrol_Edit
         public void Btn_Them_Click(object sender, EventArgs e)
         {
             ThemClicked?.Invoke(this, EventArgs.Empty);
+        }
+        public void UpdateButtonState(bool enableThem, bool enableXoa, bool enableSua, bool enableLuu, bool enableLamMoi)
+        {
+            btn_Them.Enabled = enableThem;
+            btn_Xoa.Enabled = enableXoa;
+            btn_Sua.Enabled = enableSua;
+            btn_Luu.Enabled = enableLuu;
+            btn_clear.Enabled = enableLamMoi;
         }
     }
 }

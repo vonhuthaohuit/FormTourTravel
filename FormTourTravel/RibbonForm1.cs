@@ -66,7 +66,11 @@ namespace FormTourTravel
 				panel.AutoScroll = true;
 				panel.Controls.Clear(); 
 				panel.Controls.Add(form);
-				panel.Tag = form;
+
+                panel.AutoScroll = true;
+				//panel.AutoScrollPosition = new System.Drawing.Point(0, 100);
+                panel.Tag = form;
+
 				form.Show();
 			}
 			catch (Exception ex)
@@ -115,7 +119,153 @@ namespace FormTourTravel
 			frm_TourTypecs frm_TourTypecs = new frm_TourTypecs();
 			showFormInPanel(frm_TourTypecs);
 		}
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
 
+        }
 
-	}
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barEditItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void skinRibbonGalleryBarItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void panel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_HoaDon frm = new frm_HoaDon();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_ThemHoaDon frm_ThemHoaDon = new frm_ThemHoaDon();
+            showFormInPanel(frm_ThemHoaDon);
+        }
+
+        private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_ChuanDoanTour frm_ChuanDoanTour = new frm_ChuanDoanTour();
+            showFormInPanel(frm_ChuanDoanTour);
+        }
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_ThongKe frm_ThongKe = new frm_ThongKe();
+            showFormInPanel(frm_ThongKe);
+        }
+    }
+		}
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_KhuyenMai frm = new frm_KhuyenMai();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_DanhGia frm = new frm_DanhGia();
+			showFormInPanel(frm);
+        }
+
+        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_CapTaiKhoan frm = new frm_CapTaiKhoan();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_TaoTaiKhoan	frm = new frm_TaoTaiKhoan();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem23_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_NhomQuyen frm = new frm_NhomQuyen();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem24_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_HuyTour frm = new frm_HuyTour();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_tourDaHuy frm = new frm_tourDaHuy();
+			showFormInPanel(frm);
+        }
+    }
+
 }

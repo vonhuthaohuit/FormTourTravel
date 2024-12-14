@@ -43,7 +43,7 @@ namespace DAL
                 return true;
             }
 
-            return false; 
+            return false;
         }
 
         public long kiemTraNhomQuyen(long maTaiKhoan)
@@ -60,6 +60,51 @@ namespace DAL
         {
             List<user> users = db.users.ToList();
             return users;
+        }
+
+        public bool ThemUser(user user)
+        {
+            db.users.Add(user);
+            return db.SaveChanges() > 0;
+        }
+
+        public bool SuaUser(user us)
+        {
+            user us1 = db.users.Find(us.mataikhoan);
+            us1.tentaikhoan = us.tentaikhoan;
+            us1.email = us.email;
+            us1.matkhau = us.matkhau;
+            us1.trangthai = us.trangthai;
+            us1.manhomquyen = us.manhomquyen;
+            return db.SaveChanges() > 0;
+        }
+
+        public bool XoaUser(int mataikhoan)
+        {
+            user us = db.users.Find(mataikhoan);
+            db.users.Remove(us);
+            return db.SaveChanges() > 0;
+        }
+        public user TaoTaiKhoanNguoiDaiDien(string userName, string email)
+        {
+            try
+            {
+                var user = new user
+                {
+                    tentaikhoan = userName,
+                    email = email,
+                    matkhau = BCrypt.Net.BCrypt.HashPassword("123456"),
+                    manhomquyen = 2
+                };
+                db.users.Add(user);
+                db.SaveChanges();
+                return user;
+            }
+            catch
+            {
+                return null;
+
+            }
         }
     }
 }
