@@ -14,5 +14,20 @@ namespace BLL
 		{
 			return tourDAL.LayDanhSachTour();
 		}
-	}
+
+        public List<dynamic> LayTourDaDat()
+        {
+            return tourDAL.LayTourDaDat();
+        }
+
+		public List<dynamic> TimKiemHoaDonVaPhieuDat(string nguoiDaiDien, DateTime? ngayDatTour)
+		{
+            return tourDAL.TimKiemHoaDonVaPhieuDat(nguoiDaiDien, ngayDatTour);
+        }
+
+		public bool HuyTour(int matour, string nguoidaidien, DateTime ngaydattour)
+		{
+            return tourDAL.HuyTour(matour, nguoidaidien, ngaydattour);
+        }
+    }
 }

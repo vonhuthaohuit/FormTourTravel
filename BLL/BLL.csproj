@@ -45,6 +45,7 @@
     <Compile Include="DanhGiaBLL.cs" />
     <Compile Include="DiscountBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
+    <Compile Include="PhieuHuyBLL.cs" />
     <Compile Include="PhongBanBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleBLL.cs" />
