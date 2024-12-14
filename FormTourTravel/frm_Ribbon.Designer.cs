@@ -89,10 +89,9 @@
             this.barButtonItem8,
             this.barButtonItem9});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(4);
             this.ribbon.MaxItemId = 16;
             this.ribbon.Name = "ribbon";
-            this.ribbon.OptionsMenuMinWidth = 441;
+            this.ribbon.OptionsMenuMinWidth = 378;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage_Tour,
             this.ribbonPage_TaiKhoan,
@@ -115,6 +114,8 @@
             // 
             this.barButtonItem_HoaDon.Caption = "Danh sách hoá đơn";
             this.barButtonItem_HoaDon.Id = 2;
+            this.barButtonItem_HoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem_HoaDon.ImageOptions.Image")));
+            this.barButtonItem_HoaDon.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem_HoaDon.ImageOptions.LargeImage")));
             this.barButtonItem_HoaDon.Name = "barButtonItem_HoaDon";
             this.barButtonItem_HoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_HoaDon_ItemClick);
             // 
@@ -122,6 +123,8 @@
             // 
             this.barButtonItem_TaoHoaDon.Caption = "Tạo hoá đơn";
             this.barButtonItem_TaoHoaDon.Id = 3;
+            this.barButtonItem_TaoHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem_TaoHoaDon.ImageOptions.Image")));
+            this.barButtonItem_TaoHoaDon.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem_TaoHoaDon.ImageOptions.LargeImage")));
             this.barButtonItem_TaoHoaDon.Name = "barButtonItem_TaoHoaDon";
             this.barButtonItem_TaoHoaDon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_TaoHoaDon_ItemClick);
             // 
@@ -129,6 +132,8 @@
             // 
             this.barButtonItem_ThongKe.Caption = "Thống kê";
             this.barButtonItem_ThongKe.Id = 4;
+            this.barButtonItem_ThongKe.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem_ThongKe.ImageOptions.Image")));
+            this.barButtonItem_ThongKe.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem_ThongKe.ImageOptions.LargeImage")));
             this.barButtonItem_ThongKe.Name = "barButtonItem_ThongKe";
             this.barButtonItem_ThongKe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ThongKe_ItemClick);
             // 
@@ -136,6 +141,8 @@
             // 
             this.barButtonItem_ChuanDoanTour.Caption = "Chuẩn đoán tour";
             this.barButtonItem_ChuanDoanTour.Id = 5;
+            this.barButtonItem_ChuanDoanTour.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem_ChuanDoanTour.ImageOptions.Image")));
+            this.barButtonItem_ChuanDoanTour.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem_ChuanDoanTour.ImageOptions.LargeImage")));
             this.barButtonItem_ChuanDoanTour.Name = "barButtonItem_ChuanDoanTour";
             this.barButtonItem_ChuanDoanTour.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ChuanDoanTour_ItemClick);
             // 
@@ -161,8 +168,6 @@
             // 
             this.barButtonItem2.Caption = "Tài khoản";
             this.barButtonItem2.Id = 8;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
@@ -176,8 +181,6 @@
             // 
             this.barButtonItem4.Caption = "Quyền";
             this.barButtonItem4.Id = 10;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
@@ -339,7 +342,7 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 615);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1275, 24);

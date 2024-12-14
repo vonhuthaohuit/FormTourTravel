@@ -465,6 +465,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Ribbon.resx">
       <DependentUpon>frm_Ribbon.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PhuongTienTour.resx">
       <DependentUpon>frm_PhuongTienTour.cs</DependentUpon>
@@ -550,6 +551,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\background4.png" />
     <None Include="Resources\iphone_16_pro_black_titan_2_3335ac3bf9.png" />
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>

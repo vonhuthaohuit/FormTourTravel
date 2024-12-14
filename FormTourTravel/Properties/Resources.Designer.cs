@@ -19,7 +19,7 @@ namespace FormTourTravel.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -63,9 +63,19 @@ namespace FormTourTravel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap hinh_dai_dien_dang_nhap {
+        public static System.Drawing.Bitmap background4 {
             get {
-                object obj = ResourceManager.GetObject("hinh_dai_dien_dang_nhap", resourceCulture);
+                object obj = ResourceManager.GetObject("background4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap iphone_16_pro_max_white_titan_2_1c94258235_png {
+            get {
+                object obj = ResourceManager.GetObject("iphone_16_pro_max_white_titan_2_1c94258235.png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

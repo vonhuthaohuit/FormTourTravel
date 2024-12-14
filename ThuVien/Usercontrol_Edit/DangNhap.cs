@@ -12,6 +12,7 @@ namespace ThuVien.Usercontrol_Edit
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             btn_DangNhap.Click += Btn_DangNhap_Click;
+            txt_Password.PasswordChar = '*';
         }
 
         private void Btn_DangNhap_Click(object sender, EventArgs e)

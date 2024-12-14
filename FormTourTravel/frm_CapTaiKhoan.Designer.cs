@@ -36,7 +36,7 @@
             this.capQuyenTaiKhoan1.CboNhomQuyen_DataSource = null;
             this.capQuyenTaiKhoan1.CboTaiKhoan_DataSource = null;
             this.capQuyenTaiKhoan1.DataSourceDatagirdView = null;
-            this.capQuyenTaiKhoan1.Location = new System.Drawing.Point(26, -2);
+            this.capQuyenTaiKhoan1.Location = new System.Drawing.Point(11, 11);
             this.capQuyenTaiKhoan1.Margin = new System.Windows.Forms.Padding(2);
             this.capQuyenTaiKhoan1.Name = "capQuyenTaiKhoan1";
             this.capQuyenTaiKhoan1.Size = new System.Drawing.Size(1297, 406);
