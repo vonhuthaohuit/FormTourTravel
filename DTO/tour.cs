@@ -24,6 +24,7 @@ namespace DTO
             this.hinhanhtours = new HashSet<hinhanhtour>();
             this.phancongnhanviens = new HashSet<phancongnhanvien>();
             this.phieudattours = new HashSet<phieudattour>();
+            this.danhgias = new HashSet<danhgia>();
         }
     
         public long matour { get; set; }
@@ -57,5 +58,7 @@ namespace DTO
         public virtual ICollection<phancongnhanvien> phancongnhanviens { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<phieudattour> phieudattours { get; set; }
+
+        public virtual ICollection<danhgia> danhgias { get; set; }
     }
 }

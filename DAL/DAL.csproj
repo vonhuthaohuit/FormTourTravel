@@ -84,10 +84,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhGiaDAL.cs" />
+    <Compile Include="DiscountDAL.cs" />
     <Compile Include="ChiTietPhieuDatTourDAL.cs" />
     <Compile Include="HoaDonDAL.cs" />
     <Compile Include="KhachHangDAL.cs" />
     <Compile Include="NhanVienDAL.cs" />
+    <Compile Include="PhieuHuyDAL.cs" />
     <Compile Include="PhieuDatTourDAL.cs" />
     <Compile Include="PhongBanDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -41,5 +41,20 @@ namespace BLL
         }
 
 
+
+        public bool ThemUser(user user)
+        {
+            return usersDAL.ThemUser(user);
+        }
+
+        public bool SuaUser(user user)
+        {
+            return usersDAL.SuaUser(user);
+        }
+
+        public bool XoaUser(int maTaiKhoan)
+        {
+            return usersDAL.XoaUser(maTaiKhoan);
+        }
     }
 }

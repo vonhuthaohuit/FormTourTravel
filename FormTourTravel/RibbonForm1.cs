@@ -201,4 +201,58 @@ namespace FormTourTravel
             showFormInPanel(frm_ChuanDoanTour);
         }
     }
+		}
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_KhuyenMai frm = new frm_KhuyenMai();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_DanhGia frm = new frm_DanhGia();
+			showFormInPanel(frm);
+        }
+
+        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_CapTaiKhoan frm = new frm_CapTaiKhoan();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_TaoTaiKhoan	frm = new frm_TaoTaiKhoan();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem23_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_NhomQuyen frm = new frm_NhomQuyen();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem24_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_HuyTour frm = new frm_HuyTour();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_tourDaHuy frm = new frm_tourDaHuy();
+			showFormInPanel(frm);
+        }
+    }
 }
