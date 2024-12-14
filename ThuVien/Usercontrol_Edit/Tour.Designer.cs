@@ -1,6 +1,6 @@
-﻿namespace FormTourTravel
+﻿namespace ThuVien.Usercontrol_Edit
 {
-	partial class frm_TourTypecs
+	partial class Tour
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,17 +29,25 @@
 		///
 		private void InitializeComponent()
 		{
-			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
 			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
 			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
 			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions8 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-			this.windowsUIButtonPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions9 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+			DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions10 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-			this.label1 = new System.Windows.Forms.Label();
+			this.windowsUIButtonPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
 			this.SuspendLayout();
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.RowHeadersWidth = 51;
+			this.dataGridView1.RowTemplate.Height = 24;
+			this.dataGridView1.Size = new System.Drawing.Size(1340, 442);
+			this.dataGridView1.TabIndex = 6;
 			// 
 			// windowsUIButtonPanel
 			// 
@@ -58,81 +66,50 @@
 			this.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseFont = true;
 			this.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseForeColor = true;
 			this.windowsUIButtonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-			windowsUIButtonImageOptions5.ImageUri.Uri = "New;Size32x32;GrayScaled";
-			windowsUIButtonImageOptions6.ImageUri.Uri = "Edit;Size32x32;GrayScaled";
-			windowsUIButtonImageOptions7.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled";
-			windowsUIButtonImageOptions8.ImageUri.Uri = "Refresh;Size32x32;GrayScaled";
+			windowsUIButtonImageOptions6.ImageUri.Uri = "New;Size32x32;GrayScaled";
+			windowsUIButtonImageOptions7.ImageUri.Uri = "Edit;Size32x32;GrayScaled";
+			windowsUIButtonImageOptions8.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled";
+			windowsUIButtonImageOptions9.ImageUri.Uri = "Refresh;Size32x32;GrayScaled";
+			windowsUIButtonImageOptions10.ImageUri.Uri = "Preview;Size32x32;GrayScaled";
 			this.windowsUIButtonPanel.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Thêm", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Sửa", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Xóa", true, windowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Làm mới", true, windowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("New", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Edit", true, windowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Refresh", true, windowsUIButtonImageOptions9, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Print", true, windowsUIButtonImageOptions10, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
 			this.windowsUIButtonPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.windowsUIButtonPanel.EnableImageTransparency = true;
 			this.windowsUIButtonPanel.ForeColor = System.Drawing.Color.White;
-			this.windowsUIButtonPanel.Location = new System.Drawing.Point(0, 507);
+			this.windowsUIButtonPanel.Location = new System.Drawing.Point(0, 497);
 			this.windowsUIButtonPanel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
 			this.windowsUIButtonPanel.MaximumSize = new System.Drawing.Size(0, 74);
 			this.windowsUIButtonPanel.MinimumSize = new System.Drawing.Size(70, 74);
 			this.windowsUIButtonPanel.Name = "windowsUIButtonPanel";
-			this.windowsUIButtonPanel.Size = new System.Drawing.Size(1081, 74);
+			this.windowsUIButtonPanel.Size = new System.Drawing.Size(1375, 74);
 			this.windowsUIButtonPanel.TabIndex = 5;
 			this.windowsUIButtonPanel.Text = "windowsUIButtonPanel";
 			this.windowsUIButtonPanel.UseButtonBackgroundImages = false;
 			this.windowsUIButtonPanel.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel_ButtonClick);
 			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(58, 188);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 51;
-			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(927, 233);
-			this.dataGridView1.TabIndex = 6;
-			this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-			// 
-			// textEdit1
-			// 
-			this.textEdit1.Location = new System.Drawing.Point(317, 104);
-			this.textEdit1.Name = "textEdit1";
-			this.textEdit1.Size = new System.Drawing.Size(388, 22);
-			this.textEdit1.TabIndex = 7;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-			this.label1.Location = new System.Drawing.Point(199, 107);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(90, 21);
-			this.label1.TabIndex = 8;
-			this.label1.Text = "Loại Tour: ";
-			// 
-			// frm_TourTypecs
+			// Tour
 			// 
 			this.Appearance.BackColor = System.Drawing.Color.White;
 			this.Appearance.Options.UseBackColor = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1081, 581);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.textEdit1);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.windowsUIButtonPanel);
 			this.Margin = new System.Windows.Forms.Padding(4);
-			this.Name = "frm_TourTypecs";
+			this.Name = "Tour";
+			this.Size = new System.Drawing.Size(1375, 571);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
-		private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private DevExpress.XtraEditors.TextEdit textEdit1;
-		private System.Windows.Forms.Label label1;
+		private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel;
 	}
 }

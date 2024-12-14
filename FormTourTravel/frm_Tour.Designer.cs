@@ -32,15 +32,15 @@
 			// 
 			// frm_Tour
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(962, 484);
+			this.ClientSize = new System.Drawing.Size(1258, 585);
 			this.Name = "frm_Tour";
 			this.Text = "frm_Tour";
 			this.ResumeLayout(false);
 
         }
 
-        #endregion
-    }
+		#endregion
+	}
 }

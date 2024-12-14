@@ -5,12 +5,15 @@ using System.Windows.Forms;
 using DevExpress.XtraSplashScreen;
 using static System.Threading.Thread;
 using DevExpress.XtraBars.Ribbon;
-
+using DevExpress.XtraEditors;
+using System.Threading;
 namespace FormTourTravel
 {
-	public partial class RibbonForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
+	public partial class RibbonForm1 : RibbonForm
 	{
 		private SplashScreenManager splashScreenManager;
+		public long matour { get; private set; } 
+		private frm_TourDX frmTourDx;
 
 		public RibbonForm1()
 		{
@@ -20,39 +23,50 @@ namespace FormTourTravel
 			this.MaximizeBox = true;
 			this.MinimizeBox = true;
 			this.WindowState = FormWindowState.Normal;
-
-			// Khởi tạo SplashScreenManager
+			this.frmTourDx = new frm_TourDX(this);
+			panel.Dock = DockStyle.Fill;
 			if (splashScreenManager == null)
 				splashScreenManager = new SplashScreenManager(this, typeof(WaitForm1), true, true);
 
-			// Gắn sự kiện SelectedPageChanged cho RibbonControl
-			// ribbonControl1.SelectedPageChanged += ribbonControl_SelectedPageChanged;
-		}
+			if (panel == null)
+			{
+				panel = new PanelControl
+				{
+					Dock = DockStyle.Fill
+				};
+				this.Controls.Add(panel);
+			}
 
-		/// <summary>
-		/// Hiển thị một form bên trong panel với WaitForm
-		/// </summary>
-		/// <param name="form">Form cần hiển thị</param>
-		/// 
-		private async void showFormInPanel(Form form)
+		}
+		public async void showFormInPanel(Form form)
 		{
 			try
 			{
 				if (!splashScreenManager.IsSplashFormVisible)
 					splashScreenManager.ShowWaitForm();
+
 				await Task.Run(() =>
 				{
-					Sleep(1000);
+					Sleep(700);
 				});
+
+				if (panel.Controls.Count > 0)
+				{
+					foreach (Control ctrl in panel.Controls)
+					{
+						ctrl.Dispose();
+					}
+					panel.Controls.Clear();
+				}
 
 				form.TopLevel = false;
 				form.FormBorderStyle = FormBorderStyle.None;
 				form.Dock = DockStyle.Fill;
-
-				panel.Controls.Clear();
+				form.AutoScroll = true;
+				panel.AutoScroll = true;
+				panel.Controls.Clear(); 
 				panel.Controls.Add(form);
 				panel.Tag = form;
-
 				form.Show();
 			}
 			catch (Exception ex)
@@ -66,25 +80,21 @@ namespace FormTourTravel
 			}
 		}
 
-		/// <summary>
-		/// Xử lý khi nhấn vào nút Tour trong RibbonControl
-		/// </summary>
 
-
-		/// <summary>
-		/// Hiển thị WaitForm khi chuyển đổi tab trên RibbonControl
-		/// </summary>
 		private void ribbonControl_SelectedPageChanged(object sender, EventArgs e)
 		{
 			try
 			{
-				// Hiển thị WaitForm
+				if (ribbonControl1.SelectedPage != null && ribbonControl1.SelectedPage.Name == "ribbon_tour")
+				{
+					frm_TourDX frm_TourDX = new frm_TourDX(this);
+					showFormInPanel(frm_TourDX);
+				}
 				if (!splashScreenManager.IsSplashFormVisible)
 					splashScreenManager.ShowWaitForm();
 
-				Task.Delay(1000).ContinueWith(_ =>
+				Task.Delay(700).ContinueWith(_ =>
 				{
-					// Đóng WaitForm
 					if (splashScreenManager.IsSplashFormVisible)
 						splashScreenManager.CloseWaitForm();
 				}, TaskScheduler.FromCurrentSynchronizationContext());
@@ -94,21 +104,18 @@ namespace FormTourTravel
 				MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
-		private void btn_tour_ItemClick(object sender, ItemClickEventArgs e)
+		private void btn_tourr_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			frm_TourDX frm = new frm_TourDX();
-			showFormInPanel(frm);
+			frm_TourDX frm_TourDX = new frm_TourDX(this);
+			showFormInPanel(frm_TourDX);
 		}
 
 		private void btn_loaitour_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			frm_TourTypecs frm = new frm_TourTypecs();
-			showFormInPanel(frm);
+			frm_TourTypecs frm_TourTypecs = new frm_TourTypecs();
+			showFormInPanel(frm_TourTypecs);
 		}
 
-		private void panel_Paint(object sender, PaintEventArgs e)
-		{
 
-		}
 	}
 }
