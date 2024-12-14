@@ -15,5 +15,15 @@ namespace BLL
         {
             return danhGiaDAL.LayDanhSachDanhGia();
         }
+
+        public bool LuuTinhTrang(int tinhtrang, int madanhgia)
+        {
+            return danhGiaDAL.LuuTinhTrang(tinhtrang, madanhgia);
+        }
+
+        public bool XoaDanhGia(int madanhgia)
+        {
+            return danhGiaDAL.XoaDanhGia(madanhgia);
+        }
     }
 }

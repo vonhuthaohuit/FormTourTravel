@@ -29,124 +29,155 @@
         ///
         private void InitializeComponent()
         {
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            this.layoutControl = new DevExpress.XtraLayout.LayoutControl();
-            this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.itemGrid = new DevExpress.XtraLayout.LayoutControlItem();
-            this.windowsUIButtonPanel = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
-            this.layoutControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).BeginInit();
+            this.dgv_DanhGia = new System.Windows.Forms.DataGridView();
+            this.madanhgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noidung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemdanhgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhtrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.created_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.updated_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbo_trangthai = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_luu = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhGia)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // layoutControl
+            // dgv_DanhGia
             // 
-            this.layoutControl.AllowCustomization = false;
-            this.layoutControl.Controls.Add(this.gridControl);
-            this.layoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl.Name = "layoutControl";
-            this.layoutControl.Root = this.layoutControlGroup;
-            this.layoutControl.Size = new System.Drawing.Size(784, 501);
-            this.layoutControl.TabIndex = 1;
+            this.dgv_DanhGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DanhGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.madanhgia,
+            this.matour,
+            this.noidung,
+            this.diemdanhgia,
+            this.makhachhang,
+            this.tinhtrang,
+            this.created_at,
+            this.updated_at});
+            this.dgv_DanhGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DanhGia.Location = new System.Drawing.Point(0, 0);
+            this.dgv_DanhGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_DanhGia.Name = "dgv_DanhGia";
+            this.dgv_DanhGia.RowHeadersWidth = 51;
+            this.dgv_DanhGia.RowTemplate.Height = 24;
+            this.dgv_DanhGia.Size = new System.Drawing.Size(784, 478);
+            this.dgv_DanhGia.TabIndex = 6;
+            this.dgv_DanhGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhGia_CellClick);
             // 
-            // gridControl
+            // madanhgia
             // 
-            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(40, 0);
-            this.gridControl.MainView = this.gridView;
-            this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(704, 501);
-            this.gridControl.TabIndex = 2;
-            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView});
+            this.madanhgia.DataPropertyName = "madanhgia";
+            this.madanhgia.HeaderText = "Mã đánh giá";
+            this.madanhgia.Name = "madanhgia";
             // 
-            // gridView
+            // matour
             // 
-            this.gridView.GridControl = this.gridControl;
-            this.gridView.Name = "gridView";
-            this.gridView.OptionsBehavior.Editable = false;
-            this.gridView.OptionsCustomization.AllowColumnMoving = false;
-            this.gridView.OptionsCustomization.AllowGroup = false;
-            this.gridView.OptionsCustomization.AllowQuickHideColumns = false;
-            this.gridView.OptionsMenu.EnableColumnMenu = false;
-            this.gridView.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
-            this.gridView.OptionsView.ShowGroupPanel = false;
-            this.gridView.OptionsView.ShowIndicator = false;
+            this.matour.DataPropertyName = "tentour";
+            this.matour.HeaderText = "Tour";
+            this.matour.Name = "matour";
+            this.matour.Width = 400;
             // 
-            // layoutControlGroup
+            // noidung
             // 
-            this.layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup.GroupBordersVisible = false;
-            this.layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.itemGrid});
-            this.layoutControlGroup.Name = "layoutControlGroup";
-            this.layoutControlGroup.Padding = new DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0);
-            this.layoutControlGroup.Size = new System.Drawing.Size(784, 501);
-            this.layoutControlGroup.TextVisible = false;
+            this.noidung.DataPropertyName = "noidung";
+            this.noidung.HeaderText = "Nội dung";
+            this.noidung.Name = "noidung";
+            this.noidung.Width = 500;
             // 
-            // itemGrid
+            // diemdanhgia
             // 
-            this.itemGrid.Control = this.gridControl;
-            this.itemGrid.Location = new System.Drawing.Point(0, 0);
-            this.itemGrid.Name = "itemGrid";
-            this.itemGrid.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.itemGrid.Size = new System.Drawing.Size(704, 501);
-            this.itemGrid.TextSize = new System.Drawing.Size(0, 0);
-            this.itemGrid.TextVisible = false;
+            this.diemdanhgia.DataPropertyName = "diemdanhgia";
+            this.diemdanhgia.HeaderText = "Điểm đánh giá";
+            this.diemdanhgia.Name = "diemdanhgia";
             // 
-            // windowsUIButtonPanel
+            // makhachhang
             // 
-            this.windowsUIButtonPanel.AppearanceButton.Hovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.windowsUIButtonPanel.AppearanceButton.Hovered.FontSizeDelta = -1;
-            this.windowsUIButtonPanel.AppearanceButton.Hovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.windowsUIButtonPanel.AppearanceButton.Hovered.Options.UseBackColor = true;
-            this.windowsUIButtonPanel.AppearanceButton.Hovered.Options.UseFont = true;
-            this.windowsUIButtonPanel.AppearanceButton.Hovered.Options.UseForeColor = true;
-            this.windowsUIButtonPanel.AppearanceButton.Normal.FontSizeDelta = -1;
-            this.windowsUIButtonPanel.AppearanceButton.Normal.Options.UseFont = true;
-            this.windowsUIButtonPanel.AppearanceButton.Pressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.windowsUIButtonPanel.AppearanceButton.Pressed.FontSizeDelta = -1;
-            this.windowsUIButtonPanel.AppearanceButton.Pressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseBackColor = true;
-            this.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseFont = true;
-            this.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseForeColor = true;
-            this.windowsUIButtonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            windowsUIButtonImageOptions1.ImageUri.Uri = "New;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions2.ImageUri.Uri = "Edit;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions3.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions4.ImageUri.Uri = "Refresh;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions5.ImageUri.Uri = "Preview;Size32x32;GrayScaled";
-            this.windowsUIButtonPanel.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("New", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Edit", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Refresh", true, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Print", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
-            this.windowsUIButtonPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.windowsUIButtonPanel.EnableImageTransparency = true;
-            this.windowsUIButtonPanel.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanel.Location = new System.Drawing.Point(0, 501);
-            this.windowsUIButtonPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.windowsUIButtonPanel.MaximumSize = new System.Drawing.Size(0, 60);
-            this.windowsUIButtonPanel.MinimumSize = new System.Drawing.Size(60, 60);
-            this.windowsUIButtonPanel.Name = "windowsUIButtonPanel";
-            this.windowsUIButtonPanel.Size = new System.Drawing.Size(784, 60);
-            this.windowsUIButtonPanel.TabIndex = 5;
-            this.windowsUIButtonPanel.Text = "windowsUIButtonPanel";
-            this.windowsUIButtonPanel.UseButtonBackgroundImages = false;
-            this.windowsUIButtonPanel.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel_ButtonClick);
+            this.makhachhang.DataPropertyName = "hotenKhachHang";
+            this.makhachhang.HeaderText = "Khách hàng";
+            this.makhachhang.Name = "makhachhang";
+            // 
+            // tinhtrang
+            // 
+            this.tinhtrang.DataPropertyName = "tinhtrang";
+            this.tinhtrang.HeaderText = "Tình trạng";
+            this.tinhtrang.Name = "tinhtrang";
+            // 
+            // created_at
+            // 
+            this.created_at.DataPropertyName = "created_at";
+            this.created_at.HeaderText = "Ngày tạo";
+            this.created_at.Name = "created_at";
+            // 
+            // updated_at
+            // 
+            this.updated_at.DataPropertyName = "updated_at";
+            this.updated_at.HeaderText = "Ngày cập nhật";
+            this.updated_at.Name = "updated_at";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_xoa);
+            this.panel1.Controls.Add(this.btn_luu);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cbo_trangthai);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 478);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(784, 83);
+            this.panel1.TabIndex = 7;
+            // 
+            // cbo_trangthai
+            // 
+            this.cbo_trangthai.FormattingEnabled = true;
+            this.cbo_trangthai.Location = new System.Drawing.Point(201, 32);
+            this.cbo_trangthai.Name = "cbo_trangthai";
+            this.cbo_trangthai.Size = new System.Drawing.Size(234, 21);
+            this.cbo_trangthai.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(174, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tình trạng hoạt động của bình luận";
+            // 
+            // btn_luu
+            // 
+            this.btn_luu.Location = new System.Drawing.Point(472, 30);
+            this.btn_luu.Name = "btn_luu";
+            this.btn_luu.Size = new System.Drawing.Size(75, 23);
+            this.btn_luu.TabIndex = 2;
+            this.btn_luu.Text = "Lưu";
+            this.btn_luu.UseVisualStyleBackColor = true;
+            this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.Location = new System.Drawing.Point(567, 30);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(75, 23);
+            this.btn_xoa.TabIndex = 3;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv_DanhGia);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(784, 478);
+            this.panel2.TabIndex = 8;
             // 
             // frm_DanhGia
             // 
@@ -155,26 +186,32 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.layoutControl);
-            this.Controls.Add(this.windowsUIButtonPanel);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "frm_DanhGia";
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).EndInit();
-            this.layoutControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhGia)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraLayout.LayoutControl layoutControl;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
-        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel;
-        private DevExpress.XtraGrid.GridControl gridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraLayout.LayoutControlItem itemGrid;
+        private System.Windows.Forms.DataGridView dgv_DanhGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn madanhgia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matour;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noidung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemdanhgia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn makhachhang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tinhtrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn created_at;
+        private System.Windows.Forms.DataGridViewTextBoxColumn updated_at;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.Button btn_luu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbo_trangthai;
+        private System.Windows.Forms.Panel panel2;
     }
 }

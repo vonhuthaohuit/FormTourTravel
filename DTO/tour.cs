@@ -23,6 +23,7 @@ namespace DTO
             this.hinhanhtours = new HashSet<hinhanhtour>();
             this.phancongnhanviens = new HashSet<phancongnhanvien>();
             this.phieudattours = new HashSet<phieudattour>();
+            this.danhgias = new HashSet<danhgia>();
         }
     
         public long matour { get; set; }
@@ -49,5 +50,7 @@ namespace DTO
         public virtual loaitour loaitour { get; set; }
         public virtual ICollection<phancongnhanvien> phancongnhanviens { get; set; }
         public virtual ICollection<phieudattour> phieudattours { get; set; }
+
+        public virtual ICollection<danhgia> danhgias { get; set; }
     }
 }
