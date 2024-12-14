@@ -24,5 +24,9 @@ namespace DTO
         public Nullable<int> tinhtrang { get; set; }
     
         public virtual khachhang khachhang { get; set; }
+        public virtual tour tour { get; set; }
+
+        public string hotenKhachHang { get; set; } 
+        public string tentour { get; set; }
     }
 }

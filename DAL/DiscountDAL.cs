@@ -17,45 +17,24 @@ namespace DAL
 
         public bool ThemKhuyenMai(khuyenmai km)
         {
-            try
-            {
-                db.khuyenmais.Add(km);
-                return db.SaveChanges() > 0;
-            }
-            catch (Exception ex)
-            {
-                return false; 
-            }
+            db.khuyenmais.Add(km);
+            return db.SaveChanges() > 0;
         }
 
         public bool XoaKhuyenMai(int makhuyenmai)
         {
-            try
-            {
-                khuyenmai km = db.khuyenmais.Find(makhuyenmai);
-                db.khuyenmais.Remove(km);
-                return db.SaveChanges() > 0;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
+            khuyenmai km = db.khuyenmais.Find(makhuyenmai);
+            db.khuyenmais.Remove(km);
+            return db.SaveChanges() > 0;
         }
 
         public bool SuaKhuyenMai(khuyenmai km)
         {
-            try
-            {
-                khuyenmai khuyenmai = db.khuyenmais.Find(km.makhuyenmai);
-                khuyenmai.thoigianbatdau = km.thoigianbatdau;
-                khuyenmai.thoigianketthuc = km.thoigianketthuc;
-                khuyenmai.phantramgiam = km.phantramgiam;
-                return db.SaveChanges() > 0;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
+            khuyenmai khuyenmai = db.khuyenmais.Find(km.makhuyenmai);
+            khuyenmai.thoigianbatdau = km.thoigianbatdau;
+            khuyenmai.thoigianketthuc = km.thoigianketthuc;
+            khuyenmai.phantramgiam = km.phantramgiam;
+            return db.SaveChanges() > 0;
         }
     }
 }
