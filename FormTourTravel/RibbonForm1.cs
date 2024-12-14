@@ -150,5 +150,17 @@ namespace FormTourTravel
             frm_NhomQuyen frm = new frm_NhomQuyen();
             showFormInPanel(frm);
         }
+
+        private void barButtonItem24_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_HuyTour frm = new frm_HuyTour();
+            showFormInPanel(frm);
+        }
+
+        private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_tourDaHuy frm = new frm_tourDaHuy();
+			showFormInPanel(frm);
+        }
     }
 }
