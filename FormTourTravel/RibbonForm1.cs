@@ -194,5 +194,11 @@ namespace FormTourTravel
 			frm_ThemHoaDon frm_ThemHoaDon = new frm_ThemHoaDon();
             showFormInPanel(frm_ThemHoaDon);
         }
+
+        private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
+        {
+			frm_ChuanDoanTour frm_ChuanDoanTour = new frm_ChuanDoanTour();
+            showFormInPanel(frm_ChuanDoanTour);
+        }
     }
 }

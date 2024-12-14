@@ -50,6 +50,7 @@
             this.btn_loaitour = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbon_tour = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -65,6 +66,8 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage9 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage10 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage12 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.panel = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -96,10 +99,11 @@
             this.btn_tour,
             this.btn_loaitour,
             this.barButtonItem11,
-            this.barButtonItem12});
+            this.barButtonItem12,
+            this.barButtonItem13});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.ribbonControl1.MaxItemId = 19;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(8);
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 751;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -112,7 +116,8 @@
             this.ribbonPage7,
             this.ribbonPage8,
             this.ribbonPage9,
-            this.ribbonPage10});
+            this.ribbonPage10,
+            this.ribbonPage2});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
             this.ribbonControl1.Size = new System.Drawing.Size(1365, 209);
@@ -250,6 +255,15 @@
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
+            // barButtonItem13
+            // 
+            this.barButtonItem13.Caption = "Tour";
+            this.barButtonItem13.Id = 19;
+            this.barButtonItem13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
+            this.barButtonItem13.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
+            this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -348,6 +362,21 @@
             this.ribbonPage10.Name = "ribbonPage10";
             this.ribbonPage10.Text = "Sao lưu phục hồi";
             // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "Chuẩn đoán Tour";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.AllowTextClipping = false;
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem13);
+            this.ribbonPageGroup3.MergeOrder = 1;
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Chuẩn đoán tour";
+            // 
             // ribbonPage12
             // 
             this.ribbonPage12.Name = "ribbonPage12";
@@ -356,8 +385,8 @@
             // panel
             // 
             this.panel.AutoSize = true;
-            this.panel.Location = new System.Drawing.Point(0, 275);
-            this.panel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel.Location = new System.Drawing.Point(0, 211);
+            this.panel.Margin = new System.Windows.Forms.Padding(6);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1706, 750);
             this.panel.TabIndex = 1;
@@ -421,5 +450,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
     }
 }
