@@ -206,14 +206,12 @@ namespace FormTourTravel
 			frm_ThongKe frm_ThongKe = new frm_ThongKe();
             showFormInPanel(frm_ThongKe);
         }
-    }
-		}
 
-        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
-        {
-			frm_KhuyenMai frm = new frm_KhuyenMai();
-            showFormInPanel(frm);
-        }
+   //     private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+   //     {
+			//frm_KhuyenMai frm = new frm_KhuyenMai();
+   //         showFormInPanel(frm);
+   //     }
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -221,11 +219,11 @@ namespace FormTourTravel
 			showFormInPanel(frm);
         }
 
-        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            frm_CapTaiKhoan frm = new frm_CapTaiKhoan();
-            showFormInPanel(frm);
-        }
+        //private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        //{
+        //    frm_CapTaiKhoan frm = new frm_CapTaiKhoan();
+        //    showFormInPanel(frm);
+        //}
 
         private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
         {
