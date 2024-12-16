@@ -8,8 +8,8 @@
 1. **Võ Nhựt Hào** - 2001215754
    - Email: vonhuthao11235@gmail.com
 
-2. **Nguyễn Văn Khánh** - 2001215891
-   - Email: nguyenvankhanhdev@gmail.com
+2. **Nguyễn Văn Khánh** - 2001210512
+   - Email: nguyenkhanh13082003@gmail.com
 
 3. **Trần Trọng Vương** - 2001216327
    - Email: vuongtran975@gmail.com
